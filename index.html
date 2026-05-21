@@ -2,24 +2,78 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日简报</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>阿茗的懒人新闻</title>
 <style>
-body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f1f5;margin:0;padding:20px;text-align:center}
-h1{color:#1a1a2e;font-size:24px;margin:30px 0 20px}
-a{display:block;background:#fff;margin:12px auto;padding:16px;max-width:400px;border-radius:12px;text-decoration:none;color:#333;font-size:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-a:hover{background:#eef2ff}
-.emoji{font-size:32px;display:block;margin-bottom:6px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:PingFang SC,Microsoft YaHei,sans-serif;background:#f0f1f5;color:#333;line-height:1.8}
+.w{max-width:600px;margin:40px auto;padding:0 16px}
+.hdr{text-align:center;padding:30px 0 20px}
+.hdr h1{font-size:26px;color:#1a1a2e}
+.hdr p{font-size:14px;color:#888;margin-top:6px}
+.card{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);display:flex;align-items:center;justify-content:space-between}
+.card .info{flex:1}
+.card .t{font-size:16px;font-weight:700;color:#1a1a2e}
+.card .d{font-size:13px;color:#999;margin-top:2px}
+.card .a{font-size:14px;color:#1a73e8;text-decoration:none;margin-left:12px;white-space:nowrap}
+.card .tg{display:inline-block;font-size:11px;padding:2px 7px;border-radius:8px;margin-left:6px;font-weight:600}
+.tg-n{background:#e8f0fe;color:#1a56db}
+.tg-a{background:#f5f3ff;color:#7c3aed}
+.tg-new{background:#ffebee;color:#c62828}
+.ft{text-align:center;font-size:12px;color:#bbb;margin-top:30px;padding:20px 0}
+.ft a{color:#999}
 </style>
 </head>
 <body>
-<h1>📰 每日简报</h1>
-<a href="news-20260520.html">
-<span class="emoji">📡</span>新闻联播深度解读
+<div class="w">
+<div class="hdr">
+<h1>📰 阿茗的懒人新闻</h1>
+<p>每日信息简报 · 自动更新</p>
+</div>
+
+<a href="每日综合晚报_20260521.html" style="text-decoration:none;color:inherit">
+<div class="card">
+<div class="info">
+<div class="t">每日综合晚报 <span class="tg tg-new">NEW</span></div>
+<div class="d">2026-05-21 · 当日要闻 + AI前沿，公众号风格</div>
+</div>
+<span class="a">查看 →</span>
+</div>
 </a>
-<a href="ai-20260520.html">
-<span class="emoji">🤖</span>AI 热点晚报
+
+<a href="新闻联播_20260520.html" style="text-decoration:none;color:inherit">
+<div class="card">
+<div class="info">
+<div class="t">新闻联播深度解读 <span class="tg tg-n">时政</span></div>
+<div class="d">2026-05-20 · 普京访华、神舟二十三号等</div>
+</div>
+<span class="a">查看 →</span>
+</div>
 </a>
-<p style="color:#999;font-size:13px;margin-top:30px">每日自动更新 · 全网可访问</p>
+
+<a href="AI热点_早报_20260521.html" style="text-decoration:none;color:inherit">
+<div class="card">
+<div class="info">
+<div class="t">AI热点早报 <span class="tg tg-a">AI</span></div>
+<div class="d">2026-05-21 · OpenAI、Gemini、Qwen等</div>
+</div>
+<span class="a">查看 →</span>
+</div>
+</a>
+
+<a href="AI热点_晚报_20260520.html" style="text-decoration:none;color:inherit">
+<div class="card">
+<div class="info">
+<div class="t">AI热点晚报 <span class="tg tg-a">AI</span></div>
+<div class="d">2026-05-20 · AI行业晚间速览</div>
+</div>
+<span class="a">查看 →</span>
+</div>
+</a>
+
+<div class="ft">
+每日自动更新 · <a href="https://github.com/lizhenming008-dev/daily-briefing" target="_blank">GitHub</a>
+</div>
+</div>
 </body>
 </html>
