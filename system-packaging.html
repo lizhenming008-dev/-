@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>每日信息简报系统打包说明</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f0f1f5;color:#24292f;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 48px}
+.header{background:#1a1a2e;color:#fff;border-radius:12px;padding:24px 22px;margin-bottom:16px}
+.header h1{font-size:24px;margin:0 0 8px}
+.header p{margin:0;color:#dbeafe;font-size:14px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
+.actions a{background:#fff;color:#1a56db;text-decoration:none;border:1px solid #dbeafe;border-radius:8px;padding:9px 12px;font-size:14px;font-weight:600}
+pre{white-space:pre-wrap;word-break:break-word;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px;font-size:14px;overflow:auto;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.note{font-size:13px;color:#667085;margin:0 0 12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <h1>每日信息简报系统打包说明</h1>
+    <p>HTML 稳定版入口，避免飞书内置浏览器无法打开 Markdown 或中文路径。</p>
+  </div>
+  <div class="actions">
+    <a href="./%E7%B3%BB%E7%BB%9F%E6%89%93%E5%8C%85%E8%AF%B4%E6%98%8E.md">查看 Markdown 原文</a>
+    <a href="https://github.com/lizhenming008-dev/daily-briefing/blob/main/%E7%B3%BB%E7%BB%9F%E6%89%93%E5%8C%85%E8%AF%B4%E6%98%8E.md">查看 GitHub 源文件</a>
+    <a href="./">返回首页</a>
+  </div>
+  <p class="note">以下内容同步自 <code>系统打包说明.md</code>。</p>
+  <pre># 金地上海 · 每日信息简报系统
+
+&gt; 最后更新：2026-05-21  
+&gt; 适用模型：Claude / Hermes / 其他 LLM
+
+---
+
+## 系统概述
+
+每天自动生成两份 HTML 简报，推送到 GitHub Pages 公网，手机/电脑均可访问。HTML 文件本身不依赖 JS 框架；图片允许使用稳定 HTTPS 远程地址，以保证 Hermes 可以稳定补齐配图。
+
+| 内容 | 时间 | GitHub Pages 链接 |
+|---|---|---|
+| 📡 新闻联播深度解读 | 每晚 22:00 | `https://lizhenming008-dev.github.io/daily-briefing/` |
+| 🤖 AI 热点早报 | 每天 9:00 |
+| 🤖 AI 热点晚报 | 每天 21:00 |
+
+---
+
+## 一、文件结构
+
+```
+~/Documents/每日简报/
+├── push.sh                      # 自动推送脚本
+├── index.html                   # 首页（自动更新链接用）
+├── 新闻联播_YYYYMMDD.html       # 新闻联播解读（示例：新闻联播_20260520.html）
+├── AI热点_早报_YYYYMMDD.html      # AI 早报
+├── AI热点_晚报_YYYYMMDD.html      # AI 晚报
+└── 系统打包说明.md               # 本文件
+```
+
+GitHub 仓库：`github.com/lizhenming008-dev/daily-briefing` （公开，Pages 已启用，分支 `main`，目录 `/root`）
+
+---
+
+## 二、推送脚本（push.sh）
+
+```bash
+#!/bin/bash
+TOKEN=&quot;你的GitHub_Token&quot;
+DIR=&quot;/tmp/briefing-repo&quot;
+URL=&quot;https://${TOKEN}@github.com/lizhenming008-dev/daily-briefing.git&quot;
+
+if [ ! -d &quot;$DIR/.git&quot; ]; then
+    rm -rf &quot;$DIR&quot;
+    git clone &quot;$URL&quot; &quot;$DIR&quot;
+fi
+cd &quot;$DIR&quot;
+git pull origin main --rebase
+cp ~/Documents/每日简报/*.html . 2&gt;/dev/null
+git add *.html 2&gt;/dev/null
+git commit -m &quot;update $(date +%Y%m%d)&quot; 2&gt;/dev/null
+git push origin main
+echo &quot;done&quot;
+```
+
+**用法**：AI 生成 HTML 后执行 `bash ~/Documents/每日简报/push.sh` 即可推送到公网。
+
+**要求**：GitHub 上已有仓库 `lizhenming008-dev/daily-briefing`，Settings → Pages → Source: `Deploy from a branch`，Branch: `main / / (root)`。
+
+---
+
+## 三、新闻联播深度解读
+
+### 3.1 数据来源
+`https://cn.govopendata.com/xinwenlianbo/YYYYMMDD/`  
+（将 YYYYMMDD 替换为当天日期，如 20260520）
+
+### 3.2 提示词
+
+```
+你的任务是生成当天的《新闻联播》深度解读 HTML 文章，推送到公网。
+
+## 步骤
+1. 访问 https://cn.govopendata.com/xinwenlianbo/YYYYMMDD/ 获取全文（替换为今天日期）
+2. 解析每条新闻，按以下六类排序：
+   - 🇨🇳 时政要闻：高层讲话、政策发布、会议精神
+   - 💰 经济财经：宏观经济数据、产业政策、贸易
+   - 🏠 地产专项：房地产相关政策、市场动态（重点展开）
+   - 🔬 科技前沿：科技突破、新基建、数字化
+   - 🌍 国际观察：外交活动、国际关系
+   - 📌 其他要点
+3. 每条新闻写两个部分：
+   - **表面意思**：1-2句话概括新闻说了什么（白话）
+   - **深层解读**：2-3句话分析背后逻辑，回答&quot;这意味着什么&quot;（必须原创分析，不能复述原文）
+4. 地产专项至少写 3 条解读（如果当天新闻不够，结合近期政策趋势补充）
+5. 生成一个可独立访问的 HTML 文件，保存到 ~/Documents/每日简报/新闻联播_YYYYMMDD.html
+
+## HTML 规范
+- 文件名：新闻联播_YYYYMMDD.html（YYYYMMDD 为当天日期）
+- CSS 内嵌 `&lt;style&gt;`；图片优先使用稳定 HTTPS 远程图片，不强制 base64
+- 宽度 600px，手机竖屏优先
+- 总大小建议 &lt; 80KB（不要嵌入大段 base64，避免文件暴涨）
+- 色调：深蓝 #1a1a2e 为主色，白色卡片，圆角 12px
+- 顶部标题：📡 新闻联播深度解读 · YYYY年MM月DD日
+- 每类一个卡片，卡片内有该类的条目
+- 每条项目格式：
+  - 标题（bold）
+  - 📋 表面意思：...
+  - 🔍 深层解读：...
+- 底部：每日自动生成 · 全网可访问
+- 每个卡片顶部必须配一张 16:9 配图；实在找不到新闻实图时使用主题占位图
+
+## 新闻联播配图关键词
+| 分类 | 优先图片 | 兜底关键词 |
+|---|---|---|
+| 🇨🇳 时政要闻 | 央视/新华社/政府网站新闻图 | Beijing government meeting |
+| 💰 经济财经 | 央行、港口、工厂、金融市场图 | China economy finance |
+| 🏠 地产专项 | 城市天际线、售楼处、工地、住宅社区 | real estate city skyline |
+| 🔬 科技前沿 | 实验室、芯片、数据中心、机器人 | AI chip laboratory |
+| 🌍 国际观察 | 外交会见、联合国、国际城市 | diplomacy international |
+| 📌 其他要点 | 与新闻主题最接近的实景图 | daily news briefing |
+
+## 完成后
+执行 bash ~/Documents/每日简报/push.sh 推送到 GitHub Pages
+```
+
+---
+
+## 四、AI 热点早晚报
+
+### 4.1 数据来源
+- Hacker News API（https://hacker-news.firebaseio.com/v0/）
+- arXiv 最新论文
+- 各大 AI 公司官方博客（OpenAI、Anthropic、Google DeepMind、Meta AI 等）
+- 科技媒体（TechCrunch、The Verge、机器之心、量子位等）
+
+### 4.2 提示词
+
+```
+你的任务是搜索AI领域最新动态，生成公众号风格的HTML早晚报，推送到公网。
+
+## 步骤
+1. 搜索过去12小时AI重大新闻：
+   - Hacker News 热门（API + 筛选 AI 相关）
+   - 各大 AI 公司博客
+   - arXiv 今日 AI 相关论文（选 2-3 篇）
+   - 中国 AI 动态（量子位、机器之心等）
+2. 选 8-10 条最有价值的新闻，按五类排序：
+   - 🧠 新模型发布
+   - 🛠️ 工具与产品
+   - 💼 资本与商业
+   - 🔬 前沿研究
+   - 🏠 地产+AI（结合房地产行业的 AI 应用）
+3. 每条新闻包含：
+   - 标题 + 链接
+   - 150字以内的要点总结
+   - 对地产营销的启示（如果相关）
+4. 每条新闻必须配一张相关图片：
+   - 第一优先级：新闻原文或公司博客的 `og:image` / 文章头图
+   - 第二优先级：公司 Logo、产品截图、论文图、GitHub 仓库社交预览图
+   - 第三优先级：主题图（AI chip、robot、data center、research paper、real estate marketing 等）
+   - 禁止 8-10 条新闻重复使用同一张图；同一类别最多复用 1 张
+   - 图片用 HTTPS URL，不要转 base64；如果图片失效，用 CSS 渐变占位兜底
+5. 顶部写一段 100 字的「今日锐评」
+6. 生成可独立访问的 HTML，保存到 ~/Documents/每日简报/AI热点_早报_YYYYMMDD.html 或 AI热点_晚报_YYYYMMDD.html
+
+## HTML 规范
+- CSS 内嵌；图片使用 HTTPS 远程 URL，总大小建议 &lt; 80KB
+- 宽度 600px，手机竖屏优化
+- 公众号风格：白色背景，卡片式布局
+- 顶部：🤖 AI 热点早报/晚报 · YYYY年MM月DD日
+- 锐评区：左边框紫色 #7c3aed，浅紫背景 #f5f3ff
+- 每条新闻一个卡片，含标题（可点击链接）、摘要、图片、地产启示
+- 底部：每日自动生成 · 全网可访问
+
+## 图片 HTML 模板（Hermes 必须照抄）
+每条新闻卡片里的标题下方必须放置图片块：
+
+```html
+&lt;figure class=&quot;media&quot;&gt;
+  &lt;img class=&quot;news-img&quot; src=&quot;https://example.com/image.jpg&quot; alt=&quot;新闻主题关键词&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer&quot; onerror=&quot;this.closest(&#x27;.media&#x27;).classList.add(&#x27;is-fallback&#x27;);this.remove();&quot;&gt;
+  &lt;figcaption&gt;图片来源：OpenAI / Google / arXiv / Unsplash&lt;/figcaption&gt;
+&lt;/figure&gt;
+```
+
+CSS 必须包含：
+
+```css
+.media{margin:10px 0 12px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#eef2ff,#f8fafc);border:1px solid #e5e7eb}
+.media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.media figcaption{font-size:11px;color:#888;padding:5px 8px;background:#fafafa}
+.media.is-fallback{height:150px;display:flex;align-items:end;background:linear-gradient(135deg,#1a1a2e,#7c3aed)}
+.media.is-fallback::before{content:&quot;AI Briefing&quot;;color:#fff;font-weight:700;font-size:18px;margin:auto}
+.media.is-fallback figcaption{display:none}
+```
+
+## 发布前自检
+生成 HTML 后，Hermes 必须自查：
+- 新闻条目数 = `.card` 数量（或新闻卡片数量）
+- 图片数 = `.news-img` 数量，必须不少于新闻条目数的 80%
+- 图片 `src` 必须是 `https://` 或 `data:image/svg+xml`
+- 如果图片数不足，先补图再执行 push.sh
+- 不要为了凑图使用同一张 base64 大图反复复制
+
+## 完成后
+执行 bash ~/Documents/每日简报/push.sh 推送到 GitHub Pages
+```
+
+---
+
+## 五、首页（index.html）
+
+每次推送后自动更新，列出当天所有简报链接。
+
+**核心逻辑**：用相对路径 `href=&quot;新闻联播_YYYYMMDD.html&quot;`，不写绝对 URL，避免仓库改名导致链接失效。
+
+当前内容示例：
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;每日简报&lt;/title&gt;
+&lt;style&gt;
+body{font-family:-apple-system,&quot;PingFang SC&quot;,&quot;Microsoft YaHei&quot;,sans-serif;background:#f0f1f5;margin:0;padding:20px;text-align:center}
+h1{color:#1a1a2e;font-size:24px;margin:30px 0 20px}
+a{display:block;background:#fff;margin:12px auto;padding:16px;max-width:400px;border-radius:12px;text-decoration:none;color:#333;font-size:18px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+a:hover{background:#eef2ff}
+.emoji{font-size:32px;display:block;margin-bottom:6px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;📰 每日简报&lt;/h1&gt;
+&lt;a href=&quot;新闻联播_20260521.html&quot;&gt;
+&lt;span class=&quot;emoji&quot;&gt;📡&lt;/span&gt;新闻联播深度解读
+&lt;/a&gt;
+&lt;a href=&quot;AI热点_早报_20260521.html&quot;&gt;
+&lt;span class=&quot;emoji&quot;&gt;🌅&lt;/span&gt;AI 热点早报
+&lt;/a&gt;
+&lt;a href=&quot;AI热点_晚报_20260521.html&quot;&gt;
+&lt;span class=&quot;emoji&quot;&gt;🤖&lt;/span&gt;AI 热点晚报
+&lt;/a&gt;
+&lt;p style=&quot;color:#999;font-size:13px;margin-top:30px&quot;&gt;每日自动更新 · 全网可访问&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+```
+
+---
+
+## 六、GitHub Pages 配置
+
+| 项目 | 值 |
+|---|---|
+| 仓库 | `lizhenming008-dev/daily-briefing` |
+| 可见性 | Public |
+| Pages 分支 | `main` / `/ (root)` |
+| 自定义域名 | 无 |
+| 公网地址 | `https://lizhenming008-dev.github.io/daily-briefing/` |
+
+---
+
+## 七、自动化执行（Hermes cron 定时任务）
+
+当前配置了两个 cron 任务：
+
+| 任务 ID | 名称 | 时间 | 状态 |
+|---|---|---|---|
+| `70a8570c4434` | 每晚新闻联播+时政要点 | `0 22 * * *`（每晚22:00） | ✅ 运行中 |
+| `330206843c8d` | AI热点早晚报 | `0 9,21 * * *`（每天9:00、21:00） | ✅ 运行中 |
+
+每个任务的工作流：
+1. AI 按提示词生成 HTML → 保存到 `~/Documents/每日简报/`
+2. 执行 `bash ~/Documents/每日简报/push.sh` → 推送到 GitHub
+3. GitHub Pages 自动构建（约30秒生效）
+4. 公网链接更新
+
+---
+
+## 八、迁移到 Claude 使用
+
+如果你想用 Claude 代替 Hermes 来执行这个流程：
+
+1. **手动模式**：把上面的提示词复制给 Claude，让它生成 HTML，然后你手动执行 `push.sh`
+2. **自动化**：在 Claude Pro 中可以设置类似的定时触发机制
+3. **共同维护**：两个 AI 都可以往同一个 GitHub 仓库推，只要 push.sh 里的 token 有效
+
+GitHub Token 当前：`ghp_xA...te92`（classic，永不过期，repo 权限）
+
+---
+
+## 九、示例文件
+
+见同目录下的：
+- `新闻联播_20260520.html`（12.7KB，含6类解读+配图）
+- `AI热点_晚报_20260520.html`（8.6KB，含7条新闻+锐评）
+- `AI热点_早报_20260521.html`（40KB，含6类新闻+配图）
+</pre>
+</div>
+</body>
+</html>
