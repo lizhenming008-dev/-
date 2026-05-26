@@ -20,8 +20,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans G
 .card h3{font-size:16px;margin:4px 0 8px;color:#1a1a2e}
 .sf{background:#f8f9fa;padding:10px 12px;border-radius:6px;font-size:14px;color:#555;margin:6px 0;border-left:3px solid #ddd}
 .dp{background:#eef2ff;padding:10px 12px;border-radius:6px;font-size:14px;color:#222;margin:6px 0;border-left:3px solid #0f3460}
-.cimg{width:100%;margin:8px 0;border-radius:8px;overflow:hidden}
+.cimg{display:none}
 .cimg img{width:100%;display:block}
+.news-img{margin:10px 10px 0;aspect-ratio:16/9;border-radius:10px;padding:18px;color:#fff;background:linear-gradient(135deg,#17324d,#266b68 55%,#c89b3c);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative;box-shadow:0 4px 14px rgba(15,52,96,.18)}
+.news-img:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.28),transparent 26%),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:100% 100%,34px 34px}
+.news-img b,.news-img span{position:relative}
+.news-img b{font-size:20px;line-height:1.25}
+.news-img span{font-size:12px;opacity:.86;margin-top:5px}
 .tbl{background:#fff;border-radius:10px;padding:14px;margin-bottom:10px}
 .tbl table{width:100%;border-collapse:collapse;font-size:13px}
 .tbl td{padding:6px 8px;border-bottom:1px solid #eee}
@@ -40,6 +45,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans G
   <div>📡 新闻联播深度解读</div>
   <h1>2026年5月20日</h1>
   <div class="sum"><b>普京第25次访华</b>——40项合作文件+条约续期+教育年启动。中俄进入制度绑定新阶段。同日：神舟二十三号发射在即、服务业数据亮眼、矿产资源法细则出台。</div>
+</div>
+
+<div class="news-img" role="img" aria-label="中俄合作与元首外交主题图">
+  <b>中俄合作进入制度绑定阶段</b>
+  <span>40项合作文件、条约续期、教育年启动</span>
+</div>
+
+<div class="news-img" role="img" aria-label="服务业与高技术投资主题图">
+  <b>服务业数据释放回暖信号</b>
+  <span>信息服务、文体消费与出行需求同步修复</span>
+</div>
+
+<div class="news-img" role="img" aria-label="航天与高端制造主题图">
+  <b>航天产业链继续抬升</b>
+  <span>神舟二十三号合练完成，高端制造受益</span>
 </div>
 
 <div class="cimg"><img src="data:image/jpeg;base64,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" alt="新闻联播"></div>
