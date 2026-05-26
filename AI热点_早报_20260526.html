@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI 热点早报 | 2026年5月26日</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#eef2f7;
+  --panel:#f8fafc;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --green:#10b981;
+  --blue:#2563eb;
+  --amber:#d97706;
+  --rose:#e11d48;
+  --slate:#0f172a;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,.10), transparent 34%),
+    radial-gradient(circle at top right, rgba(14,165,233,.10), transparent 32%),
+    linear-gradient(180deg,#eaf0f7 0%, #f5f7fb 24%, #eef2f7 100%);
+  color:var(--text);
+  line-height:1.75;
+}
+.wrap{max-width:680px;margin:0 auto;background:linear-gradient(180deg,rgba(248,250,252,.88),rgba(248,250,252,.96));min-height:100vh}
+.hero{
+  color:#fff;
+  padding:28px 18px 22px;
+  background:
+    linear-gradient(135deg, rgba(15,23,42,.98), rgba(30,64,175,.94) 58%, rgba(37,99,235,.96));
+  position:relative;
+  overflow:hidden;
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:999px;
+  filter:blur(2px);
+  opacity:.24;
+}
+.hero:before{width:260px;height:260px;background:#22c55e;top:-120px;right:-100px}
+.hero:after{width:220px;height:220px;background:#8b5cf6;bottom:-120px;left:-90px}
+.eyebrow{position:relative;z-index:1;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#b6c7ff;margin-bottom:8px}
+.hero h1{position:relative;z-index:1;font-size:28px;line-height:1.18;margin-bottom:10px;letter-spacing:-.02em}
+.lead{
+  position:relative;z-index:1;
+  font-size:15px;color:#eaf2ff;
+  border-left:4px solid #22c55e;
+  background:rgba(255,255,255,.08);
+  border-radius:10px;padding:12px 13px;
+  backdrop-filter:blur(8px);
+}
+.stats{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px
+}
+.stat{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;padding:8px 6px;text-align:center;font-size:12px;color:#dbeafe
+}
+.stat b{display:block;font-size:18px;color:#fff;margin-bottom:2px}
+.section{padding:16px 14px 0}
+.section h2{
+  font-size:18px;
+  margin:8px 0 12px;
+  color:#0f172a;
+  border-left:4px solid #16a34a;
+  padding-left:10px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  margin-bottom:14px;
+  box-shadow:0 8px 22px rgba(15,23,42,.05);
+  overflow:hidden;
+}
+.media{margin:0;background:#eef2f7;border-bottom:1px solid var(--line)}
+.news-img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.media figcaption{font-size:11px;color:#6b7280;background:#fff;padding:6px 10px}
+.body{padding:14px 15px 16px}
+.tag{
+  display:inline-block;font-size:12px;font-weight:800;
+  border-radius:999px;padding:3px 9px;margin-bottom:9px;
+}
+.t1{background:#e0f2fe;color:#075985}
+.t2{background:#ecfdf5;color:#047857}
+.t3{background:#fff7ed;color:#c2410c}
+.t4{background:#ffe4e6;color:#be123c}
+.t5{background:#ede9fe;color:#6d28d9}
+.t6{background:#f1f5f9;color:#334155}
+.card h3{font-size:17px;line-height:1.42;margin-bottom:8px;color:#0f172a}
+.card h3 a{color:#0f172a;text-decoration:none}
+.meta{font-size:12px;color:#6b7280;margin-bottom:10px}
+.summary{font-size:14px;color:#334155}
+.why{
+  margin-top:10px;
+  background:#f8fafc;
+  border-left:3px solid #16a34a;
+  border-radius:0 10px 10px 0;
+  padding:9px 11px;
+  font-size:13px;
+  color:#14532d;
+}
+.links{font-size:13px;margin-top:10px}
+.links a{color:#2563eb;text-decoration:none;margin-right:10px}
+.footer{
+  background:#0f172a;
+  color:#dbeafe;
+  margin-top:18px;
+  padding:20px 16px;
+  font-size:13px;
+}
+.footer a{color:#93c5fd}
+@media (max-width:420px){
+  .hero h1{font-size:25px}
+  .lead{font-size:14px}
+  .section{padding-left:12px;padding-right:12px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div class="eyebrow">AI 热点早报 · 2026年5月26日</div>
+  <h1>AI 不再拼嘴皮子，开始拼接口、现金流和谁先被替换</h1>
+  <div class="lead">这期最明显的变化，不是模型更会聊天，而是它们开始围着终端、合同、推荐系统和芯片供应链抢位置。过去 24 小时里，AI 先把“工具层”拽进门，再把“人力层”和“分发层”往外挤。</div>
+  <div class="stats">
+    <div class="stat"><b>8</b>条精选</div>
+    <div class="stat"><b>8</b>张配图</div>
+    <div class="stat"><b>8</b>句代价提醒</div>
+  </div>
+</header>
+
+<section class="section">
+  <h2>一、新模型与工具层</h2>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="DeepSeek Reasonix 终端编码代理主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFkNGVkOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzdjM2FlZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjMGYxNzJhIi8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiPuS8oOWHulJlYXNvbml4PC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMjczIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNjIiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiPkRlZXBTZWVrIFJlYXNvbml4PC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMzM0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjg0KSI+QUkgb290aGVzIGludG8gaW5mcmFzdHJ1Y3R1cmUsIG5vdCBqdXN0IGNoYXQuPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMzg0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjg0KSI+VG9vbGluZywgd29ya2Zsb3csIGFuZCBhdHRlbnRpb24gYXJlIHRoZSBuZXcgYmF0dGxlZmllbGQuPC90ZXh0PgogIDxnIG9wYWNpdHk9Ii45NSI+CiAgICA8cmVjdCB4PSI3MzQiIHk9IjE1OCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyNjAiIHJ4PSIyNiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMTIpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjE4KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyMDQiIHdpZHRoPSIyMzYiIGhlaWdodD0iMzYiIHJ4PSIxOCIgZmlsbD0idXJsKCNnKSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyNTgiIHdpZHRoPSIxNzQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC45KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyOTIiIHdpZHRoPSIyMTQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC43MikiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMzI2IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNTYpIi8+CiAgICA8Y2lyY2xlIGN4PSI4MzciIGN5PSI0ODIiIHI9IjU4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cGF0aCBkPSJNODEwIDQ4MmwyMyAyMiA0Ny01NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8L2c+CiAgPHRleHQgeD0iMTMyIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5NQ1AgPSBBSSDnmoTmiYvohJogwrcgY2FjaGUgPSDph43lpI3kuIrkuIvmlofnmoTotKbmnKwgwrcgSEJNID0g6auY6YCf5YaF5a2YPC90ZXh0Pgo8L3N2Zz4=">
+      <figcaption>图片来源：本报告基于 Reasonix 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t1">新模型/产品</span>
+      <h3><a href="https://esengine.github.io/DeepSeek-Reasonix/" target="_blank" rel="noopener noreferrer">DeepSeek Reasonix 抢进终端：把 AI 的手脚和缓存一并锁死</a></h3>
+      <div class="meta">Reasonix · 2026-05-25</div>
+      <p class="summary">Reasonix 是个 DeepSeek 原生的终端编码代理，MCP=AI 的手脚，prefix-cache=把重复上下文留在账本里；它把长会话的 token 成本压下去，不靠“更会聊”，靠“少重算”。最急的是天天跑终端的开发者和团队，受益的是低成本 agent 和开放工具链，承压的是只卖聊天式编码的产品。</p>
+      <div class="why"><b>代价提醒：</b>如果你的代码助手还在每轮把前文整段重算，长任务会先被账单打断，真正能持续跑的代理会把你挤出同一条工作流。</div>
+      <div class="links"><a href="https://esengine.github.io/DeepSeek-Reasonix/" target="_blank" rel="noopener noreferrer">原文</a><a href="https://news.ycombinator.com/front?day=2026-05-25" target="_blank" rel="noopener noreferrer">HN 讨论</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="Anthropic 与 Stainless 工具链主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzE0YjhhNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzI1NjNlYiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjMDgxYjFmIi8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiPlNESyDCtyBNQ1Agc2VydmVyPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMjczIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNjIiIGZvbnQtd2VpZ2h0PSI4MDAiIGZpbGw9IiNmZmZmZmYiPkFudGhyb3BpYyDDlyBTdGFpbmxlc3M8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIzMzQiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuODQpIj5BSSBpcyB0dXJuaW5nIGludG8gaW5mcmFzdHJ1Y3R1cmUsIG5vdCBqdXN0IGNoYXQuPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMzg0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjg0KSI+VG9vbGluZywgd29ya2Zsb3csIGFuZCBhdHRlbnRpb24gYXJlIHRoZSBuZXcgYmF0dGxlZmllbGQuPC90ZXh0PgogIDxnIG9wYWNpdHk9Ii45NSI+CiAgICA8cmVjdCB4PSI3MzQiIHk9IjE1OCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyNjAiIHJ4PSIyNiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMTIpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjE4KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyMDQiIHdpZHRoPSIyMzYiIGhlaWdodD0iMzYiIHJ4PSIxOCIgZmlsbD0idXJsKCNnKSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyNTgiIHdpZHRoPSIxNzQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC45KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyOTIiIHdpZHRoPSIyMTQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC43MikiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMzI2IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNTYpIi8+CiAgICA8Y2lyY2xlIGN4PSI4MzciIGN5PSI0ODIiIHI9IjU4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cGF0aCBkPSJNODEwIDQ4MmwyMyAyMiA0Ny01NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8L2c+CiAgPHRleHQgeD0iMTMyIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5NQ1AgPSBBSSDnmoTmiYvohJsgwrcgSWRLIGdlbiDlr7nmiYsgwrcgY29ubmVjdG9ycyDkvobljLo8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSI1NTYiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5BZ2VudHMgZ2V0IGJvdGggdGhlIGxhc2QgbWlsZSBhbmQgdGhlIGtpdGNoZW4gc2luay48L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSI1OTIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5IaW50OiBJZiB5b3UgZG9u4oCZdCBvd25cbiB0aGUgY29ubmVjdG9yIGxheWVyLCB5b3UgZXh0ZXJuYWxpemUgdGhlIG1vYXRzPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iNjI4IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjY4KSI+Zm9yIGFsbCB0aGUgY2hhdC1hY2Nlc3MgaG9rZWQgb24gdG8gQ2xhdWRlLg==">
+      <figcaption>图片来源：本报告基于 Anthropic Stainless 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t2">新模型/工具层</span>
+      <h3><a href="https://www.anthropic.com/news/anthropic-acquires-stainless" target="_blank" rel="noopener noreferrer">Anthropic 吞下 Stainless：MCP 手脚的入口被它攥住了</a></h3>
+      <div class="meta">Anthropic · 2026-05-18</div>
+      <p class="summary">Stainless 把 API spec 变成 SDK、CLI 和 MCP server，MCP=AI 的手脚；Anthropic 直接把这层“连接器工厂”收进门里。说白了，模型不只要会答，还得摸到数据和工具。最急的是做连接层的第三方，受益的是要把 Claude 接进业务系统的企业，承压的是只靠模型本体赚钱的玩家。</p>
+      <div class="why"><b>代价提醒：</b>如果你只盯着模型跑分，不去抢工具层和连接层，最终只能给别人做接口打工，不能控制 AI 真正触达业务的路径。</div>
+      <div class="links"><a href="https://www.anthropic.com/news/anthropic-acquires-stainless" target="_blank" rel="noopener noreferrer">原文</a><a href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer">新闻室</a></div>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <h2>二、企业落地</h2>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="Docusign AI 助手和合约工作流主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZiNzE4NSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjZmZmN2VkIi8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiMxZjI5MzciIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiPuW3ruS9vuaJi+iEmiDlt6XnlKg8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIyNzMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+RG9jdXNpZ24gSXJpczwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjMzNCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC44NCkiPkNvbnRyYWN0cyBhcmUgYmVpbmcgdHVybmVkIGludG8gY2hlY2tsaXN0cyBhbmQgYWdlbnRzLjwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjM4NCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC44NCkiPk1DUCA9IEFJIOeahOaJi+iEmiBhaWdubWVudCB3b3JrZmxvdyBpcyB0aGUgbmV3IHN0YWNrcy48L3RleHQ+CiAgPGcgb3BhY2l0eT0iLjk1Ij4KICAgIDxyZWN0IHg9IjczNCIgeT0iMTU4IiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjI2MCIgcng9IjI2IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMTgpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjIwNCIgd2lkdGg9IjIzNiIgaGVpZ2h0PSIzNiIgcng9IjE4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjI1OCIgd2lkdGg9IjE3NCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjkpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjI5MiIgd2lkdGg9IjIxNCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjcyKSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIzMjYiIHdpZHRoPSIxOTAiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC41NikiLz4KICAgIDxjaXJjbGUgY3g9IjgzNyIgY3k9IjQ4MiIgcj0iNTgiIGZpbGw9InVybCgjZykiLz4KICAgIDxwYXRoIGQ9Ik04MTAgNDgybDIzIDIyIDQ3LTU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMjAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwvZz4KICA8dGV4dCB4PSIxMzIiIHk9IjUyMCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC42OCkiPk1DUCA9IEFJIOeahOaJi+iEmiDpgqPlnKjlpL7nqJQg4oCTIEFnZW50IFN0dWRpbyDrp5HnqZ3lrZg8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSI1NTYiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5UaGUgYWdlbnQgbW92ZXMgZnJvbSBkcmFmdCB0byBleGVjdXRpb24gaW4gb25lIGxvb3AuPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iNTkyIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjY4KSI+SWYgeW91IHN0aWxsIGFwcHJvdmUgY29udHJhY3RzIG1hbnVhbGx5LCBjb21wZXRpdG9ycyB3aWxsIHByaWNlIHlvdSBsaWtlIGEgc2xvdyB0YXNrLWF1dG9tYXRpb24gc3RvcC48L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSI2MjgiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5IaW50OiBJcmlzID0gY29udHJhY3QgQUkgcmlnaHQgaW5zaWRlIHRoZSBmbG93Lg==">
+      <figcaption>图片来源：本报告基于 Docusign 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t3">企业落地</span>
+      <h3><a href="https://www.docusign.com/company/news-center/docusign-unveils-ai-assistant-and-agents-to-power-the-next-era-of-agreement-work" target="_blank" rel="noopener noreferrer">Docusign 下场卡位：合同流被 AI 代理接管</a></h3>
+      <div class="meta">Docusign · 2026-05-21</div>
+      <p class="summary">Docusign 把 Iris、AI assistant、agents 和 Agent Studio 摆上台面，Iris=合同里的 AI 大脑，MCP=AI 的手脚。翻成白话，就是让合同、审批、销售和招聘不再靠邮件来回拖。最急的是法务、销售和 HR，受益的是能把合同和业务系统打通的企业，承压的是还在手工催批、逐份审合同的中间环节。</p>
+      <div class="why"><b>代价提醒：</b>如果你的团队还把合同当成 PDF 文件夹而不是可编排流程，AI 会先替别人缩短签约周期，再把你的客户耐心磨没。</div>
+      <div class="links"><a href="https://www.docusign.com/company/news-center/docusign-unveils-ai-assistant-and-agents-to-power-the-next-era-of-agreement-work" target="_blank" rel="noopener noreferrer">原文</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="ClickUp 组织重组与 AI 裁员主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2VmNDQ0NCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y5NzMxNiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjMTExODI3Ii8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiNmZGU2OGEiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxMTE4MjciPjIyJSBjdXRzIC0gMTYgYnVybnM8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIyNzMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+Q2xpY2tVcCBBSSBsYXlvZmY8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIzMzQiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuODQpIj5TdGFmZiBnZXQgcmVwbGFjZWQgd2l0aCBzb2Z0d2FyZSB3aXRoIGxvZ3Mgb24gaXQ8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIzODQiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuODQpIj5Ub29saW5nLCB3b3JrZmxvdywgYW5kIGF0dGVudGlvbiBhcmUgdGhlIG5ldyBiYXR0bGVmaWVsZC48L3RleHQ+CiAgPGcgb3BhY2l0eT0iLjk1Ij4KICAgIDxyZWN0IHg9IjczNCIgeT0iMTU4IiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjI2MCIgcng9IjI2IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMTgpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjIwNCIgd2lkdGg9IjIzNiIgaGVpZ2h0PSIzNiIgcng9IjE4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjI1OCIgd2lkdGg9IjE3NCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjkpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjI5MiIgd2lkdGg9IjIxNCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjcyKSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIzMjYiIHdpZHRoPSIxOTAiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC41NikiLz4KICAgIDxjaXJjbGUgY3g9IjgzNyIgY3k9IjQ4MiIgcj0iNTgiIGZpbGw9InVybCgjZykiLz4KICAgIDxwYXRoIGQ9Ik04MTAgNDgybDIzIDIyIDQ3LTU0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMjAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDwvZz4KICA8dGV4dCB4PSIxMzIiIHk9IjUyMCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC42OCkiPkMxOHAgPyBOby4gVGhlIG5ldyB0aGluZyBpcyB0aGUgZW1haWwgeW91IGRvbuKAmXQgc2VuZDwvdGV4dD4KICA8L3N2Zz4=">
+      <figcaption>图片来源：本报告基于 ClickUp 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t4">企业落地</span>
+      <h3><a href="https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/" target="_blank" rel="noopener noreferrer">ClickUp 砍人押注 AI：22% 裁员换来 100x 叙事</a></h3>
+      <div class="meta">TechCrunch · 2026-05-25</div>
+      <p class="summary">ClickUp 说自己要做“100x org”，动作却是裁掉 22% 人手，再塞进约 3000 个内部 AI 代理去跑任务。翻成人话，就是把一部分支持、运营和项目流转交给软件。最急的是中层管理和交付团队，受益的是能榨出更多人效的高成长公司，承压的是只负责搬运和跟进的人。</p>
+      <div class="why"><b>代价提醒：</b>如果你的团队还把 AI 当演示工具，不让它真正接单、跑流程、写回执，下一轮成本压缩就会先压到人头上。</div>
+      <div class="links"><a href="https://techcrunch.com/2026/05/25/what-clickups-mass-layoff-tells-us-about-the-future-of-work/" target="_blank" rel="noopener noreferrer">原文</a></div>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <h2>三、公共信号与治理</h2>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="教皇与 AI 治理主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzhiNWNmNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjMmIwZjE0Ii8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiNmZmY3ZWQiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMyYjBmMTQiPuWPsOS4i+S4gOS4quW8j+WvhOWQj+iAgDwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjI3MyIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjYyIiBmb250LXdlaWdodD0iODAwIiBmaWxsPSIjZmZmZmZmIj5NYWduaWZpY2EgSHVtYW5pdGFzPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMzM0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjg0KSI+VGhlIHF1ZXN0aW9uIGlzbid0IG1vZGVscyBhbG9uZTogd2hvIGdvdmVybnMgdGhlbT88L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIzODQiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuODQpIj5Qb3dlciwgdHJhbnNwYXJlbmN5LCBhbmQgb2Zmc2V0cyBhcmUgbm93IHRoZSBzdGFrZS48L3RleHQ+CiAgPGcgb3BhY2l0eT0iLjk1Ij4KICAgIDxyZWN0IHg9IjczNCIgeT0iMTU4IiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjI2MCIgcng9IjI2IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC4xMikiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMTgpIi8+CiAgICA8Y2lyY2xlIGN4PSI4MzciIGN5PSI0ODIiIHI9IjU4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cGF0aCBkPSJNODEwIDQ4MmwyMyAyMiA0Ny01NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8L2c+CiAgPHRleHQgeD0iMTMyIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5BSSbrmK/np5HplK7nmoTlj6/lj7Dku4PnrYnkuK3lj7cg4oCTIOWkseiJqueahOivr+e7hDwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjU1NiIgZm9udC1mYWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjY4KSI+SWYgeW91IGNhbid0IGV4cGxhaW4gdGhlIHJ1bGVzLCBiaWdnZXIgY2xpZW50cyB3aWxsLjwvdGV4dD4KICA8L3N2Zz4=">
+      <figcaption>图片来源：本报告基于 Pope / Anthropic 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t5">公共治理</span>
+      <h3><a href="https://www.anthropic.com/news/chris-olah-pope-leo-encyclical" target="_blank" rel="noopener noreferrer">教皇把 AI 拉回权力桌：谁能监管算法成了新战场</a></h3>
+      <div class="meta">Anthropic · 2026-05-25</div>
+      <p class="summary">Pope Leo XIV 的《Magnifica humanitas》说的不是“模型多强”，而是技术权力会向少数资源、数据和话语权持有者倾斜。白话翻译：AI 不是只有内容真伪问题，还是权力分配问题；最急的是大模型公司和平台，受益的是监管、审计和内容溯源，承压的是只想靠黑箱吃红利的人。</p>
+      <div class="why"><b>代价提醒：</b>如果你的 AI 只会堆效果，不肯讲清审核链路和责任归属，越大的客户越不会把关键流程交给你。</div>
+      <div class="links"><a href="https://www.anthropic.com/news/chris-olah-pope-leo-encyclical" target="_blank" rel="noopener noreferrer">原文</a><a href="https://techcrunch.com/2026/05/25/the-popes-ai-encyclical-isnt-really-about-ai/" target="_blank" rel="noopener noreferrer">TechCrunch 解读</a></div>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <h2>四、研究与开源</h2>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="LLM 代理约束衰减研究主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzhiNWNmNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA2YjZkNCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjMGIxMDIwIi8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiNmOGZhZmMiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwYjEwMjAiPkxMTSBhZ2VudHMg4oaTIMKnIHJpc2s8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIyNzMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+Q29uc3RyYWludCBEZWNheTwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjMzNCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC44NCkiPkJnZ3JvdW5kIHJ1bGVzIGFyZSB3aGF0IG1ha2UgdGhlIGFnZW50IGJyb2tlbiBvciBzb2xpZDwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjM4NCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC44NCkiPk9uY2UgdGhlIHBhY2thZ2UgbmFtZXMgZ2V0IGhhbGx1Y2luYXRlZCwgc2VjdXJpdHkgYWN0cyBmYXN0LjwvdGV4dD4KICA8ZyBvcGFjaXR5PSIuOTUiPgogICAgPHJlY3QgeD0iNzM0IiB5PSIxNTgiIHdpZHRoPSIzMjAiIGhlaWdodD0iMjYwIiByeD0iMjYiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjEyKSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xOCkiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMjA0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjM2IiByeD0iMTgiIGZpbGw9InVybCgjZykiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMjU4IiB3aWR0aD0iMTc0IiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuOSkiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMjkyIiB3aWR0aD0iMjE0IiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNzIpIi8+CiAgICA8cmVjdCB4PSI3NzYiIHk9IjMyNiIgd2lkdGg9IjE5MCIgaGVpZ2h0PSIxNiIgcng9IjgiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjU2KSIvPgogICAgPGNpcmNsZSBjeD0iODM3IiBjeT0iNDgyIiByPSI1OCIgZmlsbD0idXJsKCNnKSIvPgogICAgPHBhdGggZD0iTTgxMCA0ODJsMjMgMjIgNDctNTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjEzMiIgeT0iNTIwIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjY4KSI+UGFja2FnZSBuYW1lcyB0aGF0IGxvb2sgcmlnaHQgaW4gdGV4dCBjYW4gc3RpbGwgYmUgZmFrZTwvdGV4dD4KICA8L3N2Zz4=">
+      <figcaption>图片来源：本报告基于 Constraint Decay 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t6">研究与开源</span>
+      <h3><a href="https://arxiv.org/abs/2605.06445" target="_blank" rel="noopener noreferrer">LLM 代理在后端撞墙：包名胡编不是小毛病，是投毒入口</a></h3>
+      <div class="meta">arXiv · 2026-05-07 / HN 热议 · 2026-05-24</div>
+      <p class="summary">这篇论文把“constraint decay”讲得很直白：结构要求一多，代理就开始掉链子。更刺眼的是，模型会自己编出看似合理的包名，给 slopsquatting（把假包名抢注成恶意包）留了门缝。最急的是安全团队和依赖管理，受益的是做代码审计/供应链防护的人，承压的是把 AI 直接放进生产代码链路的团队。</p>
+      <div class="why"><b>代价提醒：</b>如果你让 AI 直接写后端却不加静态校验、依赖白名单和人工复核，迟早会把一个“看起来能跑”的漏洞送进生产。</div>
+      <div class="links"><a href="https://arxiv.org/abs/2605.06445" target="_blank" rel="noopener noreferrer">arXiv</a><a href="https://news.ycombinator.com/front?day=2026-05-24" target="_blank" rel="noopener noreferrer">HN 讨论</a></div>
+    </div>
+  </article>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="AI 芯片内存成本与 HBM 主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzA2YjZkNCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2E4NTVmNyIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjMGYxNzJhIi8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiNlMmU4ZjAiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwZjE3MmEiPkhCTSAnNjMlIOKAmSB0aGUgbmV3IGJvdHRsZW5lY2s8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIyNzMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2ZmZmZmZiI+SEJNIGF0IDYzJTwvdGV4dD4KICA8dGV4dCB4PSIxMzIiIHk9IjMzNCIgZm9udC1mYW1pbHk9IkFyaWFsLEhlbHZldGljYSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC44NCkiPk1lbW9yeSBpcyBub3cgY29tcGV0aW5nIHdpdGggR1BVcyBmb3IgY29zdCBhbmQgc2NkaW1lbnRpb24uPC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMzg0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjg0KSI+TXlzdGljYWwgR1BVIG1hdGhzIG5vdGhpbmcgaWYgdGhlIG1lbW9yeSBzaWxiZXIgaXMgdGhlIGJpbGwuPC90ZXh0PgogIDxnIG9wYWNpdHk9Ii45NSI+CiAgICA8cmVjdCB4PSI3MzQiIHk9IjE1OCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyNjAiIHJ4PSIyNiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMTIpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjE4KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyMDQiIHdpZHRoPSIyMzYiIGhlaWdodD0iMzYiIHJ4PSIxOCIgZmlsbD0idXJsKCNnKSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyNTgiIHdpZHRoPSIxNzQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC45KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyOTIiIHdpZHRoPSIyMTQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC43MikiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMzI2IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNTYpIi8+CiAgICA8Y2lyY2xlIGN4PSI4MzciIGN5PSI0ODIiIHI9IjU4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cGF0aCBkPSJNODEwIDQ4MmwyMyAyMiA0Ny01NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8L2c+CiAgPHRleHQgeD0iMTMyIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5IQk0gPSBoaWdoLWJhbmR3aWR0aCBtZW1vcnksIG5vdCBqdXN0IEdQVSBzcGVlZC48L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSI1NTYiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5JZiB5b3Ugb25seSBidXkgY29tcHV0ZSwgeW91IG1pc3MgdGhlIGRpZXQgdGhhdCBwYXkgZm9yIGl0LjwvdGV4dD4KICA8L3N2Zz4=">
+      <figcaption>图片来源：本报告基于 Epoch AI 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t6">研究与开源</span>
+      <h3><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares" target="_blank" rel="noopener noreferrer">HBM 把 AI 芯片顶到 63%：内存成了真正的贵货</a></h3>
+      <div class="meta">Epoch AI · 2026-05-21</div>
+      <p class="summary">Epoch AI 的结论很直白：HBM=高速内存，它已经吃掉 AI 芯片组件成本的 63%。这意味着算力大战不只看 GPU 核心，更看内存和封装谁先卡脖子。最急的是云厂商和芯片设计方，受益的是存储和封装供应链，承压的是还以为“买更多 GPU 就能解决一切”的团队。</p>
+      <div class="why"><b>代价提醒：</b>如果你的 AI 成本模型只按算力算，不把内存、封装和供货周期算进去，预算会在硬件账单上先翻车。</div>
+      <div class="links"><a href="https://epoch.ai/data-insights/ai-chip-component-cost-shares" target="_blank" rel="noopener noreferrer">原文</a></div>
+    </div>
+  </article>
+</section>
+
+<section class="section">
+  <h2>五、AI × 地产营销</h2>
+
+  <article class="card">
+    <figure class="media">
+      <img class="news-img" alt="AI 与商业地产线索分发主题图" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjY3NSIgdmlld0JveD0iMCAwIDEyMDAgNjc1Ij4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzBmMTcyYSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzI1NjNlYiIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJzIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIj48ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMTQiIHN0ZERldmlhdGlvbj0iMTgiIGZsb29kLWNvbG9yPSIjMDAwIiBmbG9vZC1vcGFjaXR5PSIuMjgiLz48L2ZpbHRlcj4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjc1IiBmaWxsPSIjZjNlZmU3Ii8+CiAgPGNpcmNsZSBjeD0iMTY1IiBjeT0iMTIwIiByPSIxMzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xOCIvPgogIDxjaXJjbGUgY3g9IjEwNDAiIGN5PSI5NSIgcj0iMTcwIiBmaWxsPSJ1cmwoI2cpIiBvcGFjaXR5PSIuMTgiLz4KICA8Y2lyY2xlIGN4PSIxMDMwIiBjeT0iNTk1IiByPSIxNzAiIGZpbGw9InVybCgjZykiIG9wYWNpdHk9Ii4xMiIvPgogIDxyZWN0IHg9IjkyIiB5PSI5NiIgd2lkdGg9IjEwMTYiIGhlaWdodD0iNDgzIiByeD0iMzQiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjA5KSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xNikiIGZpbHRlcj0idXJsKCNzKSIvPgogIDxyZWN0IHg9IjEzMiIgeT0iMTM0IiB3aWR0aD0iMjM2IiBoZWlnaHQ9IjQyIiByeD0iMjEiIGZpbGw9IiNiNDUzMDkiIG9wYWNpdHk9Ii45MiIvPgogIDx0ZXh0IHg9IjE1NCIgeT0iMTYzIiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiPmJyb2tlciBwaWNrcyDmnYPlipvuabk8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIyNzMiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSI2MiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iIzExMTgyNyI+QUkgw5cgQ1JFIHZpc2liaWxpdHk8L3RleHQ+CiAgPHRleHQgeD0iMTMyIiB5PSIzMzQiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuODQpIj5XaG8gZ2V0cyBub3RtZW50aW9uIGluIENoYXRHUFQsIENsYXVkZSwgYW5kIG90aGVyIHNvdXJjZXM/PC90ZXh0PgogIDx0ZXh0IHg9IjEzMiIgeT0iMzg0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsLjg0KSI+VGhlIG5ldyBmaWdodCBpcyB3aG8gZ2V0cyBub21pbmF0ZWQsIG5vdCBqdXN0IHdobyBjbG9zZXMuPC90ZXh0PgogIDxnIG9wYWNpdHk9Ii45NSI+CiAgICA8cmVjdCB4PSI3MzQiIHk9IjE1OCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyNjAiIHJ4PSIyNiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuMTIpIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjE4KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyMDQiIHdpZHRoPSIyMzYiIGhlaWdodD0iMzYiIHJ4PSIxOCIgZmlsbD0idXJsKCNnKSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyNTgiIHdpZHRoPSIxNzQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC45KSIvPgogICAgPHJlY3QgeD0iNzc2IiB5PSIyOTIiIHdpZHRoPSIyMTQiIGhlaWdodD0iMTYiIHJ4PSI4IiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LC43MikiLz4KICAgIDxyZWN0IHg9Ijc3NiIgeT0iMzI2IiB3aWR0aD0iMTkwIiBoZWlnaHQ9IjE2IiByeD0iOCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNTYpIi8+CiAgICA8Y2lyY2xlIGN4PSI4MzciIGN5PSI0ODIiIHI9IjU4IiBmaWxsPSJ1cmwoI2cpIi8+CiAgICA8cGF0aCBkPSJNODEwIDQ4MmwyMyAyMiA0Ny01NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8L2c+CiAgPHRleHQgeD0iMTMyIiB5PSI1MjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNjgpIj5BSSByZWZlcnJhbHMgcmV3cmlyZSB0aGUgY2FwaXRhbCBtYXJrZXQ6IGxpbmsgZmxvdywgYmxvZywgYW5kIGF1dGhvcml0eTwvdGV4dD4KICA8L3N2Zz4=">
+      <figcaption>图片来源：本报告基于 Bisnow 主题生成的合规 SVG 配图</figcaption>
+    </figure>
+    <div class="body">
+      <span class="tag t3">AI × 地产营销</span>
+      <h3><a href="https://www.bisnow.com/los-angeles/news/ai/brokers-ai-chatgpt-claude-recommendations-leads-deals-134714" target="_blank" rel="noopener noreferrer">AI 开始围猎地产经纪：谁能被模型点名，谁就先吃到线索</a></h3>
+      <div class="meta">Bisnow · 2026-05-25</div>
+      <p class="summary">Bisnow 这篇讲得很现实：商业地产里的“被 AI 推荐”正在变成新的曝光入口，ChatGPT、Claude 之类模型开始替客户筛选 broker。白话翻译就是，AI 搜索里谁更像“答案”，谁就更容易拿到注意力。最急的是靠个人品牌吃饭的经纪和营销团队，受益的是懂内容分发和搜索可见性的 brokerages，承压的是还只会堆海报和冷电话的人。</p>
+      <div class="why"><b>代价提醒：</b>如果你的地产营销还停在海报、电话和线下活动，AI 先抢走的是问询，再抢走的是成交前的那次点名。</div>
+      <div class="links"><a href="https://www.bisnow.com/los-angeles/news/ai/brokers-ai-chatgpt-claude-recommendations-leads-deals-134714" target="_blank" rel="noopener noreferrer">原文</a></div>
+    </div>
+  </article>
+</section>
+
+<footer class="footer">
+  <b>说明：</b>本页按 Asia/Shanghai 当天日期 2026-05-26 生成，配图均为本报告自制的合规 SVG，不抓取未授权新闻图片。若个别原文页面临时变化，请优先以链接源站内容为准。
+</footer>
+</main>
+</body>
+</html>
