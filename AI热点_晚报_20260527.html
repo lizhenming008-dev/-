@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点晚报 | 2026-05-27</title>
+<style>
+:root{
+  --bg:#08111f;
+  --panel:#101b2f;
+  --panel-2:#0f1728;
+  --line:rgba(173,200,255,.16);
+  --text:#e9eefc;
+  --muted:#96a8c8;
+  --accent:#7dd3fc;
+  --accent-2:#f8a7ff;
+  --good:#56e39f;
+  --warn:#ffb86b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(125,211,252,.18), transparent 24%),
+    radial-gradient(circle at top right, rgba(248,167,255,.14), transparent 22%),
+    linear-gradient(180deg, #050914 0%, #08111f 36%, #07101b 100%);
+  color:var(--text);
+  line-height:1.7;
+}
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:14px 14px 28px;
+}
+.cover{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg, rgba(18,29,51,.94), rgba(10,18,35,.96));
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px 18px 18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.32);
+}
+.cover:before{
+  content:"";
+  position:absolute;
+  inset:-60px -60px auto auto;
+  width:160px;height:160px;
+  background:radial-gradient(circle, rgba(125,211,252,.24), transparent 62%);
+  filter:blur(2px);
+  pointer-events:none;
+}
+.kicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.kicker b{
+  padding:2px 8px;
+  border:1px solid rgba(125,211,252,.32);
+  border-radius:999px;
+  background:rgba(125,211,252,.08);
+}
+.cover h1{
+  margin:10px 0 10px;
+  font-size:30px;
+  line-height:1.08;
+  letter-spacing:.02em;
+}
+.cover .meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:12px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+.lede{
+  margin-top:10px;
+  padding:14px 14px 12px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(248,167,255,.08));
+  border:1px solid rgba(173,200,255,.18);
+  color:#edf3ff;
+}
+.lede strong{color:#fff}
+.trend{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.section{
+  margin-top:18px;
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:16px;
+  letter-spacing:.02em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section h2 span{
+  display:inline-flex;
+  width:10px;height:10px;border-radius:999px;
+  background:currentColor;
+  box-shadow:0 0 18px currentColor;
+}
+.cards{
+  display:grid;
+  gap:12px;
+}
+.card{
+  background:linear-gradient(180deg, rgba(17,28,49,.98), rgba(13,22,40,.98));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.06em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  line-height:1.35;
+  color:#fff;
+}
+figure{
+  margin:0 0 10px;
+}
+figure img{
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0d1524;
+}
+figcaption{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+figcaption a{
+  color:#cfe3ff;
+  text-decoration:none;
+}
+.summary,.translation,.cost{
+  margin:8px 0 0;
+  font-size:14px;
+  color:#d8e2f7;
+}
+.translation{
+  color:#b8c8e3;
+}
+.cost{
+  color:#ffe0b5;
+}
+.source{
+  display:inline-block;
+  margin-top:10px;
+  font-size:12px;
+  color:#8fc8ff;
+  text-decoration:none;
+  word-break:break-all;
+}
+.footer{
+  margin-top:18px;
+  padding:16px 14px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(248,167,255,.08), rgba(86,227,159,.07));
+  border:1px solid rgba(173,200,255,.16);
+}
+.footer h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+.stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.stats span{
+  font-size:11px;
+  color:#cde0ff;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  padding:4px 8px;
+  border-radius:999px;
+}
+.note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+@media (min-width:700px){
+  .wrap{padding:16px 18px 36px}
+  .cover{padding:24px}
+  .cover h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cover">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 夜报</span></div>
+    <h1>AI热点晚报</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-05-27</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：8 条</span>
+      <span class="chip">配图：8 / 8</span>
+    </div>
+    <div class="lede">
+      <strong>今天的主线不是“模型更聪明了”，而是“模型开始进入路由层、桌面层、记忆层和营销层”。</strong>
+      AI 的价值重心继续往两头滑：一头是推理账本和中间层调度，另一头是能真正替人干活的 Agent 和内容流水线。
+    </div>
+    <div class="trend">晚间判断：谁能把模型当零件切换、把流程当流水线拆开、把长对话压成可复用记忆，谁就开始吃掉旧工作流的利润。</div>
+  </header>
+
+  <main id="app"></main>
+
+  <section class="footer">
+    <h3>今日锐评</h3>
+    <div>AI 这波变化很清楚：大模型本身还在卷，但真正决定生意的，已经是路由、护栏、记忆、审计和最后一公里的执行层。如果你的团队还在把“会聊天”当成 AI 能力上限，就会在成本、速度和合规上一起失血。</div>
+    <div class="stats">
+      <span>8 条精选</span><span>8 张 16:9 配图</span><span>0 付费墙图</span><span>0 明显破图</span>
+    </div>
+    <div class="note">生成时间：2026-05-27 09:07 CST</div>
+  </section>
+</div>
+
+<script>
+const sections = [
+  {
+    title: '新模型 / 新产品',
+    color: '#7dd3fc',
+    items: [
+      {
+        eyebrow: '新产品',
+        title: 'Launch HN: Minicor 把 Windows 桌面自动化拧成规模化流水线',
+        imageTitle: 'Minicor',
+        imageSub: 'Windows desktop automations at scale',
+        accent: '#7dd3fc',
+        icon: '▣',
+        alt: 'Minicor Windows 桌面自动化主题图',
+        summary: 'RPA 在这里不是“更聪明的脚本”，而是让 AI 直接接管鼠标、键盘和窗口；最急的是还靠人工点后台系统的运营和 IT，最受益的是能把重复工单压成模板的团队，最承压的是外包和共享服务中心。',
+        translation: '如果你的团队还在手工处理一堆 Windows 后台动作，就会先被这类“桌面工厂”吃掉效率红利，再被迫补自动化。',
+        cost: '如果你的团队还靠人工点点点，重复工单会先变成最贵的隐性成本。',
+        sourceText: 'Hacker News / Minicor',
+        sourceUrl: 'https://news.ycombinator.com/front'
+      }
+    ]
+  },
+  {
+    title: '工具与 Agent',
+    color: '#f8a7ff',
+    items: [
+      {
+        eyebrow: '编码习惯',
+        title: 'Nolan Lawson 把 AI 编码往回拽：先慢，再准',
+        imageTitle: 'Write better code more slowly',
+        imageSub: 'Tests first, code second',
+        accent: '#f8a7ff',
+        icon: '⌘',
+        alt: 'AI 编码先写护栏的主题图',
+        summary: '这不是反 AI，而是把“AI 直接吐代码”翻译成“先把测试、类型和约束写死，再让模型填空”；最急的是赶工期的工程团队，受益的是愿意把返工率压下去的人，承压的是只看代码行数、不看维护成本的管理层。',
+        translation: '如果你的团队只追产出不先补护栏，AI 只会把技术债写得更快。',
+        cost: '如果你的团队只看交付速度，不先补测试和类型护栏，后面会为返工和事故付双倍账。',
+        sourceText: 'nolanlawson.com',
+        sourceUrl: 'https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/'
+      },
+      {
+        eyebrow: '工程口径',
+        title: 'Hacker News 甩出一句真相：给 Agent 用“乖语言”',
+        imageTitle: 'Boring languages',
+        imageSub: 'Cleaner feedback loops for LLMs',
+        accent: '#56e39f',
+        icon: 'λ',
+        alt: '适合 AI 的规整语言主题图',
+        summary: '“boring languages” 不是审美偏见，而是说 Go、Python 这类结构更规整的语言更适合 AI 反复读写；最急的是想让 Agent 真正进生产的团队，受益的是把回路缩短的架构，承压的是语法花活多、隐式魔法重的老代码。',
+        translation: '如果你的项目还把复杂度堆在语言特性上，AI 只会更容易写出看似聪明、实际上更难维护的代码。',
+        cost: '如果你的代码库本来就满是“魔法”，AI 只会把看不懂的部分放大。',
+        sourceText: 'Hacker News / Use boring languages with LLMs',
+        sourceUrl: 'https://news.ycombinator.com/front'
+      },
+      {
+        eyebrow: '安全攻防',
+        title: 'Claude 先替苹果挖出内核洞，安全攻防换了出手顺序',
+        imageTitle: 'Claude found a kernel bug',
+        imageSub: 'CVE-2026-28952',
+        accent: '#ffb86b',
+        icon: '⚑',
+        alt: 'AI 挖洞与安全修复主题图',
+        summary: 'CVE 就是漏洞编号，Apple 在 macOS Tahoe 26.5 里把 CVE-2026-28952 记到 “Claude + Anthropic Research” 名下，说明模型已经能从“写代码的助手”变成“找洞的前哨”；最急的是平台安全团队，受益的是红队和赏金猎人，承压的是还把 AI 安全当口号的厂商。',
+        translation: '如果你的安全流程还没把模型纳入挖洞和复测，漏洞发现会先落到别人手里。',
+        cost: '如果你的安全团队还没把模型当红队工具，漏洞会先被别人拿到并拿去修复。',
+        sourceText: 'Apple Support / macOS Tahoe 26.5',
+        sourceUrl: 'https://support.apple.com/en-us/127115'
+      }
+    ]
+  },
+  {
+    title: '商业与资本',
+    color: '#ff9f6e',
+    items: [
+      {
+        eyebrow: '资本',
+        title: 'OpenRouter 砸出 13 亿美元估值，把模型市场拧成路由层',
+        imageTitle: 'OpenRouter',
+        imageSub: 'Model routing layer',
+        accent: '#ff9f6e',
+        icon: '⇄',
+        alt: 'OpenRouter 模型路由主题图',
+        summary: '这类 AI 网关本质上是“模型调度台”——把 Anthropic、OpenAI、Google、DeepSeek 等模型当可替换零件，按成本、速度和效果来切换；最急的是有多模型预算压力的企业，最受益的是平台中间层，最承压的是想把客户永远锁在单一模型上的厂商。',
+        translation: '如果你的团队还把所有请求硬塞给同一模型，会同时错过降本和议价权。',
+        cost: '如果你的调用层只绑死一家模型，账单和锁定风险都会一起变贵。',
+        sourceText: 'TechCrunch',
+        sourceUrl: 'https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/'
+      },
+      {
+        eyebrow: '成本',
+        title: '外包 + 本地 AI 这套组合拳，开始卡住前沿模型的价格天花板',
+        imageTitle: 'LocalAI and outsourcing',
+        imageSub: 'Cheaper hands, cheaper tokens',
+        accent: '#7dd3fc',
+        icon: '⛭',
+        alt: '本地 AI 与外包成本对比主题图',
+        summary: '这里的 local AI 不是“自己训练大模型”，而是把 DeepSeek 这类便宜模型塞给海外工程师做日常活；最急的是想压推理账单的公司，受益的是会把任务拆解成可控步骤的团队，承压的是靠高价 API 吃差价的前沿实验室。',
+        translation: '如果你的团队还默认“越贵的模型越好”，你会在成本上先输掉一轮。',
+        cost: '如果你的预算模型只盯着大厂 API，不给便宜模型和流程拆分留位置，利润会被推理费慢慢磨掉。',
+        sourceText: 'Hacker News / Outsourcing plus local AI',
+        sourceUrl: 'https://news.ycombinator.com/front'
+      }
+    ]
+  },
+  {
+    title: '前沿研究',
+    color: '#56e39f',
+    items: [
+      {
+        eyebrow: '长上下文',
+        title: '研究者让 LLM 先“睡一觉”，再把记忆压进更稳的权重',
+        imageTitle: 'Language Models Need Sleep',
+        imageSub: 'Sleep-like consolidation',
+        accent: '#56e39f',
+        icon: '☾',
+        alt: '语言模型睡眠与记忆压缩主题图',
+        summary: '睡眠在这里不是拟人化噱头，而是把最近上下文先离线整理，再写进 fast weights，解决长对话越拖越贵、越拖越乱的问题；最急的是做长链路 Agent 和持续任务的团队，受益的是需要跨多轮保留状态的产品，承压的是只会无限拉长上下文的方案。',
+        translation: '如果你的产品还把“记住一切”当护城河，会先被算力账单和延迟拖住。',
+        cost: '如果你的方案只会不断拉长上下文，不做离线压缩，推理费用和延迟都会先爆。',
+        sourceText: 'arXiv / Language Models Need Sleep',
+        sourceUrl: 'https://arxiv.org/abs/2605.26099'
+      }
+    ]
+  },
+  {
+    title: 'AI × 地产营销',
+    color: '#c5a3ff',
+    items: [
+      {
+        eyebrow: '房源内容',
+        title: 'NAR 盯上房源营销：AI 修图、虚拟布景、短视频三件套开始抢单',
+        imageTitle: 'Real estate marketing',
+        imageSub: 'AI listings, staging and short video',
+        accent: '#c5a3ff',
+        icon: '⌂',
+        alt: 'AI 房源营销主题图',
+        summary: '这里的 AI 不是神秘黑盒，而是把房源照片、文案和短视频包装成更能刷屏的素材流水线；最急的是抢首看流量的经纪人，受益的是会做内容的地产团队，承压的是还在手工修图、手工排版的旧流程。',
+        translation: '如果你的团队还把房源营销当成“拍几张照片发出去”，你会把最值钱的首看注意力让给别人。',
+        cost: '如果你的营销还停留在“拍完就发”，首看流量会先被更会用 AI 的对手收割。',
+        sourceText: 'NAR / Styled, Staged & Sold',
+        sourceUrl: 'https://www.nar.realtor/blogs/styled-staged-sold/ai-tools-are-changing-how-homes-are-marketed-online-heres-a-few'
+      }
+    ]
+  }
+];
+
+const sectionNodes = document.getElementById('app');
+
+const escapeHtml = (value) => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+const escapeXml = escapeHtml;
+
+function svgData(title, subtitle, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${escapeXml(title)}">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#09111d"/>
+        <stop offset="100%" stop-color="#111f36"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="50%" cy="35%" r="75%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="line" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".18"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".18" stroke="#dbe8ff" stroke-width="2">
+      <path d="M0 112H1200M0 562H1200M150 0V675M1048 0V675"/>
+    </g>
+    <g opacity=".24" fill="none" stroke="url(#line)" stroke-width="5">
+      <path d="M114 495 C 290 360, 425 390, 580 266 S 885 140, 1092 214"/>
+      <path d="M114 510 C 270 404, 409 430, 570 312 S 864 202, 1090 268"/>
+    </g>
+    <g transform="translate(78 76)">
+      <rect x="0" y="0" rx="36" ry="36" width="360" height="120" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="34" y="75" fill="#ffffff" font-size="54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${icon}</text>
+      <text x="104" y="58" fill="#f5f9ff" font-size="31" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(title)}</text>
+      <text x="104" y="95" fill="#d6e2ff" font-size="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(subtitle)}</text>
+    </g>
+    <g transform="translate(760 86)" opacity=".98">
+      <circle cx="120" cy="120" r="108" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+      <circle cx="120" cy="120" r="74" fill="none" stroke="${accent}" stroke-width="3" opacity=".85"/>
+      <path d="M58 124h124M120 62v124M78 82l84 84M162 82l-84 84" stroke="${accent}" stroke-width="3" opacity=".55"/>
+      <circle cx="120" cy="120" r="14" fill="${accent}"/>
+    </g>
+    <g transform="translate(88 554)" opacity=".85">
+      <text x="0" y="0" fill="#c7d6f6" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">本报告生成的 SVG 主题图</text>
+    </g>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+function cardMarkup(card) {
+  return `
+    <article class="card">
+      <div class="eyebrow">${escapeHtml(card.eyebrow)}</div>
+      <h3>${escapeHtml(card.title)}</h3>
+      <figure>
+        <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${escapeHtml(card.alt)}">
+        <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(card.sourceText)}</a></figcaption>
+      </figure>
+      <p class="summary">${escapeHtml(card.summary)}</p>
+      <p class="translation">${escapeHtml(card.translation)}</p>
+      <p class="cost">${escapeHtml(card.cost)}</p>
+      <a class="source" href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">原文：${escapeHtml(card.sourceText)}</a>
+    </article>
+  `;
+}
+
+sectionNodes.innerHTML = sections.map(section => `
+  <section class="section">
+    <h2 style="color:${section.color}"><span></span>${escapeHtml(section.title)}</h2>
+    <div class="cards">
+      ${section.items.map(cardMarkup).join('')}
+    </div>
+  </section>
+`).join('');
+</script>
+</body>
+</html>
