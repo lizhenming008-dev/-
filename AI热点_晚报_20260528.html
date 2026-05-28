@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点晚报 | 2026-05-28</title>
+<style>
+:root{
+  --bg:#07111f;
+  --panel:#0f192c;
+  --panel-2:#111c31;
+  --line:rgba(173,200,255,.14);
+  --text:#e9eefc;
+  --muted:#95a7c6;
+  --accent:#7dd3fc;
+  --accent-2:#f8a7ff;
+  --good:#57e0a1;
+  --warn:#ffb86b;
+  --danger:#ff7d9a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(125,211,252,.16), transparent 24%),
+    radial-gradient(circle at top right, rgba(248,167,255,.12), transparent 22%),
+    radial-gradient(circle at 50% 0%, rgba(87,224,161,.08), transparent 30%),
+    linear-gradient(180deg, #050814 0%, #07111f 36%, #06101a 100%);
+  color:var(--text);
+  line-height:1.72;
+}
+.wrap{
+  max-width:660px;
+  margin:0 auto;
+  padding:14px 14px 28px;
+}
+.cover{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg, rgba(18,29,51,.96), rgba(10,18,35,.98));
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px 18px 18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.34);
+}
+.cover:before{
+  content:"";
+  position:absolute;
+  inset:-72px -70px auto auto;
+  width:190px;height:190px;
+  background:radial-gradient(circle, rgba(125,211,252,.22), transparent 62%);
+  pointer-events:none;
+}
+.cover:after{
+  content:"";
+  position:absolute;
+  left:-46px;
+  bottom:-58px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(87,224,161,.10), transparent 64%);
+  pointer-events:none;
+}
+.kicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.kicker b{
+  padding:2px 8px;
+  border:1px solid rgba(125,211,252,.32);
+  border-radius:999px;
+  background:rgba(125,211,252,.08);
+}
+.cover h1{
+  margin:10px 0 10px;
+  font-size:30px;
+  line-height:1.08;
+  letter-spacing:.02em;
+}
+.cover .meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:12px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+.lede{
+  margin-top:10px;
+  padding:14px 14px 12px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(248,167,255,.07));
+  border:1px solid rgba(173,200,255,.18);
+  color:#edf3ff;
+}
+.lede strong{color:#fff}
+.trend{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.section{
+  margin-top:18px;
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:16px;
+  letter-spacing:.02em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section h2 span{
+  display:inline-flex;
+  width:10px;height:10px;border-radius:999px;
+  background:currentColor;
+  box-shadow:0 0 18px currentColor;
+}
+.cards{
+  display:grid;
+  gap:12px;
+}
+.card{
+  background:linear-gradient(180deg, rgba(17,28,49,.98), rgba(13,22,40,.98));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.06em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  line-height:1.35;
+  color:#fff;
+}
+figure{
+  margin:0 0 10px;
+}
+figure img{
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0d1524;
+}
+figcaption{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+figcaption a{
+  color:#cfe3ff;
+  text-decoration:none;
+}
+.summary,.translation,.cost{
+  margin:8px 0 0;
+  font-size:14px;
+  color:#d8e2f7;
+}
+.translation{
+  color:#b8c8e3;
+}
+.cost{
+  color:#ffe0b5;
+}
+.source{
+  display:inline-block;
+  margin-top:10px;
+  font-size:12px;
+  color:#8fc8ff;
+  text-decoration:none;
+  word-break:break-all;
+}
+.footer{
+  margin-top:18px;
+  padding:16px 14px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(248,167,255,.08), rgba(87,224,161,.07));
+  border:1px solid rgba(173,200,255,.16);
+}
+.footer h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+.stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.stats span{
+  font-size:11px;
+  color:#cde0ff;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  padding:4px 8px;
+  border-radius:999px;
+}
+.note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+@media (min-width:700px){
+  .wrap{padding:16px 18px 36px}
+  .cover{padding:24px}
+  .cover h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="cover">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 夜报</span></div>
+    <h1>AI热点晚报</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-05-28</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：8 条</span>
+      <span class="chip">配图：8 / 8</span>
+    </div>
+    <div class="lede">
+      <strong>今夜的主线很清楚：AI 不再只抢“会聊天”的位置，而是在抢邮箱入口、搜索入口、法务入口、地产线索入口和推理基础设施。</strong>
+      一天之内最值钱的变化，不是模型又多聪明了一点，而是谁开始把 AI 直接塞进真实工作流里，谁还停留在演示页。
+    </div>
+    <div class="trend">晚间判断：谁能把模型当零件切换、把流程当流水线拆开、把证据链和交付链焊在一起，谁就会把旧工作法的利润拆走一块。</div>
+  </header>
+
+  <main id="app"></main>
+
+  <section class="footer">
+    <h3>今日锐评</h3>
+    <div>今天最值得盯的不是“某个模型分数涨了多少”，而是 AI 继续往更贵的入口挤：搜索、邮箱、法务、地产营销、推理基础设施。谁先把这些入口变成可复用的工作流，谁就先拿到下一轮效率红利；谁还守着聊天框，谁就继续替别人做整理和转述。</div>
+    <div class="stats">
+      <span>8 条精选</span><span>8 张 16:9 SVG 主题图</span><span>0 外链图片</span><span>0 明显破图</span><span>标题动词化 / 黑话翻译 / 代价句已覆盖</span>
+    </div>
+    <div class="note">生成时间：2026-05-28 09:12 CST</div>
+  </section>
+</div>
+
+<script>
+const sections = [
+  {
+    title: '新模型 / 新产品',
+    color: '#7dd3fc',
+    items: [
+      {
+        title: 'Google 把 Gemini 变成 24/7 随身 Agent',
+        source: 'TechCrunch',
+        url: 'https://techcrunch.com/2026/05/19/google-updates-its-gemini-app-to-take-on-chatgpt-and-claude-at-io-2026/',
+        badge: 'SPARK',
+        sub: '24/7 PERSONAL AGENT',
+        c1: '#7dd3fc',
+        c2: '#6366f1',
+        c3: '#08111f',
+        alt: 'Gemini Spark 主题插画',
+        summary: 'Gemini Spark 这类“随身 Agent”不再只是聊天框里的问答机，而是能把邮箱、日程和任务串起来，自己在后台接着跑。说白了，就是把 AI 从“回答问题”推进到“替你处理日常”。',
+        translation: 'Gemini=谷歌的主力 AI；Agent=能自己动手干活的助手，不只是回一句话。谁最急：被个人助手抢走入口的 ToC 应用；谁受益：能把日程、邮件、任务打通的平台；谁承压：只会卖静态摘要的旧助手。',
+        cost: '如果你的产品还停留在“帮用户总结一段话”，会被能直接接邮箱、日程和任务的 Agent 甩到边上。',
+      }
+    ]
+  },
+  {
+    title: '工具与 Agent',
+    color: '#f8a7ff',
+    items: [
+      {
+        title: 'OpenAI 抢先布防选举战场',
+        source: 'OpenAI',
+        url: 'https://openai.com/index/election-safeguards-2026/',
+        badge: 'TRUST',
+        sub: 'ELECTION SAFEGUARDS',
+        c1: '#f8a7ff',
+        c2: '#ff7d9a',
+        c3: '#08111f',
+        alt: 'OpenAI 选举防护主题插画',
+        summary: 'OpenAI 这次把防线往前挪：一边让 ChatGPT 更容易给出可靠的投票和结果信息，一边把 SynthID 和 C2PA 这类“AI 内容身份证”往内容透明度里塞。白话就是，先让人知道信息从哪来，再压住深伪和操纵。',
+        translation: 'SynthID/C2PA=AI 内容的身份证。谁最急：选举机构、媒体和安全团队；谁受益：有来源、有验证链的内容平台；谁承压：靠深伪、黑稿和信息污染吃饭的人。',
+        cost: '如果你的团队把选举、舆情、客服和法务分开看，会在危机响应上慢半拍，代价是被假消息先一步定义事实。',
+      },
+      {
+        title: 'Trajectory 给模型补上反馈回路',
+        source: 'Trajectory',
+        url: 'https://trajectory.ai/field-notes/manifesto',
+        badge: 'LOOP',
+        sub: 'CONTINUAL LEARNING',
+        c1: '#56e39f',
+        c2: '#0ea5e9',
+        c3: '#08111f',
+        alt: 'Trajectory 连续学习主题插画',
+        summary: 'Trajectory 赌的是“软件不该永远冻住”。它想把用户每次纠错、每次补充的上下文，变成明天还能继续用的记忆。通俗点说，就是让 AI 不再每次都像第一次上班。',
+        translation: 'continual learning=持续学习。谁最急：做长期协作、长期记忆产品的人；谁受益：把用户反馈变成产品资产的团队；谁承压：只会把历史对话一次性抹掉的静态助手。',
+        cost: '如果你的团队还把“每次对话结束就清零”当默认设计，会把最值钱的使用行为扔进垃圾桶。',
+      }
+    ]
+  },
+  {
+    title: '商业与资本',
+    color: '#57e0a1',
+    items: [
+      {
+        title: 'OpenAI 基金会先砸 2.5 亿美元',
+        source: 'Reuters / Investing.com',
+        url: 'https://www.investing.com/news/stock-market-news/openai-foundation-commits-250-million-to-help-workers-economies-navigate-ai-disruption-4712685',
+        badge: 'CASH',
+        sub: '$250M BUFFER',
+        c1: '#57e0a1',
+        c2: '#2dd4bf',
+        c3: '#08111f',
+        alt: 'OpenAI 基金会资金主题插画',
+        summary: 'OpenAI 的基金会先把 2.5 亿美元放进“缓冲垫”里，目标不是做公关，而是给劳动市场、经济适应和安全防护买时间。更直白一点：AI 冲击已经不只是产品问题，而是社会账单。',
+        translation: '这笔钱本质上是在给 AI 冲击买缓冲垫。谁最急：受岗位重构冲击的劳动者和政策团队；谁受益：安全、培训和公共治理相关机构；谁承压：只想把 AI 变成纯利润机器的公司。',
+        cost: '如果你的团队不提前准备岗位重构和安全预算，AI 带来的效率红利会先变成外部压力和内部摩擦。',
+      },
+      {
+        title: 'Fireworks AI 追到 150 亿估值门口',
+        source: 'Bloomberg Law',
+        url: 'https://ca.finance.yahoo.com/news/fireworks-ai-talks-funding-15-000038322.html/',
+        badge: 'VAL',
+        sub: '$15B ROUND',
+        c1: '#f59e0b',
+        c2: '#ef4444',
+        c3: '#08111f',
+        alt: 'Fireworks AI 估值融资主题插画',
+        summary: 'Fireworks AI 做的不是造模型，而是帮企业把模型跑得更快、更便宜。资本还在继续为“推理基础设施”下注，说明真正赚钱的未必是会写诗的模型，而是能把大模型稳定搬上生产线的底座。',
+        translation: '推理基础设施=把大模型真正跑起来的底层服务。谁最急：想压低推理成本的企业；谁受益：基础设施、托管和调度服务商；谁承压：只会做壳、没成本优势的中间层。',
+        cost: '如果你的产品成本结构还压不住推理费用，AI 业务越火，利润表反而越难看。',
+      }
+    ]
+  },
+  {
+    title: '前沿研究',
+    color: '#ffb86b',
+    items: [
+      {
+        title: 'Maat 把法律研究撕开引用墙',
+        source: 'arXiv',
+        url: 'https://arxiv.org/abs/2605.27331',
+        badge: 'CITE',
+        sub: 'LEGAL RESEARCH AGENT',
+        c1: '#ffb86b',
+        c2: '#f97316',
+        c3: '#08111f',
+        alt: 'Maat 法律研究主题插画',
+        summary: 'Maat 不是单纯做摘要，而是把法律研究拆成工具链：先查官方来源，再补引用，再在歧义时追问。大白话就是，它在尝试解决“会搜，但会胡编”的通病。',
+        translation: 'ReAct=先想再做的代理工作流；RAG=把外部资料塞回模型来查证。谁最急：律师、合规和竞争法研究人员；谁受益：需要可追溯引用的人；谁承压：只会吐总结、不给证据链的通用助手。',
+        cost: '如果你的法务和研究流程还靠人工拼证据，AI 时代的速度差会先体现在检索和引用质量上。',
+      },
+      {
+        title: '“睡眠” 机制给长上下文补电',
+        source: 'arXiv',
+        url: 'https://arxiv.org/abs/2605.26099',
+        badge: 'SLEEP',
+        sub: 'LONG-CONTEXT CONSOLIDATION',
+        c1: '#a78bfa',
+        c2: '#60a5fa',
+        c3: '#08111f',
+        alt: 'Language Models Need Sleep 主题插画',
+        summary: '这篇论文的直白结论是：长对话撑久了，模型也得“睡一觉”。做法不是硬把上下文全背下来，而是把近期内容压进快权重，再清缓存继续跑。说白了，是拿离线整理换在线速度。',
+        translation: 'fast weights=临时记忆；KV cache=模型的对话草稿本。谁最急：长上下文、知识库和重推理产品；谁受益：做记忆管理和推理优化的人；谁承压：靠无限上下文硬撑的产品设计。',
+        cost: '如果你的长对话系统只会无限堆上下文，算力账单会先把所谓“智能”打回原形。',
+      }
+    ]
+  },
+  {
+    title: 'AI × 地产营销',
+    color: '#c4b5fd',
+    items: [
+      {
+        title: 'Crexi 把地产营销塞进 AI 流水线',
+        source: 'Crexi',
+        url: 'https://www.crexi.com/blog/crexi-ai-commercial-real-estate-deal-cycle',
+        badge: 'DEAL',
+        sub: 'REAL ESTATE WORKFLOW',
+        c1: '#c4b5fd',
+        c2: '#22d3ee',
+        c3: '#08111f',
+        alt: 'Crexi 地产营销主题插画',
+        summary: 'Crexi 这次不是做一个“会聊天”的地产助手，而是把 brochure、OM、listing、文案和披露材料塞进同一条工作流。换成人话，就是房源物料、交易资料和营销动作开始被一条 AI 流水线串起来。',
+        translation: 'OM=Offering Memorandum，房产项目说明书；listing=房源/项目上架页。谁最急：靠人工堆物料的经纪和招商主管；谁受益：数据、模板和工作流标准化的平台；谁承压：只会排版、改稿和整理材料的传统外包。',
+        cost: '如果你的地产营销还在靠人手改稿、拼 PDF、追资料，会错过线索响应速度和成交效率的双重红利。',
+      }
+    ]
+  }
+];
+
+function esc(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function svgArt({ badge, sub, c1, c2, c3 }) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="${esc(badge)} ${esc(sub)}">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="${c1}"/>
+        <stop offset="52%" stop-color="${c2}"/>
+        <stop offset="100%" stop-color="${c3}"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="50%" cy="35%" r="70%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity=".24"/>
+        <stop offset="65%" stop-color="#ffffff" stop-opacity=".06"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="12" stdDeviation="22" flood-color="#000000" flood-opacity=".35"/>
+      </filter>
+    </defs>
+    <rect width="1600" height="900" fill="url(#bg)"/>
+    <rect width="1600" height="900" fill="url(#glow)" opacity=".55"/>
+    <g opacity=".22" stroke="#ffffff" stroke-opacity=".35" stroke-width="2">
+      <path d="M80 90 H1520"/>
+      <path d="M80 210 H1520"/>
+      <path d="M80 330 H1520"/>
+      <path d="M80 450 H1520"/>
+      <path d="M80 570 H1520"/>
+      <path d="M80 690 H1520"/>
+      <path d="M80 810 H1520"/>
+      <path d="M160 70 V830"/>
+      <path d="M360 70 V830"/>
+      <path d="M560 70 V830"/>
+      <path d="M760 70 V830"/>
+      <path d="M960 70 V830"/>
+      <path d="M1160 70 V830"/>
+      <path d="M1360 70 V830"/>
+    </g>
+    <g filter="url(#shadow)">
+      <circle cx="1275" cy="220" r="150" fill="#ffffff" fill-opacity=".12"/>
+      <circle cx="1275" cy="220" r="110" fill="#ffffff" fill-opacity=".08"/>
+      <circle cx="1275" cy="220" r="70" fill="#ffffff" fill-opacity=".16"/>
+      <circle cx="350" cy="670" r="180" fill="#000000" fill-opacity=".10"/>
+      <circle cx="350" cy="670" r="130" fill="#ffffff" fill-opacity=".08"/>
+    </g>
+    <g>
+      <text x="92" y="168" font-size="44" font-weight="800" fill="#ffffff" fill-opacity=".86" letter-spacing="4">${esc(badge)}</text>
+      <text x="92" y="305" font-size="108" font-weight="800" fill="#ffffff" letter-spacing="1">${esc(sub)}</text>
+      <text x="92" y="390" font-size="34" font-weight="600" fill="#ffffff" fill-opacity=".82">AI 热点晚报主题图</text>
+    </g>
+    <g opacity=".55" fill="none" stroke="#ffffff" stroke-opacity=".9" stroke-width="18" stroke-linecap="round">
+      <path d="M1120 620c80-80 180-112 300-108"/>
+      <path d="M1168 676c66-42 132-56 210-48"/>
+      <path d="M1212 742c78-12 144-4 214 26"/>
+    </g>
+    <g opacity=".44" fill="#ffffff" fill-opacity=".92">
+      <circle cx="1170" cy="610" r="18"/>
+      <circle cx="1250" cy="560" r="14"/>
+      <circle cx="1338" cy="530" r="12"/>
+      <circle cx="1418" cy="520" r="10"/>
+    </g>
+  </svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function renderItem(item, sectionColor) {
+  const art = svgArt(item);
+  return `
+    <article class="card">
+      <div class="eyebrow" style="color:${sectionColor}">${esc(item.source)}</div>
+      <h3>${esc(item.title)}</h3>
+      <figure>
+        <img src="${art}" alt="${esc(item.alt)}">
+        <figcaption>配图：本报告生成的 SVG 主题图；新闻来源：<a href="${item.url}" target="_blank" rel="noopener noreferrer">${esc(item.source)}</a></figcaption>
+      </figure>
+      <p class="summary">${esc(item.summary)}</p>
+      <p class="translation">${esc(item.translation)}</p>
+      <p class="cost">${esc(item.cost)}</p>
+      <a class="source" href="${item.url}" target="_blank" rel="noopener noreferrer">原文：${esc(item.source)} →</a>
+    </article>`;
+}
+
+function renderSection(section) {
+  return `
+    <section class="section">
+      <h2 style="color:${section.color}"><span style="background:${section.color};box-shadow:0 0 18px ${section.color}"></span>${esc(section.title)}</h2>
+      <div class="cards">
+        ${section.items.map((item) => renderItem(item, section.color)).join('')}
+      </div>
+    </section>`;
+}
+
+document.getElementById('app').innerHTML = sections.map(renderSection).join('');
+</script>
+</body>
+</html>
