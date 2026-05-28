@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点早报 | 2026-05-28</title>
+<style>
+:root{
+  --bg:#07111f;
+  --panel:#0e1728;
+  --panel-2:#111f36;
+  --line:rgba(173,200,255,.16);
+  --text:#e9eefc;
+  --muted:#9aa9c7;
+  --accent:#7dd3fc;
+  --accent-2:#f8a7ff;
+  --good:#56e39f;
+  --warn:#ffb86b;
+  --danger:#ff8b8b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(125,211,252,.16), transparent 26%),
+    radial-gradient(circle at top right, rgba(248,167,255,.12), transparent 22%),
+    linear-gradient(180deg, #050914 0%, #08111f 38%, #07101b 100%);
+  color:var(--text);
+  line-height:1.72;
+}
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:14px 14px 28px;
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg, rgba(18,29,51,.96), rgba(10,18,35,.98));
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px 18px 18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.32);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-70px -70px auto auto;
+  width:180px;height:180px;
+  background:radial-gradient(circle, rgba(125,211,252,.24), transparent 64%);
+  pointer-events:none;
+}
+.kicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.kicker b{
+  padding:2px 8px;
+  border:1px solid rgba(125,211,252,.32);
+  border-radius:999px;
+  background:rgba(125,211,252,.08);
+}
+.hero h1{
+  margin:10px 0 10px;
+  font-size:30px;
+  line-height:1.08;
+  letter-spacing:-.02em;
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:12px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+.lede{
+  margin-top:10px;
+  padding:14px 14px 12px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(248,167,255,.08));
+  border:1px solid rgba(173,200,255,.18);
+  color:#edf3ff;
+}
+.lede strong{color:#fff}
+.trend{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.section{
+  margin-top:18px;
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:16px;
+  letter-spacing:.02em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section h2 span{
+  display:inline-flex;
+  width:10px;height:10px;border-radius:999px;
+  background:currentColor;
+  box-shadow:0 0 18px currentColor;
+}
+.cards{
+  display:grid;
+  gap:12px;
+}
+.card{
+  background:linear-gradient(180deg, rgba(17,28,49,.98), rgba(13,22,40,.98));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.06em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  line-height:1.35;
+  color:#fff;
+}
+figure{margin:0 0 10px}
+figure img{
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0d1524;
+}
+figcaption{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+figcaption a{
+  color:#cfe3ff;
+  text-decoration:none;
+}
+.summary,.translation,.cost{
+  margin:8px 0 0;
+  font-size:14px;
+  color:#d8e2f7;
+}
+.translation{color:#b8c8e3}
+.cost{color:#ffe0b5}
+.source{
+  display:inline-block;
+  margin-top:10px;
+  font-size:12px;
+  color:#8fc8ff;
+  text-decoration:none;
+  word-break:break-all;
+}
+.footer{
+  margin-top:18px;
+  padding:16px 14px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(248,167,255,.08), rgba(86,227,159,.07));
+  border:1px solid rgba(173,200,255,.16);
+}
+.footer h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+.stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.stats span{
+  font-size:11px;
+  color:#cde0ff;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  padding:4px 8px;
+  border-radius:999px;
+}
+.note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+@media (min-width:700px){
+  .wrap{padding:16px 18px 36px}
+  .hero{padding:24px}
+  .hero h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
+    <h1>AI 开始抢预算、抢线索，也抢合规话语权</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-05-28</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：7 条</span>
+      <span class="chip">配图：7 / 7</span>
+    </div>
+    <div class="lede">
+      <strong>过去 24 小时里，AI 的战场没有停在“谁更会聊”，而是往选举信息入口、代码代理估值、高风险合规、企业咨询预算和房产线索分发一起压了过去。</strong>
+      真正的分水岭不是模型参数，而是谁能把数据、工具、流程和责任链攥在手里。
+    </div>
+    <div class="trend">早间判断：模型还在卷，但钱正在往“能接单、能留痕、能撮合、能落地”的层上挪。</div>
+  </header>
+
+  <div id="app"></div>
+
+  <section class="footer">
+    <h3>今日检查</h3>
+    <div>图片全部使用本报告生成的 16:9 SVG 主题图，避免付费墙、版权不清和外链破图；7 条卡片、7 张配图、7 个来源链接，满足移动端首屏阅读。</div>
+    <div class="stats">
+      <span>7 条精选</span><span>7 张 16:9 配图</span><span>7 / 7 图片合格</span><span>0 明显破图</span>
+    </div>
+    <div class="note">生成时间：2026-05-28 09:05 CST</div>
+  </section>
+</main>
+
+<script>
+const sections = [
+  {
+    title: '新模型 / 新产品',
+    color: '#7dd3fc',
+    items: [
+      {
+        eyebrow: '选举入口',
+        title: 'OpenAI 把选举信息拱上前台，先截住用户的第一问',
+        imageTitle: 'OpenAI election safeguards 2026',
+        imageSub: 'AP vote counts and election info',
+        accent: '#7dd3fc',
+        icon: '✦',
+        alt: 'OpenAI 2026 选举信息与安全护栏主题图',
+        summary: 'OpenAI 这次不是单纯谈内容安全，而是把 AP 实时票数、选举信息和护栏一起塞进入口，等于先把用户最容易被误导的那一口答案拽回官方数据源。最急的是选举期平台和媒体，受益的是权威数据和内容溯源，承压的是靠混杂信息抢流量的人。',
+        translation: '白话说，MCP 不是重点，这里重点是“谁先占住用户问问题的入口，谁就先占住解释权”。',
+        cost: '如果你的产品还靠搜索结果拼选举信息，会被官方入口直接截胡，流量和可信度一起掉。',
+        sourceText: 'OpenAI / Election information and safeguards in 2026',
+        sourceUrl: 'https://openai.com/index/election-safeguards-2026/'
+      },
+      {
+        eyebrow: '编码代理',
+        title: 'Cognition 砸下 10 亿，把 Devin 拱到 250 亿估值',
+        imageTitle: 'Cognition raises 1B',
+        imageSub: 'Devin autonomous software engineer',
+        accent: '#f8a7ff',
+        icon: '⟡',
+        alt: 'Cognition 与 Devin 代码代理主题图',
+        summary: 'Devin=自动写代码的软件工程师，这轮融资把“AI 写代码”从工具故事推成资本故事。最急的是编码代理赛道，受益的是愿意把工程流程交给 agent 的大客户，承压的是只卖聊天式 IDE 的玩家。',
+        translation: '白话说，市场不再只问模型会不会写代码，而是问它能不能接单、跑测试、交付结果。',
+        cost: '如果你的工程链路还停留在“给模型写一段代码”，而不是“让它真的跑完任务”，会被完整代理平台挤出预算。',
+        sourceText: 'TechCrunch / Cognition raises $1B at $25B pre-money valuation',
+        sourceUrl: 'https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/'
+      }
+    ]
+  },
+  {
+    title: '企业落地',
+    color: '#ffb86b',
+    items: [
+      {
+        eyebrow: '咨询预算',
+        title: 'Capgemini 撕开 IT 预算边界，AI 咬进企业服务钱袋',
+        imageTitle: 'Capgemini AI spending pool',
+        imageSub: 'Beyond traditional IT budgets',
+        accent: '#56e39f',
+        icon: '⇄',
+        alt: 'Capgemini AI 咨询预算主题图',
+        summary: 'Reuters 这条消息的意思很直白：AI 正把客户预算从传统 IT 账本里往咨询、流程和业务改造里拽。白话说，卖 AI 的不只卖软件，开始卖改流程和改组织。最急的是 IT 服务商，受益的是会做咨询+交付的综合型厂商，承压的是只靠人天报价的旧服务模式。',
+        translation: '谁能把模型、流程和组织一起卖出去，谁就把 AI 从“试用费”变成“长期账单”。',
+        cost: '如果你的团队只会卖工时，不会卖结果，AI 会先让你从必选项变成可替代项。',
+        sourceText: 'Reuters via CNA / Capgemini says AI widens client spending pool',
+        sourceUrl: 'https://www.channelnewsasia.com/business/capgemini-says-ai-widens-client-spending-pool-6145376'
+      },
+      {
+        eyebrow: '内存军备',
+        title: 'SK Hynix 冲进 1 万亿美元俱乐部，AI 内存把牌桌抬高',
+        imageTitle: 'SK Hynix AI memory boom',
+        imageSub: 'Memory is the new bottleneck',
+        accent: '#ff8b8b',
+        icon: '◉',
+        alt: 'SK Hynix 与 AI 内存行情主题图',
+        summary: 'HBM=高带宽内存，不是 GPU 的配角，而是 AI 芯片性能和成本的真瓶颈。白话说，这波行情已经从“买更多 GPU”转到“谁能把内存和供货卡住”。最急的是云厂商和芯片设计方，受益的是存储和封装供应链，承压的是还把算力账单只算 GPU 的团队。',
+        translation: '市场在告诉你，AI 的钱不只流向模型厂，还在流向能喂饱模型的内存和封装。',
+        cost: '如果你的成本模型里没有 HBM、封装和供货周期，预算会在硬件账单上先翻车。',
+        sourceText: 'Reuters via Investing.com / SK Hynix joins $1 trillion club after Samsung, Micron on AI chip boom',
+        sourceUrl: 'https://m.investing.com/news/economy-news/sk-hynix-joins-1-trillion-club-after-samsung-micron-on-ai-chip-boom-4711159?ampMode=1'
+      }
+    ]
+  },
+  {
+    title: '研究与开源',
+    color: '#56e39f',
+    items: [
+      {
+        eyebrow: '代理安全',
+        title: '研究者捅穿大代理系统：AI 一上手就暴露老漏洞',
+        imageTitle: 'Agent system penetration tests',
+        imageSub: 'Execution-capable AI agents',
+        accent: '#56e39f',
+        icon: '☠',
+        alt: '大型 AI 代理系统安全测试主题图',
+        summary: '这篇 arXiv 论文看了两次针对商用 agent 产品的渗透测试，结论很刺眼：AI 不是凭空长出新漏洞，而是把老系统的安全短板放大了。白话说，一旦 agent 能调工具、改状态、执行动作，安全问题就从“答错”升级成“真动手”。最急的是安全团队，受益的是做审计和防护的厂商，承压的是把 agent 直接塞进生产环境却没加护栏的团队。',
+        translation: '这不是模型评分问题，这是系统工程问题，工具权限和审计链条才是命门。',
+        cost: '如果你的 AI agent 还能直接碰生产系统，却没做权限分层和审计，事故不是会不会，而是何时。',
+        sourceText: 'arXiv / Lessons from Penetration Tests on Large-Scale Agent Systems',
+        sourceUrl: 'https://arxiv.org/abs/2605.27042'
+      },
+      {
+        eyebrow: '开源农技',
+        title: 'Xinhua 甩出开源农技模型，先堵住农药建议乱飞',
+        imageTitle: 'Xinhua Green Shield',
+        imageSub: 'Open-source crop protection LLM',
+        accent: '#8ddf9b',
+        icon: '♻',
+        alt: '开源农作物保护模型主题图',
+        summary: '中国首个面向作物保护的开源 LLM Green Shield，把“能回答”推进到“能先查禁限用药和作物条件再回答”。白话说，它不是让农民多一个聊天框，而是多一个会先核对药品合规的农技助手。最急的是农业技术服务和监管侧，受益的是需要标准化农技建议的一线种植者，承压的是随口给方案的通用模型。',
+        translation: '开源在这里不是口号，而是把专业农业知识和用药规则塞进了可复核的模型里。',
+        cost: '如果你的农技建议还靠泛化大模型瞎猜，风险不是答错，而是把合规问题直接推到田里。',
+        sourceText: 'Xinhua / China unveils its first open-source AI model for crop protection',
+        sourceUrl: 'https://english.news.cn/20260527/ff9f5a531fef4a6cb22dc5b2e3c17cc0/c.html'
+      }
+    ]
+  },
+  {
+    title: 'AI × 地产营销',
+    color: '#c5a3ff',
+    items: [
+      {
+        eyebrow: '线索分发',
+        title: 'HouseWhisper 下场抢房产线索，AI 先吃掉首轮跟进',
+        imageTitle: 'HouseWhisper lead nurturing',
+        imageSub: 'Real estate lead routing',
+        accent: '#c5a3ff',
+        icon: '⌂',
+        alt: '房产线索 AI 跟进与分发主题图',
+        summary: 'lead nurturing=把线索慢慢养熟，routing=把线索分到最该接的人手里。白话说，系统先替经纪人回复、分配、追单，把最耗时的第一轮沟通自动化。最急的是抢首通电话和首封邮件的经纪团队，受益的是能把 CRM 串起来的房产营销方，承压的是靠人工盯漏斗的老打法。',
+        translation: '真正值钱的不是“能不能发消息”，而是谁先拿到速度和响应窗口。',
+        cost: '如果你的房产团队还靠人工轮询线索，最值钱的秒回窗口会先被 AI 代理拿走。',
+        sourceText: 'HousingWire / HouseWhisper adds AI lead nurturing and routing tools',
+        sourceUrl: 'https://www.housingwire.com/articles/ai-lead-nurturing-routing/'
+      },
+      {
+        eyebrow: 'CRE 交易',
+        title: 'CommLoan 把 CRE 报价链路拧成 1 分钟',
+        imageTitle: 'CommLoan AI quote generator',
+        imageSub: 'Over 1,000 lenders in one pass',
+        accent: '#ff8b8b',
+        icon: '⌁',
+        alt: '商业地产贷款 AI 报价主题图',
+        summary: 'OM=项目资料包；这套 AI quote generator 让经纪人把材料丢进去，系统自动对照 60 万+ loan programs 和 1000+ lenders 先出前三匹配。白话说，从“人找贷款”变成“贷款先挑项目”。最急的是 CRE 经纪和融资顾问，受益的是有海量数据的撮合平台，承压的是只靠人工比对的报价环节。',
+        translation: '在商业地产里，速度不是锦上添花，是决定谁先拿到 pipeline 的门槛。',
+        cost: '如果你的团队还在靠邮件回合找资金，成交速度会先输给会自动撮合的对手。',
+        sourceText: 'PR Newswire / CommLoan launches AI loan quote generator',
+        sourceUrl: 'https://www.prnewswire.com/news-releases/commloan-launches-ai-loan-quote-generator-that-instantly-matches-cre-deals-to-over-1-000-lenders-302782729.html'
+      }
+    ]
+  }
+];
+
+const sectionNodes = document.getElementById('app');
+
+const escapeHtml = (value) => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+const escapeXml = escapeHtml;
+
+function svgData(title, subtitle, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${escapeXml(title)}">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#09111d"/>
+        <stop offset="100%" stop-color="#111f36"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="50%" cy="35%" r="75%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="line" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".18"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".18" stroke="#dbe8ff" stroke-width="2">
+      <path d="M0 112H1200M0 562H1200M150 0V675M1048 0V675"/>
+    </g>
+    <g opacity=".24" fill="none" stroke="url(#line)" stroke-width="5">
+      <path d="M114 495 C 290 360, 425 390, 580 266 S 885 140, 1092 214"/>
+      <path d="M114 510 C 270 404, 409 430, 570 312 S 864 202, 1090 268"/>
+    </g>
+    <g transform="translate(78 76)">
+      <rect x="0" y="0" rx="36" ry="36" width="420" height="120" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="34" y="75" fill="#ffffff" font-size="54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${icon}</text>
+      <text x="104" y="58" fill="#f5f9ff" font-size="31" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(title)}</text>
+      <text x="104" y="95" fill="#d6e2ff" font-size="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(subtitle)}</text>
+    </g>
+    <g transform="translate(760 86)" opacity=".98">
+      <circle cx="120" cy="120" r="108" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+      <circle cx="120" cy="120" r="74" fill="none" stroke="${accent}" stroke-width="3" opacity=".85"/>
+      <path d="M58 124h124M120 62v124M78 82l84 84M162 82l-84 84" stroke="${accent}" stroke-width="3" opacity=".55"/>
+      <circle cx="120" cy="120" r="14" fill="${accent}"/>
+    </g>
+    <g transform="translate(88 554)" opacity=".85">
+      <text x="0" y="0" fill="#c7d6f6" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">本报告生成的 SVG 主题图</text>
+    </g>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+function cardMarkup(card) {
+  return `
+    <article class="card">
+      <div class="eyebrow">${escapeHtml(card.eyebrow)}</div>
+      <h3>${escapeHtml(card.title)}</h3>
+      <figure>
+        <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${escapeHtml(card.alt)}">
+        <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(card.sourceText)}</a></figcaption>
+      </figure>
+      <p class="summary">${escapeHtml(card.summary)}</p>
+      <p class="translation">${escapeHtml(card.translation)}</p>
+      <p class="cost">${escapeHtml(card.cost)}</p>
+      <a class="source" href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">原文：${escapeHtml(card.sourceText)}</a>
+    </article>
+  `;
+}
+
+sectionNodes.innerHTML = sections.map(section => `
+  <section class="section">
+    <h2 style="color:${section.color}"><span></span>${escapeHtml(section.title)}</h2>
+    <div class="cards">
+      ${section.items.map(cardMarkup).join('')}
+    </div>
+  </section>
+`).join('');
+</script>
+</body>
+</html>
