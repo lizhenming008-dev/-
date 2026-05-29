@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>简报页面暂未生成</title>
+<script>
+(function(){
+  var path = window.location.pathname;
+  var htmlIndex = path.indexOf(".html/");
+  if (htmlIndex !== -1) {
+    var fixedPath = path.slice(0, htmlIndex + 5);
+    window.location.replace(fixedPath + window.location.search + window.location.hash);
+  }
+}());
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#1f2937;line-height:1.8}
