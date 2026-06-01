@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI热点晚报 | 2026-06-01</title>
+<style>
+:root{
+  --bg0:#050911;
+  --bg1:#0a1322;
+  --panel:#101a2c;
+  --panel2:#0d1727;
+  --line:rgba(175,201,255,.14);
+  --text:#eaf1ff;
+  --muted:#93a8c8;
+  --muted2:#b8c7df;
+  --blue:#7dd3fc;
+  --cyan:#6ee7d8;
+  --amber:#ffb86b;
+  --rose:#ff9fb4;
+  --lime:#8eea9a;
+  --violet:#c7a6ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(125,211,252,.16), transparent 22%),
+    radial-gradient(circle at 90% 8%, rgba(110,231,216,.10), transparent 18%),
+    radial-gradient(circle at 72% 72%, rgba(255,184,107,.08), transparent 16%),
+    linear-gradient(180deg, var(--bg0), var(--bg1) 52%, #070c16);
+  line-height:1.7;
+}
+a{color:inherit}
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:12px 12px 28px;
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:18px 16px 16px;
+  background:
+    linear-gradient(140deg, rgba(16,26,44,.95), rgba(11,18,31,.98)),
+    linear-gradient(180deg, rgba(125,211,252,.06), transparent);
+  box-shadow:0 16px 40px rgba(0,0,0,.28);
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:999px;
+  filter:blur(2px);
+  pointer-events:none;
+}
+.hero:before{
+  inset:-70px auto auto -70px;
+  width:180px;height:180px;
+  background:radial-gradient(circle, rgba(125,211,252,.24), transparent 62%);
+}
+.hero:after{
+  inset:auto -60px -80px auto;
+  width:220px;height:220px;
+  background:radial-gradient(circle, rgba(255,184,107,.18), transparent 62%);
+}
+.kicker{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+  color:var(--muted2);
+  font-size:12px;
+}
+.kicker b{
+  color:var(--blue);
+  border:1px solid rgba(125,211,252,.28);
+  background:rgba(125,211,252,.07);
+  border-radius:999px;
+  padding:2px 9px;
+}
+.hero h1{
+  position:relative;
+  z-index:1;
+  margin:12px 0 10px;
+  font-size:32px;
+  line-height:1.06;
+  letter-spacing:.01em;
+}
+.meta{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  padding:5px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.04);
+  color:#dce7fa;
+  font-size:12px;
+}
+.lede{
+  position:relative;
+  z-index:1;
+  margin-top:12px;
+  padding:14px;
+  border-radius:18px;
+  border:1px solid rgba(173,200,255,.16);
+  background:linear-gradient(135deg, rgba(125,211,252,.08), rgba(110,231,216,.05) 55%, rgba(255,184,107,.04));
+  color:#edf4ff;
+}
+.lede strong{color:#fff}
+.trend{
+  position:relative;
+  z-index:1;
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.section{
+  margin-top:18px;
+}
+.section h2{
+  margin:0 0 10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:16px;
+  letter-spacing:.02em;
+}
+.section h2 span{
+  width:10px;height:10px;border-radius:999px;
+  background:currentColor;
+  box-shadow:0 0 20px currentColor;
+  flex:0 0 auto;
+}
+.cards{
+  display:grid;
+  gap:12px;
+}
+.card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:linear-gradient(180deg, rgba(18,30,50,.98), rgba(11,19,33,.98));
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+  padding:14px;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  color:var(--muted2);
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.eyebrow:before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:999px;
+  background:currentColor;
+}
+.card h3{
+  margin:8px 0 10px;
+  font-size:19px;
+  line-height:1.34;
+  color:#fff;
+}
+figure{margin:0}
+figure img{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0b1320;
+}
+figcaption{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+figcaption a{
+  color:#d9e8ff;
+  text-decoration:none;
+}
+.summary,.translation,.cost{
+  margin:10px 0 0;
+  font-size:14px;
+}
+.summary{color:#e5edf9}
+.translation{color:#bfd0e7}
+.cost{
+  color:#ffd9ab;
+}
+.source{
+  display:inline-block;
+  margin-top:10px;
+  font-size:12px;
+  color:#96cbff;
+  text-decoration:none;
+  word-break:break-word;
+}
+.footer{
+  margin-top:18px;
+  padding:16px 14px;
+  border-radius:20px;
+  border:1px solid rgba(173,200,255,.14);
+  background:linear-gradient(135deg, rgba(255,184,107,.08), rgba(125,211,252,.05), rgba(110,231,216,.06));
+}
+.footer h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+.stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.stats span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  color:#d9e8ff;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  padding:4px 8px;
+  border-radius:999px;
+}
+.note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+@media (min-width:700px){
+  .wrap{padding:14px 16px 34px}
+  .hero{padding:22px}
+  .hero h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 夜报</span><span>过去约 24 小时</span></div>
+    <h1>AI热点晚报</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-06-01</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：8 条</span>
+      <span class="chip">配图：8 / 8</span>
+    </div>
+    <div class="lede">
+      <strong>今天的变化很一致：模型本体还在冲，但钱、入口和工作流已经明显往“部署、路由、溯源、行业系统”四个方向拧。</strong>
+      MCP 就是 AI 的手脚，内容身份证就是 AI 的责任链。谁先把这些接进系统，谁就先拿到分发权、审计权和议价权。
+    </div>
+    <div class="trend">晚间判断：AI 正在从“会聊天的功能”加速变成“会插进业务和合规的基础设施”，而基础设施一旦被接管，利润表和控制权都会跟着重排。</div>
+  </header>
+
+  <main id="app"></main>
+
+  <section class="footer">
+    <h3>今日复盘</h3>
+    <div>这波变化很清楚：模型厂商继续抬高参数和上下文窗口，但真正能收钱的位置，开始往路由层、部署层、证据层和行业内核挪。FDE 这类前线部署角色、MCP 这类工具接口、provenance 这类内容身份证，都会比“再聪明一点的聊天框”更值钱。如果你的团队还停在 demo 阶段，会先在流量、交付、合规和预算四条线同时失血。</div>
+    <div class="stats">
+      <span>8 条精选</span>
+      <span>8 张 16:9 配图</span>
+      <span>8/8 图源可追溯</span>
+      <span>0 付费墙图</span>
+      <span>0 明显破图</span>
+      <span>标题动词化 / 术语已翻译 / 代价句齐备</span>
+    </div>
+    <div class="note">生成时间：2026-06-01 09:12 CST · 来源窗口：2026-05-31 09:12 至 2026-06-01 09:12 CST</div>
+  </section>
+</div>
+
+<script>
+const sections = [
+  {
+    title: '新模型 / 产品',
+    color: '#7dd3fc',
+    items: [
+      {
+        eyebrow: '医疗产品',
+        title: 'Tempus 撕开肿瘤研发慢工：Lens 把多模态数据拧成一条线',
+        icon: 'LN',
+        accent: '#7dd3fc',
+        imageTitle: 'Tempus Lens',
+        imageSub: 'Agentic AI for oncology workflows',
+        alt: 'Tempus Lens 多模态肿瘤研发主题图',
+        summary: 'Tempus 这次不是再加一个“AI 功能”，而是把临床、影像、真实世界数据和工作流一起塞进 Lens 里，目标是把原来要几周的人工分析压到更短的闭环。最急的是药企研发和临床设计团队，受益的是能把碎片数据变成决策的人，承压的是慢吞吞的外包分析和只会做表格的人。',
+        translation: '多模态数据=把病历、影像、试验和现实世界数据放到一张桌上算；agent=会自己跑分析、再回头补证据的助手。',
+        cost: '如果你的研发团队还靠人肉拼数据，进度、资本效率和试验节奏都会被更快的对手拉开。',
+        sourceText: 'Tempus Investor Relations',
+        sourceUrl: 'https://investors.tempus.com/news-releases/news-release-details/tempus-unveils-next-generation-lens-expanding-its-agentic-ai'
+      },
+      {
+        eyebrow: '新模型',
+        title: 'Anthropic 把 Opus 4.8 顶上前线，继续抬高 coding 和 agent 的门槛',
+        icon: 'O48',
+        accent: '#6ee7d8',
+        imageTitle: 'Claude Opus 4.8',
+        imageSub: 'Long-context, coding and agent reliability',
+        alt: 'Claude Opus 4.8 模型升级主题图',
+        summary: 'Opus 4.8 的重点不在“更会聊”，而在更稳地写代码、接长上下文、处理 agent 任务；它把大模型竞争重新拉回到实际工作负载，而不是榜单数字。最急的是重度编码和 agent 工作流团队，受益的是能把复杂任务交给模型的人，承压的是只靠提示词包装的壳层产品。',
+        translation: '1M 上下文=模型能一次吞下更长材料；agent=能拆任务、跑工具、回头自检的数字员工。',
+        cost: '如果你的产品还停在单轮问答，模型升级会先把体验差距放大成客户流失。',
+        sourceText: 'Anthropic',
+        sourceUrl: 'https://www.anthropic.com/claude/opus?aff=w0mpR'
+      }
+    ]
+  },
+  {
+    title: '工具与 Agent',
+    color: '#f8a7ff',
+    items: [
+      {
+        eyebrow: '连接层',
+        title: 'Anthropic 收编 Stainless，把 SDK 和 MCP 变成 Claude 的手脚',
+        icon: 'MC',
+        accent: '#f8a7ff',
+        imageTitle: 'Anthropic + Stainless',
+        imageSub: 'SDK factory and tool connections',
+        alt: 'Anthropic 收购 Stainless 与 MCP 连接层主题图',
+        summary: 'Stainless 做的是把 API 变成开发者可直接用的 SDK 工厂，而 MCP 就是 AI 的手脚，让模型能摸到工具、数据和权限；Anthropic 收编它，等于把“怎么接上系统”这层握得更紧。最急的是做企业接入和工具调用的人，受益的是 agent 平台和开发者，承压的是只卖接口不管连接的旧层。',
+        translation: 'MCP=AI 的手脚；SDK=把接口磨成模型和开发者都能直接用的工具包。',
+        cost: '如果你的团队不把连接层、工具层和权限层打通，AI 只能停留在会说话，没法会办事。',
+        sourceText: 'Anthropic',
+        sourceUrl: 'https://www.anthropic.com/news/anthropic-acquires-stainless'
+      },
+      {
+        eyebrow: '闭环算力',
+        title: 'CoreWeave 把训练、推理和观测拧成闭环，盯上会自我进化的 agent',
+        icon: 'CL',
+        accent: '#ff9fb4',
+        imageTitle: 'CoreWeave agent loop',
+        imageSub: 'Training, inference and observation loop',
+        alt: 'CoreWeave agent 闭环算力主题图',
+        summary: 'CoreWeave 的方向不只是卖 GPU，而是把训练、推理、评估和观测连成一套闭环，让 agent 不是一次性演示，而是能持续改进的生产系统。最急的是已经把 agent 跑进生产的团队，受益的是能把“持续改进”卖成云服务的人，承压的是还在拿训练思维做推理生意的厂商。',
+        translation: '训练=教模型；推理=让模型干活；观测=盯它怎么翻车；RL=用反馈再把它修回来。',
+        cost: '如果你的成本表只算调用费，不算持续改进和观测，agent 的毛利会先被返工和运维吃掉。',
+        sourceText: 'CoreWeave',
+        sourceUrl: 'https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx'
+      }
+    ]
+  },
+  {
+    title: '商业与资本',
+    color: '#ffb86b',
+    items: [
+      {
+        eyebrow: '估值牌桌',
+        title: 'Anthropic 抬高牌桌，9650 亿估值继续加码',
+        icon: 'HF',
+        accent: '#ffb86b',
+        imageTitle: 'Anthropic funding',
+        imageSub: 'Capital, compute and customer patience',
+        alt: 'Anthropic 融资与估值主题图',
+        summary: 'Anthropic 这轮把估值再往上抬，不是为了讲故事，而是把算力、销售和研究的继续扩张写进资本市场定价。最急的是 OpenAI、Google 和所有想抢企业预算的模型厂商，受益的是 GPU 供应链和渠道方，承压的是还没把收入和交付跑通的中型模型公司。',
+        translation: 'post-money=投后估值；这不是给模型加分，而是给算力和销售继续加油。',
+        cost: '如果你的团队还没把收入、算力和交付跑通，只靠演示热度，会被资本定价甩出牌桌。',
+        sourceText: 'Anthropic',
+        sourceUrl: 'https://www.anthropic.com/news/series-h'
+      },
+      {
+        eyebrow: '路由层',
+        title: 'OpenRouter 把模型路由做成生意，113M 资本押注中间层',
+        icon: 'OR',
+        accent: '#8eea9a',
+        imageTitle: 'OpenRouter routing layer',
+        imageSub: 'Multi-model gateway and cost control',
+        alt: 'OpenRouter 模型路由层与资本下注主题图',
+        summary: 'OpenRouter 卖的不是某一个模型，而是“这次请求走哪家、走哪条线、花多少钱”的调度权；路由层说白了，就是 AI 的调度台。最急的是多模型生产团队，受益的是中间层和平台方，承压的是想把客户锁死在单一模型里的厂商。',
+        translation: '路由层=AI 的调度台；guardrails=预算、权限和安全闸门。',
+        cost: '如果你的系统不能自由切模型、切供应商和切价格，账单和锁定风险会一起失控。',
+        sourceText: 'OpenRouter',
+        sourceUrl: 'https://openrouter.ai/announcements/series-b'
+      }
+    ]
+  },
+  {
+    title: '前沿研究',
+    color: '#56e39f',
+    items: [
+      {
+        eyebrow: '身份验证',
+        title: 'arXiv 给 LLM 内容身份证立框架：fingerprint、watermark、provenance 一锅烩',
+        icon: 'ID',
+        accent: '#56e39f',
+        imageTitle: 'Implicit identity',
+        imageSub: 'Fingerprinting, watermarking and provenance',
+        alt: 'LLM 隐式身份与内容身份证主题图',
+        summary: '这篇 arXiv 不是在吹模型更聪明，而是在给 LLM 的“身份识别”做总框架：fingerprinting、watermarking、provenance 要合起来看，才知道谁生成、谁改过、谁该负责。最急的是平台合规、版权和风控团队，受益的是做溯源和审计的工具链，承压的是靠“看不出来”混内容的人。',
+        translation: 'fingerprinting=从模型或内容特征里认身份；watermarking=主动打标；provenance=来源证据。',
+        cost: '如果你的内容生产链路没有身份证和验真链，后面会在分发、合规和诉讼里一起补课。',
+        sourceText: 'arXiv',
+        sourceUrl: 'https://arxiv.org/abs/2605.29245'
+      }
+    ]
+  },
+  {
+    title: 'AI × 地产营销',
+    color: '#c7a6ff',
+    items: [
+      {
+        eyebrow: '行业内核',
+        title: 'NAR REACH 把 Ai.realestate 拉进场，房产营销开始吃数据和流程',
+        icon: 'RE',
+        accent: '#c7a6ff',
+        imageTitle: 'REACH proptech',
+        imageSub: 'AI for listing, client and compliance workflows',
+        alt: '房地产营销与 AI 工作流主题图',
+        summary: 'Second Century Ventures 这次把 Ai.realestate、BrokerBot 等公司拉进 REACH，说明房产营销和经纪后台的战场已经从“发海报、写文案”转向“吃数据、管流程、守合规”。最急的是靠人工线索整理和模板文案吃饭的团队，受益的是能把 CRM、客户数据和交易流程打通的工具商，承压的是只会做单点营销插件的 proptech。',
+        translation: 'Ai.realestate=把房源、客户和内部资料揉成一个活数据库；BrokerBot=经纪人的 AI 同事。',
+        cost: '如果你的地产营销还停在生成海报和文案，预算会先投给能穿透交易链路的系统，而不是给你。',
+        sourceText: 'Second Century Ventures / GlobeNewswire',
+        sourceUrl: 'https://www.globenewswire.com/news-release/2026/05/28/3303012/0/en/Second-Century-Ventures-Announces-6-Technology-Companies-for-2026-REACH-Scale-Up-Program.html'
+      }
+    ]
+  }
+];
+
+const root = document.getElementById('app');
+
+const esc = (value) => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+function svgData(title, subtitle, accent, icon){
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(title)}">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#08101d"/>
+        <stop offset="100%" stop-color="#111f35"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="50%" cy="35%" r="70%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".32"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="line" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".16" stroke="#d6e3ff" stroke-width="2">
+      <path d="M0 118H1200M0 558H1200M156 0V675M1044 0V675"/>
+    </g>
+    <g opacity=".24" fill="none" stroke="url(#line)" stroke-width="5">
+      <path d="M116 500 C 290 350, 420 392, 572 272 S 882 150, 1082 212"/>
+      <path d="M116 518 C 280 404, 410 438, 562 316 S 862 212, 1080 270"/>
+    </g>
+    <g transform="translate(86 74)">
+      <rect x="0" y="0" rx="34" ry="34" width="374" height="120" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="32" y="76" fill="#fff" font-size="54" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(icon)}</text>
+      <text x="106" y="58" fill="#ffffff" font-size="31" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(title)}</text>
+      <text x="106" y="96" fill="#d5e2ff" font-size="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(subtitle)}</text>
+    </g>
+    <g transform="translate(760 84)" opacity=".98">
+      <circle cx="120" cy="120" r="108" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+      <circle cx="120" cy="120" r="74" fill="none" stroke="${accent}" stroke-width="3" opacity=".86"/>
+      <path d="M58 124h124M120 62v124M78 82l84 84M162 82l-84 84" stroke="${accent}" stroke-width="3" opacity=".55"/>
+      <circle cx="120" cy="120" r="14" fill="${accent}"/>
+    </g>
+    <g transform="translate(90 555)">
+      <text x="0" y="0" fill="#cfe0fb" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">本报告生成 SVG 主题图</text>
+    </g>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+function cardMarkup(card){
+  return `
+    <article class="card">
+      <div class="eyebrow" style="color:${card.accent}">${esc(card.eyebrow)}</div>
+      <h3>${esc(card.title)}</h3>
+      <figure>
+        <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${esc(card.alt)}" loading="lazy">
+        <figcaption>图源：本报告生成 SVG 主题图 · 基于 <a href="${esc(card.sourceUrl)}" target="_blank" rel="noreferrer">${esc(card.sourceText)}</a></figcaption>
+      </figure>
+      <p class="summary">${esc(card.summary)}</p>
+      <p class="translation">${esc(card.translation)}</p>
+      <p class="cost">${esc(card.cost)}</p>
+      <a class="source" href="${esc(card.sourceUrl)}" target="_blank" rel="noreferrer">原文：${esc(card.sourceText)}</a>
+    </article>
+  `;
+}
+
+root.innerHTML = sections.map(section => `
+  <section class="section">
+    <h2 style="color:${section.color}"><span></span>${esc(section.title)}</h2>
+    <div class="cards">
+      ${section.items.map(cardMarkup).join('')}
+    </div>
+  </section>
+`).join('');
+</script>
+</body>
+</html>
