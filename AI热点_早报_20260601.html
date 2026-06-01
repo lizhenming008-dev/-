@@ -6,221 +6,73 @@
 <title>AI热点早报 | 2026-06-01</title>
 <style>
 :root{
-  --bg:#07111f;
-  --panel:#0e1728;
-  --panel-2:#111f36;
-  --line:rgba(173,200,255,.16);
-  --text:#e9eefc;
-  --muted:#9aa9c7;
+  --bg:#06101c;
+  --panel:#0d1728;
+  --panel-2:#101f33;
+  --line:rgba(160,186,255,.14);
+  --text:#edf2ff;
+  --muted:#a1b0cf;
   --accent:#7dd3fc;
-  --accent-2:#f8a7ff;
-  --good:#56e39f;
-  --warn:#ffb86b;
-  --danger:#ff8b8b;
+  --accent-2:#fbbf24;
+  --accent-3:#66e3a6;
+  --danger:#ff8e8e;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(125,211,252,.16), transparent 26%),
-    radial-gradient(circle at top right, rgba(248,167,255,.12), transparent 22%),
-    linear-gradient(180deg, #050914 0%, #08111f 38%, #07101b 100%);
+    radial-gradient(circle at top left, rgba(125,211,252,.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(251,191,36,.12), transparent 22%),
+    linear-gradient(180deg, #050913 0%, #07101b 45%, #07111d 100%);
   color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   line-height:1.72;
 }
-.wrap{
-  max-width:680px;
-  margin:0 auto;
-  padding:14px 14px 28px;
-}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 28px}
 .hero{
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(145deg, rgba(18,29,51,.96), rgba(10,18,35,.98));
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:22px 18px 18px;
-  box-shadow:0 16px 40px rgba(0,0,0,.32);
+  position:relative;overflow:hidden;border:1px solid var(--line);border-radius:24px;
+  background:linear-gradient(150deg, rgba(15,24,42,.98), rgba(10,17,31,.98));
+  box-shadow:0 16px 36px rgba(0,0,0,.28);padding:20px 18px 18px;
 }
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:-70px -70px auto auto;
-  width:180px;height:180px;
-  background:radial-gradient(circle, rgba(125,211,252,.24), transparent 64%);
-  pointer-events:none;
-}
-.kicker{
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  font-size:12px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--accent);
-}
-.kicker b{
-  padding:2px 8px;
-  border:1px solid rgba(125,211,252,.32);
-  border-radius:999px;
-  background:rgba(125,211,252,.08);
-}
-.hero h1{
-  margin:10px 0 10px;
-  font-size:30px;
-  line-height:1.08;
-  letter-spacing:-.02em;
-}
-.meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  color:var(--muted);
-  font-size:12px;
-  margin-bottom:12px;
-}
-.chip{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  padding:5px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-}
-.lede{
-  margin-top:10px;
-  padding:14px 14px 12px;
-  border-radius:18px;
-  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(248,167,255,.08));
-  border:1px solid rgba(173,200,255,.18);
-  color:#edf3ff;
-}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:999px;pointer-events:none}
+.hero:before{inset:-80px -50px auto auto;width:200px;height:200px;background:radial-gradient(circle, rgba(125,211,252,.20), transparent 68%)}
+.hero:after{inset:auto auto -90px -40px;width:190px;height:190px;background:radial-gradient(circle, rgba(251,191,36,.14), transparent 68%)}
+.kicker{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker b{padding:2px 8px;border-radius:999px;background:rgba(125,211,252,.09);border:1px solid rgba(125,211,252,.26)}
+.hero h1{margin:10px 0 10px;font-size:30px;line-height:1.08;letter-spacing:-.03em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:var(--muted);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.lede{margin-top:10px;padding:14px 14px 12px;border-radius:18px;background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(251,191,36,.08));border:1px solid rgba(160,186,255,.16);color:#edf3ff}
 .lede strong{color:#fff}
-.trend{
-  margin-top:10px;
-  color:var(--muted);
-  font-size:13px;
-}
-.section{
-  margin-top:18px;
-}
-.section h2{
-  margin:0 0 10px;
-  font-size:16px;
-  letter-spacing:.02em;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.section h2 span{
-  display:inline-flex;
-  width:10px;height:10px;border-radius:999px;
-  background:currentColor;
-  box-shadow:0 0 18px currentColor;
-}
-.cards{
-  display:grid;
-  gap:12px;
-}
-.card{
-  background:linear-gradient(180deg, rgba(17,28,49,.98), rgba(13,22,40,.98));
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.18);
-}
-.eyebrow{
-  font-size:12px;
-  letter-spacing:.06em;
-  color:var(--accent);
-  text-transform:uppercase;
-  margin-bottom:6px;
-}
-.card h3{
-  margin:0 0 10px;
-  font-size:18px;
-  line-height:1.35;
-  color:#fff;
-}
+.trend{margin-top:10px;font-size:13px;color:var(--muted)}
+.section{margin-top:18px}
+.section h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+.section h2 span{width:10px;height:10px;border-radius:999px;background:currentColor;box-shadow:0 0 16px currentColor}
+.cards{display:grid;gap:12px}
+.card{padding:14px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg, rgba(16,26,45,.98), rgba(12,20,36,.98));box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow small{color:var(--muted);letter-spacing:0;text-transform:none;font-size:11px}
+.card h3{margin:0 0 10px;font-size:18px;line-height:1.34}
 figure{margin:0 0 10px}
-figure img{
-  display:block;
-  width:100%;
-  aspect-ratio:16 / 9;
-  object-fit:cover;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.08);
-  background:#0d1524;
-}
-figcaption{
-  margin-top:6px;
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.45;
-}
-figcaption a{
-  color:#cfe3ff;
-  text-decoration:none;
-}
-.summary,.translation,.cost{
-  margin:8px 0 0;
-  font-size:14px;
-  color:#d8e2f7;
-}
-.translation{color:#b8c8e3}
-.cost{color:#ffe0b5}
-.source{
-  display:inline-block;
-  margin-top:10px;
-  font-size:12px;
-  color:#8fc8ff;
-  text-decoration:none;
-  word-break:break-all;
-}
-.footer{
-  margin-top:18px;
-  padding:16px 14px;
-  border-radius:20px;
-  background:linear-gradient(135deg, rgba(248,167,255,.08), rgba(86,227,159,.07));
-  border:1px solid rgba(173,200,255,.16);
-}
-.footer h3{
-  margin:0 0 8px;
-  font-size:15px;
-}
-.stats{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:10px;
-}
-.stats span{
-  font-size:11px;
-  color:#cde0ff;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-  padding:4px 8px;
-  border-radius:999px;
-}
-.note{
-  margin-top:10px;
-  font-size:12px;
-  color:var(--muted);
-}
-@media (min-width:700px){
-  .wrap{padding:16px 18px 36px}
-  .hero{padding:24px}
-  .hero h1{font-size:32px}
-}
+figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0b1322}
+figcaption{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.45}
+figcaption a{color:#d7e6ff;text-decoration:none}
+.summary,.cost{margin:8px 0 0;font-size:14px}
+.summary{color:#d9e4f7}
+.cost{color:#ffe3b0}
+.footer{margin-top:18px;padding:16px 14px;border-radius:20px;background:linear-gradient(135deg, rgba(102,227,166,.08), rgba(251,191,36,.08));border:1px solid rgba(160,186,255,.16)}
+.footer h3{margin:0 0 8px;font-size:15px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.stats span{font-size:11px;color:#d2e3ff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.note{margin-top:10px;font-size:12px;color:var(--muted)}
+@media (min-width:700px){.wrap{padding:16px 18px 36px}.hero{padding:24px}.hero h1{font-size:32px}}
 </style>
 </head>
 <body>
 <main class="wrap">
   <header class="hero">
     <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
-    <h1>AI 把计费、代理和成交链一起拖上新牌桌</h1>
+    <h1>计费、标签、企业下场和房产现金流一起改写</h1>
     <div class="meta">
       <span class="chip">日期：2026-06-01</span>
       <span class="chip">时区：Asia/Shanghai</span>
@@ -228,178 +80,45 @@ figcaption a{
       <span class="chip">配图：8 / 8</span>
     </div>
     <div class="lede">
-      <strong>今天值钱的不是谁把模型说得更像人，而是谁把模型塞进计费、桌面、组织、医疗和成交这些真流程。</strong>
-      这组新闻拼出来的，不是模型热度，而是预算、权限、交付和线索速度的重新分配。
+      <strong>过去 24 小时里，最值钱的不是模型又多像人，而是谁把模型塞进计费、内容标识、企业部署、选举防线和买房首付这些真流程。</strong>
+      今天这 8 条新闻拼出的，是 AI 从“讲故事”转向“收账”的速度。
     </div>
-    <div class="trend">早间判断：模型只是门面，能不能接手、记账、收单，才是里子。</div>
+    <div class="trend">早间判断：入口在收紧，账单在变硬，真正的赢家开始吃流程而不是吃流量。</div>
   </header>
 
-  <div id="app"></div>
+  <section class="section">
+    <h2 style="color:#7dd3fc"><span></span>今日精选</h2>
+    <div class="cards" id="cards"></div>
+  </section>
 
   <section class="footer">
     <h3>今日检查</h3>
-    <div>图片全部使用本报告生成的 16:9 SVG 主题图，避免付费墙、版权不清和外链破图；8 条卡片、8 张配图、8 个来源链接，满足移动端首屏阅读。</div>
+    <div>图片全部使用本报告生成的 16:9 SVG 主题图，避开付费墙、版权不明和外链破图；8 条卡片、8 张配图、8 个来源链接，移动端首屏可直接读完。</div>
     <div class="stats">
       <span>8 条精选</span><span>8 张 16:9 配图</span><span>8 / 8 图片合格</span><span>0 明显破图</span>
     </div>
-    <div class="note">生成时间：2026-06-01 09:10 CST</div>
+    <div class="note">生成时间：2026-06-01 09:07 CST</div>
   </section>
 </main>
 
 <script>
-const sections = [
-  {
-    title: '新模型 / 新产品',
-    color: '#7dd3fc',
-    items: [
-      {
-        eyebrow: '计费翻脸',
-        title: 'GitHub Copilot 改成按 token 计费，开发者的包月幻觉被戳穿',
-        imageTitle: 'GitHub Copilot billing',
-        imageSub: 'Token metering and AI Credits',
-        accent: '#7dd3fc',
-        icon: '¥',
-        alt: 'GitHub Copilot 按 token 计费主题图',
-        summary: 'GitHub Copilot 从固定订阅切到 usage-based billing，白话就是 AI 编程助手开始按你喂进去的字和吐出来的结果收钱，token=模型吞吐的计价单位。最急的是重度 Copilot 团队，受益的是会精算调用链的管理者，承压的是把 AI 当免费加速器的人。',
-        translation: '白话说，Copilot 不再像包月软件，更像按工时和字数一起收税的外包工程师。',
-        cost: '如果你的团队不盯着 token 账单，会在六月第一周先被成本报表打醒。',
-        sourceText: 'GitHub Copilot is moving to usage-based billing',
-        sourceUrl: 'https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/'
-      },
-      {
-        eyebrow: '桌面下场',
-        title: 'OpenAI 用 Codex 远控 Windows，顺手把工作流塞进手机',
-        imageTitle: 'OpenAI Codex Windows',
-        imageSub: 'Computer use and remote control',
-        accent: '#f8a7ff',
-        icon: '⎘',
-        alt: 'OpenAI Codex Windows 远控主题图',
-        summary: 'OpenAI 的 release notes 里，Codex 现在能在 Windows 上看、点、敲，usage profiles 也跟着上桌。Codex=会干活的 AI 编程员，computer use=它能替你操作桌面应用。最急的是测试和交付团队，受益的是能把本地开发环境串起来的人，承压的是还靠“盯屏幕手动点”的流程。',
-        translation: '白话说，OpenAI 这次不是加了个功能，而是把 AI 从聊天框推到桌面上。',
-        cost: '如果你的工具链还卡在“人盯人点”，效率会先被能远控的 agent 拉开。',
-        sourceText: 'ChatGPT — Release Notes',
-        sourceUrl: 'https://help.openai.com/en/articles/6825453-chatgpt-versionshinweise'
-      },
-      {
-        eyebrow: '能力升级',
-        title: 'Anthropic 押注 Claude Opus 4.8，继续围猎代码和代理场景',
-        imageTitle: 'Anthropic Opus 4.8',
-        imageSub: 'Dynamic workflows and agentic coding',
-        accent: '#56e39f',
-        icon: '◇',
-        alt: 'Anthropic Claude Opus 4.8 主题图',
-        summary: 'Anthropic 这次把 Opus 4.8 的重点压在 coding、agentic tasks 和 knowledge work 上，还给 Claude Code 塞了 dynamic workflows。agentic=AI 会自己拆任务、调用工具、回头验收；动态工作流=它能在一条会话里拉起一串并行子代理。最急的是代码代理平台，受益的是企业知识工作流，承压的是还停在“更会聊天”阶段的对手。',
-        translation: '白话说，这是一版更会接活，也更会收尾的 Claude。',
-        cost: '如果你的助手还扛不住多步任务，企业买单时会直接绕开你。',
-        sourceText: 'Introducing Claude Opus 4.8',
-        sourceUrl: 'https://www.anthropic.com/news/claude-opus-4-8'
-      }
-    ]
-  },
-  {
-    title: '企业落地',
-    color: '#ffb86b',
-    items: [
-      {
-        eyebrow: '大厂贴身',
-        title: 'Meta 下场做 Enterprise Solutions，直接贴身围猎客户系统',
-        imageTitle: 'Meta Enterprise Solutions',
-        imageSub: 'Embedded enterprise deployment teams',
-        accent: '#ffb86b',
-        icon: '◉',
-        alt: 'Meta Enterprise Solutions 主题图',
-        summary: 'The Information 说 Meta 要组 Enterprise Solutions，把产品经理、数据工程师和软件工程师直接塞进大客户系统里。白话说，这不是卖一个 API，而是把人和工程师一起送进客户流程，盯着真系统把 AI 跑起来。最急的是传统企业软件商，受益的是能做集成交付的大厂销售团队，承压的是只卖单点功能的工具厂商。',
-        translation: '白话说，Meta 要靠“贴身交付”抢企业预算，不再只靠模型名气。',
-        cost: '如果你的产品不能嵌进客户系统，最后可能只剩试用名单，没有续费。',
-        sourceText: 'Meta Launches New Enterprise Push to Boost Business Adoption of Its AI Tools',
-        sourceUrl: 'https://www.theinformation.com/articles/meta-launches-new-enterprise-push-boost-business-adoption-ai-tools'
-      },
-      {
-        eyebrow: '医疗脏活',
-        title: 'Triomics 抢下 2200 万美元，癌症中心的文书苦力开始被撬',
-        imageTitle: 'Triomics oncology AI',
-        imageSub: 'Trial matching and appointment prep',
-        accent: '#c5a3ff',
-        icon: '⌂',
-        alt: 'Triomics 肿瘤 AI 主题图',
-        summary: 'Triomics 融到 2200 万美元，重点就是帮肿瘤科做 clinical trial matching 和 appointment prep。白话说，clinical trial matching=把病历和试验条件互相筛，appointment prep=看诊前先把材料整理干净。最急的是肿瘤中心和医助团队，受益的是能把病历流转做成流水线的医疗 AI，承压的是靠人工翻病历的后台。',
-        translation: '白话说，AI 正在先吃掉癌症流程里最费人、最费时的脏活累活。',
-        cost: '如果你的诊所还让人手动翻几千页病历，时间成本会先输给自动化队伍。',
-        sourceText: 'Triomics nabs $22M to bring oncology-specific AI to cancer centers',
-        sourceUrl: 'https://techcrunch.com/2026/05/27/triomics-nabs-22m-to-bring-oncology-specific-ai-to-cancer-centers/'
-      },
-      {
-        eyebrow: '基础设施',
-        title: 'CoreWeave 撕开训练与推理的断层，逼企业把 agent 真跑起来',
-        imageTitle: 'CoreWeave agentic AI',
-        imageSub: 'Training-to-inference loop',
-        accent: '#ff8b8b',
-        icon: '⇄',
-        alt: 'CoreWeave autonomous agent improvement 主题图',
-        summary: 'CoreWeave 这次主打 unified agentic AI capabilities，目标是把训练、推理、观测和 RL 串成闭环，别再让生产经验和模型改进分家。RL=让 AI 通过试错学会更会干活，GPU-heavy=特别烧钱的算力训练。最急的是把 agent 拉进生产的企业，受益的是云和基础设施，承压的是还在手工调模型的人。',
-        translation: '白话说，CoreWeave 在卖的不是机器，而是让 AI 越跑越会跑的工厂。',
-        cost: '如果你的训练、回放和上线还是三套系统，agent 会很快停在 demo 而不是成交。',
-        sourceText: 'CoreWeave Closes the Training-to-Inference Gap for Autonomous Agent Improvement',
-        sourceUrl: 'https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx'
-      }
-    ]
-  },
-  {
-    title: '研究与开源',
-    color: '#56e39f',
-    items: [
-      {
-        eyebrow: '安全裂缝',
-        title: 'arXiv 论文撕开代理口子：AI 手脚一多，漏洞就先炸',
-        imageTitle: 'Agent system security',
-        imageSub: 'Pen tests on large-scale agents',
-        accent: '#56e39f',
-        icon: '⚑',
-        alt: '大规模代理系统渗透测试论文主题图',
-        summary: '《Lessons from Penetration Tests on Large-Scale Agent Systems》说得很直白：会干活的 AI 一旦拿到工具和权限，老毛病也会一起被放大。prompt injection=把假指令塞进 AI 嘴里；agent=AI 的手脚。最急的是做 agent 平台的安全团队，受益的是先补权限和隔离的人，承压的是急着上线却没做护栏的公司。',
-        translation: '白话说，AI 越会办事，越像一台能被骗着乱跑的自动机器。',
-        cost: '如果你的 agent 还没做工具权限隔离，早晚会把“能干活”变成“能闯祸”。',
-        sourceText: 'Lessons from Penetration Tests on Large-Scale Agent Systems',
-        sourceUrl: 'https://arxiv.org/abs/2605.27042'
-      }
-    ]
-  },
-  {
-    title: 'AI × 地产营销',
-    color: '#c5a3ff',
-    items: [
-      {
-        eyebrow: '营销战场',
-        title: 'Crexi 把 AI 塞进 CRE 成交链，营销包和 listing 一起收割',
-        imageTitle: 'Crexi AI commercial real estate',
-        imageSub: 'Deal prep and targeted property marketing',
-        accent: '#8ddf9b',
-        icon: '◈',
-        alt: 'Crexi AI 商业地产营销主题图',
-        summary: 'Crexi AI 直接把 OM 草稿、listing 创建和定向物业营销塞进同一套流程。OM=给买家看的项目说明书，listing=房源或物业上线页。最急的是 CRE brokers 和资产运营方，受益的是能把营销和交易数据串起来的平台，承压的是只会单点生成文案的工具。',
-        translation: '白话说，Crexi 不是给你一个写稿机器人，而是把“找房源、写材料、发出去”这条链条一起压缩。',
-        cost: '如果你的团队还靠人手拼 OM 和 listing，会被更快出稿、更准投放的对手抢走线索。',
-        sourceText: 'Crexi Expands Crexi AI Capabilities to Help CRE Professionals Work Faster and Close Deals More Efficiently',
-        sourceUrl: 'https://www.prnewswire.com/news-releases/crexi-expands-crexi-ai-capabilities-to-help-cre-professionals-work-faster-and-close-deals-more-efficiently-302770467.html'
-      }
-    ]
-  }
+const stories = [
+  {group:"新模型 / 产品",badge:"计费改道",title:"GitHub 砍掉 Copilot 的平价账本，改按 token 结账",main:"COPILOT",sub:"TOKEN METER",accent:"#7dd3fc",icon:"¥",alt:"蓝色科技风 SVG 主题图，展示 Copilot 计费被改成 token 计量的抽象账单面板",summary:"GitHub 把 Copilot 从“按请求算账”拧成“按 token 算账”，MCP 和 agent 这类 AI 的手脚一多，账单就会像电表一样狂转。最急的是重度开发者和小团队，受益的是 GitHub 的毛利和会算成本的大企业，承压的是把 Copilot 当固定套餐的人。",cost:"如果你的团队还把 AI 当固定月费而不是可变成本，下一次模型切换就会直接把研发预算打穿，并把预算管理权交到更会算账的对手手里。",source:"GitHub Docs",url:"https://docs.github.com/en/copilot/reference/copilot-billing"},
+  {group:"新模型 / 产品",badge:"内容身份证",title:"YouTube 把 AI 标签顶到台前，连自动识别也一并下场",main:"AI LABELS",sub:"C2PA ID",accent:"#fbbf24",icon:"ID",alt:"金色科技风 SVG 主题图，展示 YouTube AI 标签和内容身份证的概念面板",summary:"YouTube 把“AI 生成/显著修改”的标记挪到更显眼的位置，还开始自动识别没老实打标的写实内容；C2PA 就像 AI 内容的身份证，能告诉平台这段东西是不是机器做的。最急的是内容号、广告主和新闻机构，受益的是想少踩深伪坑的普通用户，承压的是靠混剪和伪装吃流量的人。",cost:"如果你的团队不把内容溯源和标识做成默认动作，就会被平台规则和用户信任一起卡脖子，最后只能给真假混杂的流量账单买单。",source:"YouTube Blog",url:"https://blog.youtube/news-and-events/improving-ai-labels-viewers-creators/"},
+  {group:"企业落地",badge:"选举防线",title:"OpenAI 把选举假消息防线往前推到州政府和政策桌面",main:"DEEPFAKE",sub:"DEFENSE",accent:"#66e3a6",icon:"SHIELD",alt:"绿色科技风 SVG 主题图，展示选举防线、深伪警戒和政府盾牌图形",summary:"OpenAI 这回把防深伪、信息核验和州政府协作绑在一起，等于承认 AI 生成内容已经不是公关问题，而是选举基础设施问题；deepfake=会说谎的假视频和假音频。最急的是选务和政务系统，受益的是先把防线装上的机构，承压的是靠假图假声搅局的账号。",cost:"如果你的团队不提前把内容验证和敏感场景审核拉满，下一轮选举季就会在假消息、舆情和合规三头夹击里失去解释权。",source:"OpenAI",url:"https://openai.com/index/election-safeguards-2026/"},
+  {group:"企业落地",badge:"转型基金",title:"OpenAI Foundation 把 2.5 亿美元押向 AI 冲击善后",main:"250M",sub:"WORKFORCE",accent:"#a78bfa",icon:"FUND",alt:"紫色科技风 SVG 主题图，展示 2.5 亿美元资金流入劳动力转型与经济缓冲垫",summary:"这笔钱不是慈善秀，而是在给“被 AI 改写的岗位和地方经济”先垫一个缓冲层；白话就是给再培训、社区支持和长期安全网先买时间。最急的是会被自动化挤压的白领和地方政府，受益的是能拿到资源做过渡方案的人，承压的是只想省人不想接盘的企业。",cost:"如果你的团队不为岗位重组和技能转移预留预算，等 AI 把流程吃掉时，你会发现省下来的薪资很快会变成更高的离职、再招和交接成本。",source:"Techmeme / Reuters",url:"https://www.techmeme.com/260527/p36"},
+  {group:"企业落地",badge:"嵌进客户",title:"Meta 直接派人下场，把工程师塞进大客户办公室",main:"ENTERPRISE",sub:"EMBEDDED TEAMS",accent:"#22d3ee",icon:"TEAM",alt:"青蓝色科技风 SVG 主题图，展示嵌入式企业团队和办公楼连接网络",summary:"Meta 的 Enterprise Solutions 不是简单卖软件，而是把产品经理、数据工程师和软件工程师塞进客户现场，MCP 这类接口就是 AI 的手脚，目标是让模型真的接上企业系统。最急的是 Salesforce、微软和一众企业软件中间层，受益的是能赚定制交付费的 Meta，承压的是只靠自助试用成交的厂商。",cost:"如果你的产品不能嵌进客户系统，最后可能只剩试用名单，没有续费。",source:"The Information / PYMNTS",url:"https://www.pymnts.com/meta/2026/meta-is-coming-for-enterprise-ai/"},
+  {group:"企业落地",badge:"资金加速",title:"Corgi 用 1060 万美元外的老把戏再抬价，三周翻到 26 亿美元",main:"CORGI",sub:"$2.6B",accent:"#fb7185",icon:"GROW",alt:"红色科技风 SVG 主题图，展示保险公司估值上升和资金加速的抽象图表",summary:"Corgi 这轮是把 AI 风险保险当成一个新赛道来抢位，$2.6B 估值说明资本正在给“AI 时代的保险底层设施”提前定价。最急的是还没给 AI 风险买单的创业公司，受益的是拿到先手的保险平台和风投，承压的是传统保险里反应慢的一层。",cost:"如果你的团队不把 AI 失误、模型事故和数据泄漏的责任链条写进合同和保险，等事故来了，你会先被客户问责，再被保单条款卡住。",source:"TechCrunch",url:"https://techcrunch.com/2026/05/28/corgi-announces-106m-raise-at-2-6b-valuation-three-weeks-after-160m-series-b/"},
+  {group:"研究与开源",badge:"长跑评测",title:"Datacurve 用 DeepSWE 撕开编码榜单，逼模型回到真实仓库",main:"DEEPSWE",sub:"REAL REPOS",accent:"#93c5fd",icon:"CODE",alt:"蓝白色科技风 SVG 主题图，展示真实仓库、代码格子和 benchmark 评分表",summary:"DeepSWE 不是拿一道题考模型，而是拿活着的开源仓库、长链路任务和独立 verifier 去测代理能不能真修代码；benchmark=给 AI 做体检，但这次体检不让它背题。最急的是只会刷榜单的模型团队，受益的是要选型的工程负责人，承压的是靠短题分数讲故事的厂商。",cost:"如果你的团队继续只看短榜单，不在自家仓库做实测，就会把采购决策建立在幻觉上，最后被一场真正的线上故障打回原形。",source:"Datacurve / GitHub",url:"https://datacurve.ai/research/deepswe"},
+  {group:"AI × 地产营销",badge:"首付抬升",title:"AI 财富把湾区豪宅首付抬高，买房门槛被期权现金顶上去",main:"HOME CASH",sub:"AI EQUITY",accent:"#f59e0b",icon:"HOME",alt:"橙金色科技风 SVG 主题图，展示房屋、现金和上涨箭头的地产市场图景",summary:"Realtor.com 的研究算出，AI 股权变现正在把湾区买房的首付往上拱，白话就是期权、二级市场和 IPO 现金流正直接冲进房产市场。最急的是想在湾区抢房的买家，受益的是豪宅经纪和卖方，承压的是没搭上 AI 红利的本地中产和首购族。",cost:"如果你的团队不把 AI 财富流动对房源、定价和获客的影响算进去，就会在下一轮豪宅和高端租赁竞争里被更懂现金流的人抢走客户。",source:"Realtor.com",url:"https://www.realtor.com/research/ai-housing-market-2026/"}
 ];
 
-const sectionNodes = document.getElementById('app');
+const cards = document.getElementById('cards');
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 
-const escapeHtml = (value) => String(value)
-  .replace(/&/g, '&amp;')
-  .replace(/</g, '&lt;')
-  .replace(/>/g, '&gt;')
-  .replace(/"/g, '&quot;')
-  .replace(/'/g, '&#39;');
-
-const escapeXml = escapeHtml;
-
-function svgData(title, subtitle, accent, icon) {
+function svgData(main, sub, accent, icon) {
   const svg = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${escapeXml(title)}">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(main)}">
     <defs>
       <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
         <stop offset="0%" stop-color="#09111d"/>
@@ -425,9 +144,9 @@ function svgData(title, subtitle, accent, icon) {
     </g>
     <g transform="translate(78 76)">
       <rect x="0" y="0" rx="36" ry="36" width="420" height="120" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12"/>
-      <text x="34" y="75" fill="#ffffff" font-size="54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${icon}</text>
-      <text x="104" y="58" fill="#f5f9ff" font-size="31" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(title)}</text>
-      <text x="104" y="95" fill="#d6e2ff" font-size="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(subtitle)}</text>
+      <text x="34" y="75" fill="#ffffff" font-size="54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(icon)}</text>
+      <text x="104" y="58" fill="#f5f9ff" font-size="31" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(main)}</text>
+      <text x="104" y="95" fill="#d6e2ff" font-size="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(sub)}</text>
     </g>
     <g transform="translate(760 86)" opacity=".98">
       <circle cx="120" cy="120" r="108" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
@@ -442,30 +161,17 @@ function svgData(title, subtitle, accent, icon) {
   return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
 
-function cardMarkup(card) {
-  return `
-    <article class="card">
-      <div class="eyebrow">${escapeHtml(card.eyebrow)}</div>
-      <h3>${escapeHtml(card.title)}</h3>
-      <figure>
-        <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${escapeHtml(card.alt)}">
-        <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(card.sourceText)}</a></figcaption>
-      </figure>
-      <p class="summary">${escapeHtml(card.summary)}</p>
-      <p class="translation">${escapeHtml(card.translation)}</p>
-      <p class="cost">${escapeHtml(card.cost)}</p>
-      <a class="source" href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">原文：${escapeHtml(card.sourceText)}</a>
-    </article>
-  `;
-}
-
-sectionNodes.innerHTML = sections.map(section => `
-  <section class="section">
-    <h2 style="color:${section.color}"><span></span>${escapeHtml(section.title)}</h2>
-    <div class="cards">
-      ${section.items.map(cardMarkup).join('')}
-    </div>
-  </section>
+cards.innerHTML = stories.map(card => `
+  <article class="card">
+    <div class="eyebrow">${esc(card.group)}<small>${esc(card.badge)}</small></div>
+    <h3>${esc(card.title)}</h3>
+    <figure>
+      <img src="${svgData(card.main, card.sub, card.accent, card.icon)}" alt="${esc(card.alt)}">
+      <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${esc(card.url)}" target="_blank" rel="noreferrer">${esc(card.source)}</a></figcaption>
+    </figure>
+    <p class="summary">${esc(card.summary)}</p>
+    <p class="cost">${esc(card.cost)}</p>
+  </article>
 `).join('');
 </script>
 </body>
