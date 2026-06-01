@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点早报 | 2026-06-01</title>
+<style>
+:root{
+  --bg:#07111f;
+  --panel:#0e1728;
+  --panel-2:#111f36;
+  --line:rgba(173,200,255,.16);
+  --text:#e9eefc;
+  --muted:#9aa9c7;
+  --accent:#7dd3fc;
+  --accent-2:#f8a7ff;
+  --good:#56e39f;
+  --warn:#ffb86b;
+  --danger:#ff8b8b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(125,211,252,.16), transparent 26%),
+    radial-gradient(circle at top right, rgba(248,167,255,.12), transparent 22%),
+    linear-gradient(180deg, #050914 0%, #08111f 38%, #07101b 100%);
+  color:var(--text);
+  line-height:1.72;
+}
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:14px 14px 28px;
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg, rgba(18,29,51,.96), rgba(10,18,35,.98));
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px 18px 18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.32);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-70px -70px auto auto;
+  width:180px;height:180px;
+  background:radial-gradient(circle, rgba(125,211,252,.24), transparent 64%);
+  pointer-events:none;
+}
+.kicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.kicker b{
+  padding:2px 8px;
+  border:1px solid rgba(125,211,252,.32);
+  border-radius:999px;
+  background:rgba(125,211,252,.08);
+}
+.hero h1{
+  margin:10px 0 10px;
+  font-size:30px;
+  line-height:1.08;
+  letter-spacing:-.02em;
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:var(--muted);
+  font-size:12px;
+  margin-bottom:12px;
+}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+.lede{
+  margin-top:10px;
+  padding:14px 14px 12px;
+  border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(248,167,255,.08));
+  border:1px solid rgba(173,200,255,.18);
+  color:#edf3ff;
+}
+.lede strong{color:#fff}
+.trend{
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+}
+.section{
+  margin-top:18px;
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:16px;
+  letter-spacing:.02em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section h2 span{
+  display:inline-flex;
+  width:10px;height:10px;border-radius:999px;
+  background:currentColor;
+  box-shadow:0 0 18px currentColor;
+}
+.cards{
+  display:grid;
+  gap:12px;
+}
+.card{
+  background:linear-gradient(180deg, rgba(17,28,49,.98), rgba(13,22,40,.98));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.06em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  line-height:1.35;
+  color:#fff;
+}
+figure{margin:0 0 10px}
+figure img{
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#0d1524;
+}
+figcaption{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.45;
+}
+figcaption a{
+  color:#cfe3ff;
+  text-decoration:none;
+}
+.summary,.translation,.cost{
+  margin:8px 0 0;
+  font-size:14px;
+  color:#d8e2f7;
+}
+.translation{color:#b8c8e3}
+.cost{color:#ffe0b5}
+.source{
+  display:inline-block;
+  margin-top:10px;
+  font-size:12px;
+  color:#8fc8ff;
+  text-decoration:none;
+  word-break:break-all;
+}
+.footer{
+  margin-top:18px;
+  padding:16px 14px;
+  border-radius:20px;
+  background:linear-gradient(135deg, rgba(248,167,255,.08), rgba(86,227,159,.07));
+  border:1px solid rgba(173,200,255,.16);
+}
+.footer h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+.stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.stats span{
+  font-size:11px;
+  color:#cde0ff;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  padding:4px 8px;
+  border-radius:999px;
+}
+.note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+@media (min-width:700px){
+  .wrap{padding:16px 18px 36px}
+  .hero{padding:24px}
+  .hero h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
+    <h1>AI 把计费、代理和成交链一起拖上新牌桌</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-06-01</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：8 条</span>
+      <span class="chip">配图：8 / 8</span>
+    </div>
+    <div class="lede">
+      <strong>今天值钱的不是谁把模型说得更像人，而是谁把模型塞进计费、桌面、组织、医疗和成交这些真流程。</strong>
+      这组新闻拼出来的，不是模型热度，而是预算、权限、交付和线索速度的重新分配。
+    </div>
+    <div class="trend">早间判断：模型只是门面，能不能接手、记账、收单，才是里子。</div>
+  </header>
+
+  <div id="app"></div>
+
+  <section class="footer">
+    <h3>今日检查</h3>
+    <div>图片全部使用本报告生成的 16:9 SVG 主题图，避免付费墙、版权不清和外链破图；8 条卡片、8 张配图、8 个来源链接，满足移动端首屏阅读。</div>
+    <div class="stats">
+      <span>8 条精选</span><span>8 张 16:9 配图</span><span>8 / 8 图片合格</span><span>0 明显破图</span>
+    </div>
+    <div class="note">生成时间：2026-06-01 09:10 CST</div>
+  </section>
+</main>
+
+<script>
+const sections = [
+  {
+    title: '新模型 / 新产品',
+    color: '#7dd3fc',
+    items: [
+      {
+        eyebrow: '计费翻脸',
+        title: 'GitHub Copilot 改成按 token 计费，开发者的包月幻觉被戳穿',
+        imageTitle: 'GitHub Copilot billing',
+        imageSub: 'Token metering and AI Credits',
+        accent: '#7dd3fc',
+        icon: '¥',
+        alt: 'GitHub Copilot 按 token 计费主题图',
+        summary: 'GitHub Copilot 从固定订阅切到 usage-based billing，白话就是 AI 编程助手开始按你喂进去的字和吐出来的结果收钱，token=模型吞吐的计价单位。最急的是重度 Copilot 团队，受益的是会精算调用链的管理者，承压的是把 AI 当免费加速器的人。',
+        translation: '白话说，Copilot 不再像包月软件，更像按工时和字数一起收税的外包工程师。',
+        cost: '如果你的团队不盯着 token 账单，会在六月第一周先被成本报表打醒。',
+        sourceText: 'GitHub Copilot is moving to usage-based billing',
+        sourceUrl: 'https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/'
+      },
+      {
+        eyebrow: '桌面下场',
+        title: 'OpenAI 用 Codex 远控 Windows，顺手把工作流塞进手机',
+        imageTitle: 'OpenAI Codex Windows',
+        imageSub: 'Computer use and remote control',
+        accent: '#f8a7ff',
+        icon: '⎘',
+        alt: 'OpenAI Codex Windows 远控主题图',
+        summary: 'OpenAI 的 release notes 里，Codex 现在能在 Windows 上看、点、敲，usage profiles 也跟着上桌。Codex=会干活的 AI 编程员，computer use=它能替你操作桌面应用。最急的是测试和交付团队，受益的是能把本地开发环境串起来的人，承压的是还靠“盯屏幕手动点”的流程。',
+        translation: '白话说，OpenAI 这次不是加了个功能，而是把 AI 从聊天框推到桌面上。',
+        cost: '如果你的工具链还卡在“人盯人点”，效率会先被能远控的 agent 拉开。',
+        sourceText: 'ChatGPT — Release Notes',
+        sourceUrl: 'https://help.openai.com/en/articles/6825453-chatgpt-versionshinweise'
+      },
+      {
+        eyebrow: '能力升级',
+        title: 'Anthropic 押注 Claude Opus 4.8，继续围猎代码和代理场景',
+        imageTitle: 'Anthropic Opus 4.8',
+        imageSub: 'Dynamic workflows and agentic coding',
+        accent: '#56e39f',
+        icon: '◇',
+        alt: 'Anthropic Claude Opus 4.8 主题图',
+        summary: 'Anthropic 这次把 Opus 4.8 的重点压在 coding、agentic tasks 和 knowledge work 上，还给 Claude Code 塞了 dynamic workflows。agentic=AI 会自己拆任务、调用工具、回头验收；动态工作流=它能在一条会话里拉起一串并行子代理。最急的是代码代理平台，受益的是企业知识工作流，承压的是还停在“更会聊天”阶段的对手。',
+        translation: '白话说，这是一版更会接活，也更会收尾的 Claude。',
+        cost: '如果你的助手还扛不住多步任务，企业买单时会直接绕开你。',
+        sourceText: 'Introducing Claude Opus 4.8',
+        sourceUrl: 'https://www.anthropic.com/news/claude-opus-4-8'
+      }
+    ]
+  },
+  {
+    title: '企业落地',
+    color: '#ffb86b',
+    items: [
+      {
+        eyebrow: '大厂贴身',
+        title: 'Meta 下场做 Enterprise Solutions，直接贴身围猎客户系统',
+        imageTitle: 'Meta Enterprise Solutions',
+        imageSub: 'Embedded enterprise deployment teams',
+        accent: '#ffb86b',
+        icon: '◉',
+        alt: 'Meta Enterprise Solutions 主题图',
+        summary: 'The Information 说 Meta 要组 Enterprise Solutions，把产品经理、数据工程师和软件工程师直接塞进大客户系统里。白话说，这不是卖一个 API，而是把人和工程师一起送进客户流程，盯着真系统把 AI 跑起来。最急的是传统企业软件商，受益的是能做集成交付的大厂销售团队，承压的是只卖单点功能的工具厂商。',
+        translation: '白话说，Meta 要靠“贴身交付”抢企业预算，不再只靠模型名气。',
+        cost: '如果你的产品不能嵌进客户系统，最后可能只剩试用名单，没有续费。',
+        sourceText: 'Meta Launches New Enterprise Push to Boost Business Adoption of Its AI Tools',
+        sourceUrl: 'https://www.theinformation.com/articles/meta-launches-new-enterprise-push-boost-business-adoption-ai-tools'
+      },
+      {
+        eyebrow: '医疗脏活',
+        title: 'Triomics 抢下 2200 万美元，癌症中心的文书苦力开始被撬',
+        imageTitle: 'Triomics oncology AI',
+        imageSub: 'Trial matching and appointment prep',
+        accent: '#c5a3ff',
+        icon: '⌂',
+        alt: 'Triomics 肿瘤 AI 主题图',
+        summary: 'Triomics 融到 2200 万美元，重点就是帮肿瘤科做 clinical trial matching 和 appointment prep。白话说，clinical trial matching=把病历和试验条件互相筛，appointment prep=看诊前先把材料整理干净。最急的是肿瘤中心和医助团队，受益的是能把病历流转做成流水线的医疗 AI，承压的是靠人工翻病历的后台。',
+        translation: '白话说，AI 正在先吃掉癌症流程里最费人、最费时的脏活累活。',
+        cost: '如果你的诊所还让人手动翻几千页病历，时间成本会先输给自动化队伍。',
+        sourceText: 'Triomics nabs $22M to bring oncology-specific AI to cancer centers',
+        sourceUrl: 'https://techcrunch.com/2026/05/27/triomics-nabs-22m-to-bring-oncology-specific-ai-to-cancer-centers/'
+      },
+      {
+        eyebrow: '基础设施',
+        title: 'CoreWeave 撕开训练与推理的断层，逼企业把 agent 真跑起来',
+        imageTitle: 'CoreWeave agentic AI',
+        imageSub: 'Training-to-inference loop',
+        accent: '#ff8b8b',
+        icon: '⇄',
+        alt: 'CoreWeave autonomous agent improvement 主题图',
+        summary: 'CoreWeave 这次主打 unified agentic AI capabilities，目标是把训练、推理、观测和 RL 串成闭环，别再让生产经验和模型改进分家。RL=让 AI 通过试错学会更会干活，GPU-heavy=特别烧钱的算力训练。最急的是把 agent 拉进生产的企业，受益的是云和基础设施，承压的是还在手工调模型的人。',
+        translation: '白话说，CoreWeave 在卖的不是机器，而是让 AI 越跑越会跑的工厂。',
+        cost: '如果你的训练、回放和上线还是三套系统，agent 会很快停在 demo 而不是成交。',
+        sourceText: 'CoreWeave Closes the Training-to-Inference Gap for Autonomous Agent Improvement',
+        sourceUrl: 'https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-the-Training-to-Inference-Gap-for-Autonomous-Agent-Improvement/default.aspx'
+      }
+    ]
+  },
+  {
+    title: '研究与开源',
+    color: '#56e39f',
+    items: [
+      {
+        eyebrow: '安全裂缝',
+        title: 'arXiv 论文撕开代理口子：AI 手脚一多，漏洞就先炸',
+        imageTitle: 'Agent system security',
+        imageSub: 'Pen tests on large-scale agents',
+        accent: '#56e39f',
+        icon: '⚑',
+        alt: '大规模代理系统渗透测试论文主题图',
+        summary: '《Lessons from Penetration Tests on Large-Scale Agent Systems》说得很直白：会干活的 AI 一旦拿到工具和权限，老毛病也会一起被放大。prompt injection=把假指令塞进 AI 嘴里；agent=AI 的手脚。最急的是做 agent 平台的安全团队，受益的是先补权限和隔离的人，承压的是急着上线却没做护栏的公司。',
+        translation: '白话说，AI 越会办事，越像一台能被骗着乱跑的自动机器。',
+        cost: '如果你的 agent 还没做工具权限隔离，早晚会把“能干活”变成“能闯祸”。',
+        sourceText: 'Lessons from Penetration Tests on Large-Scale Agent Systems',
+        sourceUrl: 'https://arxiv.org/abs/2605.27042'
+      }
+    ]
+  },
+  {
+    title: 'AI × 地产营销',
+    color: '#c5a3ff',
+    items: [
+      {
+        eyebrow: '营销战场',
+        title: 'Crexi 把 AI 塞进 CRE 成交链，营销包和 listing 一起收割',
+        imageTitle: 'Crexi AI commercial real estate',
+        imageSub: 'Deal prep and targeted property marketing',
+        accent: '#8ddf9b',
+        icon: '◈',
+        alt: 'Crexi AI 商业地产营销主题图',
+        summary: 'Crexi AI 直接把 OM 草稿、listing 创建和定向物业营销塞进同一套流程。OM=给买家看的项目说明书，listing=房源或物业上线页。最急的是 CRE brokers 和资产运营方，受益的是能把营销和交易数据串起来的平台，承压的是只会单点生成文案的工具。',
+        translation: '白话说，Crexi 不是给你一个写稿机器人，而是把“找房源、写材料、发出去”这条链条一起压缩。',
+        cost: '如果你的团队还靠人手拼 OM 和 listing，会被更快出稿、更准投放的对手抢走线索。',
+        sourceText: 'Crexi Expands Crexi AI Capabilities to Help CRE Professionals Work Faster and Close Deals More Efficiently',
+        sourceUrl: 'https://www.prnewswire.com/news-releases/crexi-expands-crexi-ai-capabilities-to-help-cre-professionals-work-faster-and-close-deals-more-efficiently-302770467.html'
+      }
+    ]
+  }
+];
+
+const sectionNodes = document.getElementById('app');
+
+const escapeHtml = (value) => String(value)
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+const escapeXml = escapeHtml;
+
+function svgData(title, subtitle, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${escapeXml(title)}">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#09111d"/>
+        <stop offset="100%" stop-color="#111f36"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="50%" cy="35%" r="75%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="line" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".18"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".18" stroke="#dbe8ff" stroke-width="2">
+      <path d="M0 112H1200M0 562H1200M150 0V675M1048 0V675"/>
+    </g>
+    <g opacity=".24" fill="none" stroke="url(#line)" stroke-width="5">
+      <path d="M114 495 C 290 360, 425 390, 580 266 S 885 140, 1092 214"/>
+      <path d="M114 510 C 270 404, 409 430, 570 312 S 864 202, 1090 268"/>
+    </g>
+    <g transform="translate(78 76)">
+      <rect x="0" y="0" rx="36" ry="36" width="420" height="120" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="34" y="75" fill="#ffffff" font-size="54" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${icon}</text>
+      <text x="104" y="58" fill="#f5f9ff" font-size="31" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(title)}</text>
+      <text x="104" y="95" fill="#d6e2ff" font-size="20" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${escapeXml(subtitle)}</text>
+    </g>
+    <g transform="translate(760 86)" opacity=".98">
+      <circle cx="120" cy="120" r="108" fill="#ffffff" fill-opacity=".06" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+      <circle cx="120" cy="120" r="74" fill="none" stroke="${accent}" stroke-width="3" opacity=".85"/>
+      <path d="M58 124h124M120 62v124M78 82l84 84M162 82l-84 84" stroke="${accent}" stroke-width="3" opacity=".55"/>
+      <circle cx="120" cy="120" r="14" fill="${accent}"/>
+    </g>
+    <g transform="translate(88 554)" opacity=".85">
+      <text x="0" y="0" fill="#c7d6f6" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">本报告生成的 SVG 主题图</text>
+    </g>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+function cardMarkup(card) {
+  return `
+    <article class="card">
+      <div class="eyebrow">${escapeHtml(card.eyebrow)}</div>
+      <h3>${escapeHtml(card.title)}</h3>
+      <figure>
+        <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${escapeHtml(card.alt)}">
+        <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(card.sourceText)}</a></figcaption>
+      </figure>
+      <p class="summary">${escapeHtml(card.summary)}</p>
+      <p class="translation">${escapeHtml(card.translation)}</p>
+      <p class="cost">${escapeHtml(card.cost)}</p>
+      <a class="source" href="${escapeHtml(card.sourceUrl)}" target="_blank" rel="noreferrer">原文：${escapeHtml(card.sourceText)}</a>
+    </article>
+  `;
+}
+
+sectionNodes.innerHTML = sections.map(section => `
+  <section class="section">
+    <h2 style="color:${section.color}"><span></span>${escapeHtml(section.title)}</h2>
+    <div class="cards">
+      ${section.items.map(cardMarkup).join('')}
+    </div>
+  </section>
+`).join('');
+</script>
+</body>
+</html>
