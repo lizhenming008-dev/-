@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点早报 | 2026-06-05</title>
+<style>
+:root{
+  --bg:#090c12;
+  --panel:#111827;
+  --panel-2:#161f2e;
+  --line:rgba(255,255,255,.10);
+  --text:#f6f3ea;
+  --muted:#b8c0cf;
+  --accent:#7dd3fc;
+  --warm:#fbbf24;
+  --good:#8ddc9b;
+  --warn:#fb7185;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(125,211,252,.16), transparent 26%),
+    radial-gradient(circle at 85% 15%, rgba(251,191,36,.14), transparent 22%),
+    radial-gradient(circle at 50% 95%, rgba(141,220,155,.10), transparent 28%),
+    linear-gradient(180deg, #07101b 0%, #0b111b 45%, #070c13 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.68;
+}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 30px}
+.hero{
+  position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);
+  padding:20px 18px 18px;background:linear-gradient(160deg, rgba(17,24,39,.98), rgba(9,12,18,.98));
+  box-shadow:0 18px 50px rgba(0,0,0,.38);
+}
+.hero:before{
+  content:"";position:absolute;inset:-20% -8% auto auto;width:320px;height:320px;border-radius:999px;
+  background:radial-gradient(circle, rgba(125,211,252,.14), transparent 70%);
+  pointer-events:none;
+}
+.kicker{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker b{padding:2px 8px;border-radius:999px;background:rgba(125,211,252,.10);border:1px solid rgba(125,211,252,.24)}
+.hero h1{margin:10px 0 10px;font-size:31px;line-height:1.08;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:var(--muted);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.lede{
+  margin-top:10px;padding:14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(251,191,36,.10));
+  border:1px solid rgba(255,255,255,.10);color:#fff9ea
+}
+.lede strong{color:#ffffff}
+.trend{margin-top:10px;font-size:13px;color:var(--muted)}
+.section{margin-top:18px}
+.section h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+.section h2 span{width:10px;height:10px;border-radius:999px;background:currentColor;box-shadow:0 0 16px currentColor}
+.cards{display:grid;gap:12px}
+.card{
+  padding:14px;border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(17,24,39,.98), rgba(10,14,22,.98));
+  box-shadow:0 12px 30px rgba(0,0,0,.20)
+}
+.eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow small{color:var(--muted);letter-spacing:0;text-transform:none;font-size:11px;text-align:right}
+.card h3{margin:0 0 10px;font-size:18px;line-height:1.34;color:#fff}
+figure{margin:0 0 10px}
+figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:#0b1220}
+figcaption{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.45}
+figcaption a{color:#c9e8ff;text-decoration:none}
+.summary,.cost{margin:8px 0 0;font-size:14px}
+.summary{color:#e8ebf2}
+.cost{color:#ffd8a5}
+.footer{
+  margin-top:18px;padding:16px 14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(141,220,155,.08), rgba(125,211,252,.08));
+  border:1px solid rgba(255,255,255,.10)
+}
+.footer h3{margin:0 0 8px;font-size:15px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.stats span{font-size:11px;color:#fff4d4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.note{margin-top:10px;font-size:12px;color:var(--muted)}
+@media (min-width:700px){.wrap{padding:16px 18px 36px}.hero{padding:24px}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
+    <h1>ChatGPT 记忆重写，微软连甩 7 个自研模型，生物安全和房产前台都开始被对话入口重定价</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-06-05</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：7 条</span>
+      <span class="chip">配图：7 / 7</span>
+    </div>
+    <div class="lede">
+      <strong>今天的信号很清楚：AI 不再只是在聊天框里抢注意力，而是在重写记忆、重画工作流、重估 token 成本，也开始碰生物实验和房产首问这些更贵的入口。</strong>
+      这批消息里，真正值钱的不是“模型更大”，而是谁先把模型塞进系统、流程、合规和成交链路里。
+    </div>
+    <div class="trend">早间判断：AI 的战场从“会回答”变成“会长期记、会接流程、会定成本、会改入口”。</div>
+  </header>
+
+  <section class="section">
+    <h2 style="color:#7dd3fc"><span></span>今日精选</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="footer">
+    <h3>今日检查</h3>
+    <div>全部卡片使用本报告生成的 16:9 SVG 主题图，避开付费墙、版权不明和外链破图；7 条卡片、7 张配图、7 个来源链接，移动端宽度控制在 680px 内。</div>
+    <div class="stats">
+      <span>7 条精选</span><span>7 张 16:9 配图</span><span>7 / 7 图片合格</span><span>0 明显破图</span><span>标题软词已清理</span>
+    </div>
+    <div class="note">生成时间：2026-06-05 01:10 CST</div>
+  </section>
+</main>
+
+<script>
+const stories = [
+  {
+    group:"新模型 / 产品",
+    badge:"记忆重做",
+    title:"OpenAI 重写 ChatGPT 记忆，专治越聊越旧",
+    main:"CHATGPT MEMORY",
+    sub:"FRESH CONTEXT",
+    accent:"#7dd3fc",
+    icon:"OAI",
+    alt:"蓝色科技风 SVG 主题图，展示 ChatGPT 记忆系统与上下文持续更新的概念图",
+    summary:"OpenAI 把 ChatGPT 的记忆系统改成更会“合成”的版本，目标是把新鲜度、连贯性和相关性拉回来。大白话：memory 就是 AI 的长期上下文，不是聊天记录备份；它要解决的是越用越旧、越存越乱、越多越慢。最急的是重度用户和企业工作流，受益的是做长期任务的人，承压的是只会一次性问答的轻量工具。",
+    cost:"如果你的团队还把 AI 当成一次性搜索框，而不是会积累上下文的工作伙伴，就会错过长期记忆带来的效率红利，也会被能持续跟进项目的工具抢走黏性。",
+    source:"OpenAI",
+    url:"https://openai.com/index/chatgpt-memory-dreaming/"
+  },
+  {
+    group:"新模型 / 产品",
+    badge:"自研模型",
+    title:"微软在 Build 甩出 7 个自研模型，先抢开发者入口",
+    main:"MAI MODELS",
+    sub:"BUILD 7",
+    accent:"#fbbf24",
+    icon:"MS",
+    alt:"金色科技风 SVG 主题图，展示微软在 Build 2026 甩出七个自研 AI 模型的概念图",
+    summary:"微软在 Build 期间亮出一组七个自研 AI 模型，覆盖图像、语音、编码和推理，想把多模态能力做成一套可互相咬合的系统。大白话：它不是单点模型秀肌肉，而是想把开发者从“选模型”推到“选微软体系”。最急的是还在卖单模型 API 的对手，受益的是想把模型、工具和云绑成一体的企业，承压的是只靠外部模型转售的中间商。",
+    cost:"如果你的产品链路还停在“接一个大模型 API 就算 AI 化”，就会错过自研体系带来的成本和控制权，也会被更完整的平台先卡住入口。",
+    source:"Microsoft AI",
+    url:"https://microsoft.ai/news/building-a-hill-climbing-machine-launching-seven-new-mai-models/"
+  },
+  {
+    group:"企业落地",
+    badge:"生物安全",
+    title:"微软把 AI 和生物实验绑到一起，先把风险摊在桌面上",
+    main:"AI BIO RISK",
+    sub:"WHOLE SYSTEM",
+    accent:"#8ddc9b",
+    icon:"MS",
+    alt:"绿色科技风 SVG 主题图，展示 AI、生物实验、合成 DNA 审查和风险控制的概念图",
+    summary:"微软这篇 biosecurity 文章盯住的是整个 AI-biology 技术栈，不只是模型本身，还包括设计工具、实验自动化和把这些东西串起来的 agentic system。大白话：模型能帮科研提速，也能帮坏人更快摸到危险路径；DNA 订单审查就是那道关键闸门。最急的是生物安全和政策团队，受益的是做合规、审查和风控的厂商，承压的是把大模型直接接进实验流程却没加护栏的机构。",
+    cost:"如果你的研发或合规团队不把 AI 介入实验设计、DNA 合成和自动化流程写进防线，就会错过正当科研的提速红利，也会在风险暴露时来不及补闸。",
+    source:"Microsoft On the Issues",
+    url:"https://blogs.microsoft.com/on-the-issues/2026/06/04/strengthening-biosecurity-in-the-era-of-ai/"
+  },
+  {
+    group:"企业落地",
+    badge:"tokenomics",
+    title:"微软给企业算 tokenomics：AI 不是 IT 预算，是新头数",
+    main:"TOKENOMICS",
+    sub:"NEW HEADCOUNT",
+    accent:"#60a5fa",
+    icon:"MS",
+    alt:"蓝色科技风 SVG 主题图，展示 token 预算、头数和企业 AI 成本重算的概念图",
+    summary:"微软把 tokenomics 直接翻成“新头数”：谁拿多少 token、做什么工作、值不值一个人力成本，要重新算。大白话：token 不是抽象计费单位，而是 AI 干活的工时和工资单。最急的是 CFO、IT 和业务负责人，受益的是能把 AI 纳入经营核算的企业，承压的是只会买许可证、不会重做流程的团队。",
+    cost:"如果你的组织还把 token 费当成小额云账单，而不是替代人力的预算池，就会错过真正的降本增效窗口，也会在下一轮采购时被更会算账的对手甩开。",
+    source:"Microsoft WorkLab",
+    url:"https://www.microsoft.com/en-us/worklab/aiwork-tokenomics-is-the-new-headcount-and-four-more-trends-to-watch"
+  },
+  {
+    group:"企业落地",
+    badge:"代理工作流",
+    title:"Asana 直接把人和代理塞进同一张工作图，工单和项目一起改命",
+    main:"HUMAN AGENT",
+    sub:"WORK GRAPH",
+    accent:"#f97316",
+    icon:"ASA",
+    alt:"橙色科技风 SVG 主题图，展示 Asana 的工作图谱、AI Teammates 和人机协作流程",
+    summary:"Asana 把 Agentic Work Management 包成一整套，核心是 Work Graph、AI Teammates 和 AI Chief of Staff Dash。大白话：Work Graph 就是“工作图谱”，把目标、决策、交接和上下文都锁在一张网里；代理不再是外挂，而是直接坐进流程。最急的是 IT、运营和专业服务团队，受益的是流程重、协作多的企业，承压的是只卖表格和工单的老牌工具。",
+    cost:"如果你的团队还把 AI 当成旁边挂一个聊天窗，而不把它嵌进工作图和治理链路，就会错过人机协作的规模化红利，也会被更会管流程的平台替代。",
+    source:"Asana",
+    url:"https://investors.asana.com/news-releases/news-release-details/asana-unveils-operating-system-human-agent-teams"
+  },
+  {
+    group:"研究与开源",
+    badge:"生命科学",
+    title:"OpenAI 给 GPT-Rosalind 加火力，药研开始拼工具链",
+    main:"GPT ROSALIND",
+    sub:"SCIENCE WORKFLOW",
+    accent:"#d8b4fe",
+    icon:"OAI",
+    alt:"紫色科技风 SVG 主题图，展示生命科学研究模型、药物发现和实验流程的概念图",
+    summary:"GPT-Rosalind 这次升级，主打的是生命科学研究里的工具使用、医学化学和基因组学，而不是普通聊天。大白话：它不是“更会答题”，而是更会读文献、串数据、接工作流，像一个给实验室和药研团队打下手的研究助手。最急的是药企和生物科技公司，受益的是把模型接进研发流程的团队，承压的是还停留在通用模型试探阶段的竞品。",
+    cost:"如果你的研发团队不把 AI 从问答玩具升级成研究管线的一部分，就会错过科学工作流自动化的红利，也会把先手让给已经在跑工具链的对手。",
+    source:"OpenAI",
+    url:"https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/"
+  },
+  {
+    group:"AI × 地产营销",
+    badge:"首问入口",
+    title:"Realtor.com 把 Gemini 塞进买房首问，房产前台先被对话入口抢走",
+    main:"REAL ESTATE",
+    sub:"REALASSIST AI",
+    accent:"#93c5fd",
+    icon:"RE",
+    alt:"蓝白色科技风 SVG 主题图，展示房地产 AI 对话搜索、预算判断和房源预筛流程",
+    summary:"Realtor.com 的 RealAssist AI 用 Gemini 把买房从“筛条件”改成“聊需求”，从第一问一路推到 closing。大白话：AI 不只是写房源文案，而是在接管买家的首问、预算判断和房源预筛。最急的是 Zillow、Redfin 和本地经纪平台，受益的是能拿到一手意图数据的平台，承压的是还靠人工筛盘和电话回访吃线索的人。",
+    cost:"如果你的地产营销团队还停在静态筛选器、手工跟进和模板文案，就会错过最值钱的首问流量，也会被把聊天变成线索的对手抢走成交前台。",
+    source:"Google Cloud Press Corner",
+    url:"https://www.googlecloudpresscorner.com/2026-06-02-Realtor-com-R-Launches-RealAssist-TM-AI-A-Completely-Reimagined-Way-to-Find-A-Home"
+  }
+];
+
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+
+function svgData(main, sub, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(main)}">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#08111d"/>
+        <stop offset="100%" stop-color="#182437"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="55%" cy="42%" r="72%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="slash" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".92"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".16" stroke="#ffffff" stroke-width="2">
+      <path d="M0 120H1200M0 338H1200M0 556H1200M168 0V675M598 0V675M1032 0V675"/>
+    </g>
+    <g transform="translate(92 86)">
+      <path d="M0 0H520L468 142H0Z" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".13"/>
+      <text x="34" y="73" fill="${accent}" font-size="50" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(icon)}</text>
+      <text x="126" y="63" fill="#fff9de" font-size="34" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(main)}</text>
+      <text x="126" y="103" fill="#d9e4f2" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(sub)}</text>
+    </g>
+    <g transform="translate(130 350)" fill="none" stroke="url(#slash)" stroke-width="9" stroke-linecap="square">
+      <path d="M0 120L210 0L405 88L610 -28L865 102"/>
+      <path d="M0 170L210 50L405 138L610 22L865 152" opacity=".55"/>
+    </g>
+    <g transform="translate(760 104)">
+      <rect x="0" y="0" width="286" height="286" rx="28" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".14"/>
+      <circle cx="143" cy="143" r="86" fill="none" stroke="${accent}" stroke-width="4"/>
+      <path d="M143 56V230M56 143H230M82 82L204 204M204 82L82 204" stroke="${accent}" stroke-width="4" opacity=".55"/>
+      <circle cx="143" cy="143" r="18" fill="${accent}"/>
+    </g>
+    <text x="92" y="595" fill="#c8d4e8" font-size="23" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">本报告生成的 16:9 SVG 主题图</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+document.getElementById('cards').innerHTML = stories.map(card => `
+  <article class="card">
+    <div class="eyebrow">${esc(card.group)}<small>${esc(card.badge)}</small></div>
+    <h3>${esc(card.title)}</h3>
+    <figure>
+      <img src="${svgData(card.main, card.sub, card.accent, card.icon)}" alt="${esc(card.alt)}" loading="lazy">
+      <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${esc(card.url)}" target="_blank" rel="noreferrer">${esc(card.source)}</a></figcaption>
+    </figure>
+    <p class="summary">${esc(card.summary)}</p>
+    <p class="cost">${esc(card.cost)}</p>
+  </article>
+`).join('');
+</script>
+</body>
+</html>
