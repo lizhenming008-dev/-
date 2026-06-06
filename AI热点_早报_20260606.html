@@ -5,46 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI热点早报 | 2026-06-06</title>
 <style>
-:root{--bg:#070b12;--line:rgba(255,255,255,.10);--text:#f6f3ea;--muted:#b5bfce;--accent:#7dd3fc}
+:root{
+  --bg:#090c12;
+  --panel:#111827;
+  --panel-2:#161f2e;
+  --line:rgba(255,255,255,.10);
+  --text:#f6f3ea;
+  --muted:#b8c0cf;
+  --accent:#7dd3fc;
+  --warm:#fbbf24;
+  --good:#8ddc9b;
+  --warn:#fb7185;
+}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
   color:var(--text);
   background:
-    radial-gradient(circle at 12% 12%, rgba(125,211,252,.16), transparent 28%),
-    radial-gradient(circle at 84% 16%, rgba(251,191,36,.14), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(141,220,155,.12), transparent 30%),
-    linear-gradient(180deg, #050910 0%, #0a111a 48%, #070b12 100%);
+    radial-gradient(circle at 15% 10%, rgba(125,211,252,.16), transparent 26%),
+    radial-gradient(circle at 85% 15%, rgba(251,191,36,.14), transparent 22%),
+    radial-gradient(circle at 50% 95%, rgba(141,220,155,.10), transparent 28%),
+    linear-gradient(180deg, #07101b 0%, #0b111b 45%, #070c13 100%);
   font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   line-height:1.68;
 }
-.wrap{max-width:680px;margin:0 auto;padding:14px}
-.hero,.card,.footer{border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 30px}
 .hero{
-  position:relative;overflow:hidden;border-radius:24px;padding:20px 18px 18px;
-  background:linear-gradient(160deg, rgba(17,24,39,.98), rgba(9,12,18,.98));
+  position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);
+  padding:20px 18px 18px;background:linear-gradient(160deg, rgba(17,24,39,.98), rgba(9,12,18,.98));
+  box-shadow:0 18px 50px rgba(0,0,0,.38);
 }
 .hero:before{
-  content:"";position:absolute;inset:-18% -10% auto auto;width:340px;height:340px;border-radius:999px;
-  background:radial-gradient(circle, rgba(125,211,252,.14), transparent 72%);pointer-events:none;
+  content:"";position:absolute;inset:-20% -8% auto auto;width:320px;height:320px;border-radius:999px;
+  background:radial-gradient(circle, rgba(125,211,252,.14), transparent 70%);
+  pointer-events:none;
 }
 .kicker{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .kicker b{padding:2px 8px;border-radius:999px;background:rgba(125,211,252,.10);border:1px solid rgba(125,211,252,.24)}
-.hero h1{margin:10px 0;font-size:31px;line-height:1.08;letter-spacing:-.01em}
+.hero h1{margin:10px 0 10px;font-size:31px;line-height:1.08;letter-spacing:-.01em}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:var(--muted);font-size:12px}
-.chip,.stats span{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
 .lede{
   margin-top:10px;padding:14px;border-radius:18px;
   background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(251,191,36,.10));
-  border:1px solid rgba(255,255,255,.10);color:#fff8e6
+  border:1px solid rgba(255,255,255,.10);color:#fff9ea
 }
+.lede strong{color:#ffffff}
 .trend{margin-top:10px;font-size:13px;color:var(--muted)}
 .section{margin-top:18px}
 .section h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
 .section h2 span{width:10px;height:10px;border-radius:999px;background:currentColor;box-shadow:0 0 16px currentColor}
 .cards{display:grid;gap:12px}
 .card{
-  padding:14px;border-radius:20px;background:linear-gradient(180deg, rgba(17,24,39,.98), rgba(10,14,22,.98));
+  padding:14px;border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(17,24,39,.98), rgba(10,14,22,.98));
+  box-shadow:0 12px 30px rgba(0,0,0,.20)
 }
 .eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .eyebrow small{color:var(--muted);letter-spacing:0;text-transform:none;font-size:11px;text-align:right}
@@ -58,10 +73,12 @@ figcaption a{color:#c9e8ff;text-decoration:none}
 .cost{color:#ffd8a5}
 .footer{
   margin-top:18px;padding:16px 14px;border-radius:18px;
-  background:linear-gradient(135deg, rgba(141,220,155,.08), rgba(125,211,252,.08))
+  background:linear-gradient(135deg, rgba(141,220,155,.08), rgba(125,211,252,.08));
+  border:1px solid rgba(255,255,255,.10)
 }
 .footer h3{margin:0 0 8px;font-size:15px}
 .stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.stats span{font-size:11px;color:#fff4d4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
 .note{margin-top:10px;font-size:12px;color:var(--muted)}
 @media (min-width:700px){.wrap{padding:16px 18px 36px}.hero{padding:24px}.hero h1{font-size:34px}}
 </style>
@@ -103,21 +120,21 @@ figcaption a{color:#c9e8ff;text-decoration:none}
 const stories = [
   {
     group:"新模型 / 产品",
-    badge:"记忆翻盘",
-    title:"OpenAI 把 ChatGPT 记忆重写，先清理旧上下文",
-    main:"MEMORY STACK",
-    sub:"LONG CONTEXT",
+    badge:"记忆重做",
+    title:"OpenAI 重写 ChatGPT 记忆，专治越聊越旧",
+    main:"CHATGPT MEMORY",
+    sub:"FRESH CONTEXT",
     accent:"#7dd3fc",
     icon:"OAI",
-    alt:"蓝色科技风 SVG 主题图，展示 ChatGPT 记忆系统与长期上下文整理的概念图",
-    summary:"memory 不是聊天记录仓库，而是 AI 的长期上下文；这次改的是“记忆合成”，重点是把过期、冲突和碎片化上下文洗掉。最急的是重度用户和长周期项目团队，受益的是靠连续上下文吃饭的人，承压的是只能一次性答题的轻工具。",
-    cost:"如果你的团队还把 AI 当成一次性搜索框，而不是会滚动积累项目记忆的工作台，就会错过连续协作红利，也会被更会记事的产品抢走留存。",
+    alt:"蓝色科技风 SVG 主题图，展示 ChatGPT 记忆系统与上下文持续更新的概念图",
+    summary:"OpenAI 把 ChatGPT 的记忆系统改成更会“合成”的版本，目标是把新鲜度、连贯性和相关性拉回来。大白话：memory 不是聊天记录备份，而是 AI 的长期上下文；这次升级要解决的是越用越旧、越存越乱、越多越慢。最急的是重度用户和企业工作流，受益的是做长期任务的人，承压的是只会一次性问答的轻量工具。",
+    cost:"如果你的团队还把 AI 当成一次性搜索框，而不是会积累上下文的工作伙伴，就会错过长期记忆带来的效率红利，也会被能持续跟进项目的工具抢走黏性。",
     source:"OpenAI",
     url:"https://openai.com/index/chatgpt-memory-dreaming/"
   },
   {
     group:"新模型 / 产品",
-    badge:"端侧卡位",
+    badge:"自研模型",
     title:"微软甩出 7 个 MAI 模型，先把入口和成本都卡住",
     main:"MAI MODELS",
     sub:"BUILD 7",
@@ -172,6 +189,20 @@ const stories = [
     url:"https://www.anthropic.com/institute/recursive-self-improvement"
   },
   {
+    group:"研究与开源",
+    badge:"多代理检索",
+    title:"Google Research 让企业问答先翻资料再答，不够就继续挖",
+    main:"AGENTIC RAG",
+    sub:"MULTI-SOURCE SEARCH",
+    accent:"#22c55e",
+    icon:"GOOG",
+    alt:"绿色科技风 SVG 主题图，展示多代理检索、上下文补全和企业问答的概念图",
+    summary:"Google Research 的 agentic RAG 不再是一把梭的检索问答，而是先拆问题、再扔给多个代理去找足够上下文，找不全就继续翻。大白话：RAG 就是先找资料再回答，这次 Google 要做的是不让模型瞎猜，而是逼它先把资料找够。最急的是企业知识库和客服系统，受益的是要答案可追溯的业务，承压的是靠“看起来会答”混过去的老问答。",
+    cost:"如果你的团队还在拿一次检索就出答案的系统糊企业问答，就会错过更准确、更可追溯的检索红利，也会被更会找资料的系统替代。",
+    source:"Google Research",
+    url:"https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/"
+  },
+  {
     group:"AI × 地产营销",
     badge:"首问入口",
     title:"Realtor.com 把 Gemini 塞进买房首问，房产前台先被对话入口抢走",
@@ -188,16 +219,29 @@ const stories = [
 ];
 
 const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-function svgData(main, sub, accent, icon){
+
+function svgData(main, sub, accent, icon) {
   const svg = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(main)}">
     <defs>
-      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#08111d"/><stop offset="100%" stop-color="#182437"/></linearGradient>
-      <radialGradient id="glow" cx="55%" cy="42%" r="72%"><stop offset="0%" stop-color="${accent}" stop-opacity=".34"/><stop offset="100%" stop-color="${accent}" stop-opacity="0"/></radialGradient>
-      <linearGradient id="slash" x1="0" x2="1"><stop offset="0%" stop-color="${accent}" stop-opacity=".92"/><stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/></linearGradient>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#08111d"/>
+        <stop offset="100%" stop-color="#182437"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="55%" cy="42%" r="72%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="slash" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".92"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+      </linearGradient>
     </defs>
-    <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#glow)"/>
-    <g opacity=".16" stroke="#ffffff" stroke-width="2"><path d="M0 120H1200M0 338H1200M0 556H1200M168 0V675M598 0V675M1032 0V675"/></g>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".16" stroke="#ffffff" stroke-width="2">
+      <path d="M0 120H1200M0 338H1200M0 556H1200M168 0V675M598 0V675M1032 0V675"/>
+    </g>
     <g transform="translate(92 86)">
       <path d="M0 0H520L468 142H0Z" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".13"/>
       <text x="34" y="73" fill="${accent}" font-size="50" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(icon)}</text>
@@ -205,7 +249,8 @@ function svgData(main, sub, accent, icon){
       <text x="126" y="103" fill="#d9e4f2" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(sub)}</text>
     </g>
     <g transform="translate(130 350)" fill="none" stroke="url(#slash)" stroke-width="9" stroke-linecap="square">
-      <path d="M0 120L210 0L405 88L610 -28L865 102"/><path d="M0 170L210 50L405 138L610 22L865 152" opacity=".55"/>
+      <path d="M0 120L210 0L405 88L610 -28L865 102"/>
+      <path d="M0 170L210 50L405 138L610 22L865 152" opacity=".55"/>
     </g>
     <g transform="translate(760 104)">
       <rect x="0" y="0" width="286" height="286" rx="28" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".14"/>
@@ -217,6 +262,7 @@ function svgData(main, sub, accent, icon){
   </svg>`;
   return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
 }
+
 document.getElementById('cards').innerHTML = stories.map(card => `
   <article class="card">
     <div class="eyebrow">${esc(card.group)}<small>${esc(card.badge)}</small></div>
