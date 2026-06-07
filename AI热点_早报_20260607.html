@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点早报 | 2026-06-07</title>
+<style>
+:root{
+  --bg:#080b11;
+  --panel:#111827;
+  --panel-2:#151e2d;
+  --line:rgba(255,255,255,.10);
+  --text:#f5f2e9;
+  --muted:#b4becd;
+  --accent:#7dd3fc;
+  --warm:#fbbf24;
+  --good:#8ddc9b;
+  --warn:#fb7185;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(circle at 14% 8%, rgba(125,211,252,.16), transparent 22%),
+    radial-gradient(circle at 86% 12%, rgba(251,191,36,.12), transparent 24%),
+    radial-gradient(circle at 50% 96%, rgba(141,220,155,.08), transparent 26%),
+    linear-gradient(180deg, #07101a 0%, #090d15 46%, #06090f 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7;
+}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 30px}
+.hero{
+  position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);
+  padding:20px 18px 18px;background:linear-gradient(160deg, rgba(17,24,39,.98), rgba(9,12,18,.98));
+  box-shadow:0 18px 50px rgba(0,0,0,.36);
+}
+.hero:before{
+  content:"";position:absolute;inset:-18% -10% auto auto;width:320px;height:320px;border-radius:999px;
+  background:radial-gradient(circle, rgba(125,211,252,.15), transparent 68%);
+  pointer-events:none;
+}
+.kicker{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker b{padding:2px 8px;border-radius:999px;background:rgba(125,211,252,.10);border:1px solid rgba(125,211,252,.24)}
+.hero h1{margin:10px 0 10px;font-size:31px;line-height:1.06;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:var(--muted);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.lede{
+  margin-top:10px;padding:14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(251,191,36,.10));
+  border:1px solid rgba(255,255,255,.10);color:#fff9eb
+}
+.lede strong{color:#ffffff}
+.trend{margin-top:10px;font-size:13px;color:var(--muted)}
+.section{margin-top:18px}
+.section h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+.section h2 span{width:10px;height:10px;border-radius:999px;background:currentColor;box-shadow:0 0 16px currentColor}
+.cards{display:grid;gap:12px}
+.card{
+  padding:14px;border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(17,24,39,.98), rgba(10,14,22,.98));
+  box-shadow:0 12px 30px rgba(0,0,0,.20)
+}
+.eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow small{color:var(--muted);letter-spacing:0;text-transform:none;font-size:11px;text-align:right}
+.card h3{margin:0 0 10px;font-size:18px;line-height:1.34;color:#fff}
+figure{margin:0 0 10px}
+figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:#0b1220}
+figcaption{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.45}
+figcaption a{color:#c9e8ff;text-decoration:none}
+.summary,.cost{margin:8px 0 0;font-size:14px}
+.summary{color:#e8ebf2}
+.cost{color:#ffd8a5}
+.footer{
+  margin-top:18px;padding:16px 14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(141,220,155,.08), rgba(125,211,252,.08));
+  border:1px solid rgba(255,255,255,.10)
+}
+.footer h3{margin:0 0 8px;font-size:15px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.stats span{font-size:11px;color:#fff4d4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.note{margin-top:10px;font-size:12px;color:var(--muted)}
+@media (min-width:700px){.wrap{padding:16px 18px 36px}.hero{padding:24px}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
+    <h1>ChatGPT 重写记忆，Meta 支持机器人翻车，Google 把算力租给 SpaceX</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-06-07</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：8 条</span>
+      <span class="chip">配图：8 / 8</span>
+    </div>
+    <div class="lede">
+      <strong>今天的核心信号很直白：AI 正在从“会答题”转向“会记、会接权限、会吞流程、会锁算力”。</strong>
+      Hacker News 也把注意力压在同一条线上，讨论 LLM 机理、账号安全、算力租赁和沙箱执行，说明市场已经不再只看模型分数，而是盯住谁能把模型变成系统能力。
+    </div>
+    <div class="trend">早间判断：真正值钱的不是“更会说”，而是谁先把记忆、工具、审核、入口和算力一起拧进业务链。</div>
+  </header>
+
+  <section class="section">
+    <h2 style="color:#7dd3fc"><span></span>今日精选</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="footer">
+    <h3>今日检查</h3>
+    <div>全部卡片使用本报告生成的 16:9 SVG 主题图，避开付费墙、版权不明和外链破图；8 条卡片、8 张配图、8 个来源链接，移动端宽度控制在 680px 内。</div>
+    <div class="stats">
+      <span>8 条精选</span><span>8 张 16:9 配图</span><span>8 / 8 图片合格</span><span>0 明显破图</span><span>标题软词已清理</span>
+    </div>
+    <div class="note">生成时间：2026-06-07 21:20 CST</div>
+  </section>
+</main>
+
+<script>
+const stories = [
+  {
+    group:"新模型 / 产品",
+    badge:"记忆重做",
+    title:"OpenAI 重写 ChatGPT 记忆，越聊越旧的毛病被拆掉",
+    main:"OPENAI MEMORY",
+    sub:"DREAMING SYSTEM",
+    accent:"#7dd3fc",
+    icon:"OAI",
+    alt:"蓝色科技风 SVG 主题图，展示 ChatGPT 记忆系统持续合成和刷新上下文的概念图",
+    summary:"OpenAI 把 memory 从“记点笔记”改成后台持续合成和刷新，让上下文不再越聊越旧、越存越乱。大白话：memory 不是聊天记录仓库，而是 AI 的长期上下文引擎。最急的是重度用户和企业工作流，受益的是要连续追踪项目的人，承压的是只会一次性问答的轻工具。",
+    cost:"如果你的团队还把 ChatGPT 当成一次性问答机，就会错过长期上下文带来的复用红利，也会被能跟着项目跑的工具挤掉黏性。",
+    source:"OpenAI",
+    url:"https://openai.com/index/chatgpt-memory-dreaming/"
+  },
+  {
+    group:"新模型 / 产品",
+    badge:"伙伴卡位",
+    title:"Anthropic 把伙伴目录接上 Claude，企业实施开始明码标价",
+    main:"ANTHROPIC HUB",
+    sub:"MCP CONNECTOR",
+    accent:"#fbbf24",
+    icon:"ANTH",
+    alt:"金色科技风 SVG 主题图，展示 Claude Partner Hub 通过 MCP 连接企业工具和伙伴目录的概念图",
+    summary:"Anthropic 给 Claude Partner Hub 接了一个 MCP 连接器，把伙伴资格、交付能力和企业查询直接拧进 Claude 对话里。大白话：MCP 就是 AI 的手脚，能把工具、资料和流程接进对话；谁能把实施服务接得更顺，谁就更容易收单。最急的是做 Claude 交付的服务商，受益的是企业采购方，承压的是只卖口水方案但不接系统的中介。",
+    cost:"如果你的团队还只会卖模型访问权，而不会把工具链塞进业务流程，连接层的利润就会被有实施能力的对手拿走。",
+    source:"Anthropic",
+    url:"https://www.anthropic.com/news/services-track-partner-hub"
+  },
+  {
+    group:"企业落地",
+    badge:"算力租赁",
+    title:"Google 砸 9.2 亿美元月租 SpaceX 算力，AI 进入租机时代",
+    main:"GOOGLE SPACEX",
+    sub:"GPU RENTAL",
+    accent:"#fb7185",
+    icon:"G×X",
+    alt:"红色科技风 SVG 主题图，展示 Google 通过巨额合同向 SpaceX 租用 GPU 算力的概念图",
+    summary:"Google 按月给 SpaceX 付 9.2 亿美元，换来约 11 万块 GPU、CPU 和内存的长期使用权。大白话：AI 现在不是只拼模型分数，而是拼谁能先锁住算力，云开始像租机市场，资源先到先赢。最急的是所有还在抢 GPU 的大模型公司，受益的是手里有算力库存的人，承压的是算力不够的独立云和中小模型团队。",
+    cost:"如果你的团队只盯模型参数，不盯算力合同和交付能力，就会错过真正决定 AI 规模化的资源红利，也会被更能锁仓的巨头压在成本下。",
+    source:"TechCrunch",
+    url:"https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/"
+  },
+  {
+    group:"企业落地",
+    badge:"权限翻车",
+    title:"Meta 的 AI 支持机器人翻车，Instagram 账号被人顺手牵走",
+    main:"META AI",
+    sub:"ACCOUNT TAKEOVER",
+    accent:"#22c55e",
+    icon:"META",
+    alt:"绿色科技风 SVG 主题图，展示 Meta AI 客服机器人绕过账号校验并引发 Instagram 接管风险的概念图",
+    summary:"Meta 的 AI 支持机器人被人拿来改 Instagram 找回流程，连 2FA 都被绕过去。大白话：这不是模型答题错了，而是 AI 被放进了本该严守身份校验的后台；一旦手脚和权限绑错，机器人就会替坏人办事。最急的是社交平台和客服自动化团队，受益的是安全审计和人工兜底，承压的是把 AI 当万能客服的产品经理。",
+    cost:"如果你的团队还让 AI 直接碰账号恢复、支付和权限修改，就会承担被一条提示词绕穿的风险，也会把品牌信任押给脆弱流程。",
+    source:"TechCrunch",
+    url:"https://techcrunch.com/2026/06/01/hackers-hijacked-instagram-accounts-by-tricking-meta-ai-support-chatbot-into-granting-access/"
+  },
+  {
+    group:"研究与开源",
+    badge:"agent 工具链",
+    title:"Hugging Face 给 `hf` CLI 安上手脚，模型仓库操作开始省 token",
+    main:"HUGGING FACE",
+    sub:"AGENT CLI",
+    accent:"#93c5fd",
+    icon:"HF",
+    alt:"蓝白色科技风 SVG 主题图，展示 Hugging Face hf CLI 面向 AI 代理优化的命令行工具链概念图",
+    summary:"Hugging Face 把 `hf` CLI 按照 agent 的习惯重做，连 Codex、Claude、Cursor 这些编码代理都能少绕路。大白话：CLI 不只是给人用的命令行，也开始给 AI 用；当工具输出更稳、更短，模型就少烧 token、少出错。最急的是做 Hub 工作流的开发者，受益的是会用 CLI 的代理和平台方，承压的是还把接口设计成只适合人读的工具商。",
+    cost:"如果你的团队不把 AI 工具链做成机器可读、可重试、可预测，就会错过 agent 自动化带来的效率红利，也会被更懂代理的基础设施替代。",
+    source:"Hugging Face",
+    url:"https://huggingface.co/blog/hf-cli-for-agents"
+  },
+  {
+    group:"研究与开源",
+    badge:"沙箱执行",
+    title:"MicroPython + WASM 给代码执行上锁，AI 插件终于能先关笼子",
+    main:"MICROPYTHON",
+    sub:"WASM SANDBOX",
+    accent:"#f97316",
+    icon:"WASM",
+    alt:"橙色科技风 SVG 主题图，展示 MicroPython 运行在 WebAssembly 沙箱中的隔离执行概念图",
+    summary:"Simon Willison 用 MicroPython 加 WASM 做出一个可复用的代码沙箱，让插件式代码先关进笼子再跑。大白话：这不是“给 AI 更多权限”，而是先把权限切开，让它能执行代码但碰不到不该碰的文件和网络。最急的是做插件、代理和自动化平台的团队，受益的是需要可信执行环境的人，承压的是仍旧把任意代码直接塞进主进程的方案。",
+    cost:"如果你的团队还让 AI 代码直接进主进程，就会承担数据外泄和系统失控的双重风险，也会被更安全的沙箱方案替代。",
+    source:"Simon Willison",
+    url:"https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/"
+  },
+  {
+    group:"研究与开源",
+    badge:"安全筛子",
+    title:"NVIDIA 把内容安全做成可解释筛子，企业审核开始从黑盒转明账",
+    main:"NVIDIA SAFETY",
+    sub:"MULTIMODAL POLICY",
+    accent:"#8ddc9b",
+    icon:"NV",
+    alt:"绿色科技风 SVG 主题图，展示 NVIDIA Nemotron 3.5 Content Safety 对文本和图像做多模态安全审核的概念图",
+    summary:"NVIDIA 的 Nemotron 3.5 Content Safety 把文字、图片和响应一起扫，输出的不只是 safe/unsafe，还能吐出理由链。大白话：这不是“模型觉得不行”，而是把审核标准写进系统，让企业知道哪条规则被踩了。最急的是全球化产品和风控团队，受益的是要可审计的合规系统，承压的是只能给黑盒分数的老安全模块。",
+    cost:"如果你的团队还靠单一语言、单一模态的黑盒审核，就会错过更低延迟的安全红利，也会在多语种、多模态场景里被替代。",
+    source:"Hugging Face / NVIDIA",
+    url:"https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety"
+  },
+  {
+    group:"AI × 地产营销",
+    badge:"首问入口",
+    title:"Realtor.com 把 Gemini 塞进看房首问，房产前台先被对话抢走",
+    main:"REALESTATE AI",
+    sub:"FIRST QUESTION",
+    accent:"#d8b4fe",
+    icon:"RE",
+    alt:"紫色科技风 SVG 主题图，展示房地产 AI 对话搜索、预算判断和房源预筛流程的概念图",
+    summary:"Realtor.com 把 RealAssist AI 做成从第一问一路走到 closing 的对话入口，买房从“筛条件”变成“聊需求”。大白话：AI 不只是写房源文案，而是在吃掉最值钱的前台意图数据，先摸清预算、通勤和偏好，再把人推给经纪人。最急的是 Zillow、Redfin 和本地经纪平台，受益的是握住首问流量的一方，承压的是还靠人工筛盘和电话回访吃线索的人。",
+    cost:"如果你的地产团队还在靠静态筛选器和模板文案，就会错过最早的成交线索，也会被把聊天变线索的对手抢走前台。",
+    source:"Realtor.com",
+    url:"https://www.realtor.com/homemade/introducing-realassist-ai-from-first-question-to-closing/"
+  }
+];
+
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+
+function svgData(main, sub, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(main)}">
+    <defs>
+      <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#08111d"/>
+        <stop offset="100%" stop-color="#182437"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="55%" cy="42%" r="72%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="slash" x1="0" x2="1">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".92"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".16" stroke="#ffffff" stroke-width="2">
+      <path d="M0 120H1200M0 338H1200M0 556H1200M168 0V675M598 0V675M1032 0V675"/>
+    </g>
+    <g transform="translate(92 86)">
+      <path d="M0 0H520L468 142H0Z" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".13"/>
+      <text x="34" y="73" fill="${accent}" font-size="50" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(icon)}</text>
+      <text x="126" y="63" fill="#fff9de" font-size="34" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(main)}</text>
+      <text x="126" y="103" fill="#d9e4f2" font-size="22" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">${esc(sub)}</text>
+    </g>
+    <g transform="translate(130 350)" fill="none" stroke="url(#slash)" stroke-width="9" stroke-linecap="square">
+      <path d="M0 120L210 0L405 88L610 -28L865 102"/>
+      <path d="M0 170L210 50L405 138L610 22L865 152" opacity=".55"/>
+    </g>
+    <g transform="translate(760 104)">
+      <rect x="0" y="0" width="286" height="286" rx="28" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".14"/>
+      <circle cx="143" cy="143" r="86" fill="none" stroke="${accent}" stroke-width="4"/>
+      <path d="M143 56V230M56 143H230M82 82L204 204M204 82L82 204" stroke="${accent}" stroke-width="4" opacity=".55"/>
+      <circle cx="143" cy="143" r="18" fill="${accent}"/>
+    </g>
+    <text x="92" y="595" fill="#c8d4e8" font-size="23" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">本报告生成的 16:9 SVG 主题图</text>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+document.getElementById('cards').innerHTML = stories.map(card => `
+  <article class="card">
+    <div class="eyebrow">${esc(card.group)}<small>${esc(card.badge)}</small></div>
+    <h3>${esc(card.title)}</h3>
+    <figure>
+      <img src="${svgData(card.main, card.sub, card.accent, card.icon)}" alt="${esc(card.alt)}" loading="lazy">
+      <figcaption>图源：本报告生成的主题 SVG · 基于 <a href="${esc(card.url)}" target="_blank" rel="noreferrer">${esc(card.source)}</a></figcaption>
+    </figure>
+    <p class="summary">${esc(card.summary)}</p>
+    <p class="cost">${esc(card.cost)}</p>
+  </article>
+`).join('');
+</script>
+</body>
+</html>
