@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点早报 | 2026-06-10</title>
+<style>
+:root{
+  --bg:#070b12;
+  --panel:#111827;
+  --panel-2:#151d2b;
+  --line:rgba(255,255,255,.10);
+  --text:#f5f2e9;
+  --muted:#b4becd;
+  --accent:#7dd3fc;
+  --good:#8ddc9b;
+  --warm:#fbbf24;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(circle at 14% 8%, rgba(125,211,252,.16), transparent 22%),
+    radial-gradient(circle at 86% 12%, rgba(251,191,36,.12), transparent 24%),
+    radial-gradient(circle at 50% 96%, rgba(141,220,155,.08), transparent 26%),
+    linear-gradient(180deg, #06111b 0%, #08101a 48%, #05080d 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7;
+}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 30px}
+.hero{
+  position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);
+  padding:20px 18px 18px;background:linear-gradient(160deg, rgba(17,24,39,.98), rgba(9,12,18,.98));
+  box-shadow:0 18px 50px rgba(0,0,0,.36);
+}
+.hero:before{
+  content:"";position:absolute;inset:-18% -10% auto auto;width:320px;height:320px;border-radius:999px;
+  background:radial-gradient(circle, rgba(125,211,252,.15), transparent 68%);
+  pointer-events:none;
+}
+.kicker{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker b{padding:2px 8px;border-radius:999px;background:rgba(125,211,252,.10);border:1px solid rgba(125,211,252,.24)}
+.hero h1{margin:10px 0 10px;font-size:31px;line-height:1.06;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:var(--muted);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.lede{
+  margin-top:10px;padding:14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(251,191,36,.10));
+  border:1px solid rgba(255,255,255,.10);color:#fff9eb
+}
+.lede strong{color:#ffffff}
+.trend{margin-top:10px;font-size:13px;color:var(--muted)}
+.section{margin-top:18px}
+.section h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+.section h2 span{width:10px;height:10px;border-radius:999px;background:currentColor;box-shadow:0 0 16px currentColor}
+.cards{display:grid;gap:12px}
+.card{
+  padding:14px;border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(17,24,39,.98), rgba(10,14,22,.98));
+  box-shadow:0 12px 30px rgba(0,0,0,.20)
+}
+.eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow small{color:var(--muted);letter-spacing:0;text-transform:none;font-size:11px;text-align:right}
+.card h3{margin:0 0 10px;font-size:18px;line-height:1.34;color:#fff}
+figure{margin:0 0 10px}
+figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:#0b1220}
+figcaption{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.45}
+figcaption a{color:#c9e8ff;text-decoration:none}
+.summary,.cost{margin:8px 0 0;font-size:14px}
+.summary{color:#e8ebf2}
+.cost{color:#ffd8a5}
+.footer{
+  margin-top:18px;padding:16px 14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(141,220,155,.08), rgba(125,211,252,.08));
+  border:1px solid rgba(255,255,255,.10)
+}
+.footer h3{margin:0 0 8px;font-size:15px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.stats span{font-size:11px;color:#fff4d4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.note{margin-top:10px;font-size:12px;color:var(--muted)}
+a{color:#c9e8ff}
+@media (min-width:700px){.wrap{padding:16px 18px 36px}.hero{padding:24px}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
+    <h1>OpenAI 反手敲开 IPO 门，苹果重做 Siri，AI 也把房产营销拖进真刀真枪</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-06-10</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：7 条</span>
+      <span class="chip">配图：7 / 7</span>
+    </div>
+    <div class="lede">
+      <strong>今天的信号很直白：AI 不再只比谁更会说，而是开始比谁能把入口、合约、算力、图像真伪和工具链拧成一条能收钱的链。</strong>
+      这份早报只挑过去 24 小时里最值钱的动作看，重点不是公告腔，而是谁在卡位、谁在吃入口、谁会先被挤出牌桌。
+    </div>
+    <div class="trend">早间判断：真正值钱的不是模型有多会说，而是谁先把入口、权限、图像标注和工具链做成能持续收钱的系统。</div>
+  </header>
+
+  <section class="section">
+    <h2 style="color:#7dd3fc"><span></span>今日精选</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="footer">
+    <h3>今日检查</h3>
+    <div>全部卡片使用本报告生成的 16:9 SVG 主题图，避开付费墙、版权不明和外链破图；7 条卡片、7 张配图、7 个来源链接，移动端宽度控制在 680px 内。</div>
+    <div class="stats">
+      <span>7 条精选</span><span>7 张 16:9 配图</span><span>7 / 7 图片合格</span><span>0 明显破图</span><span>标题软词已清理</span>
+    </div>
+    <div class="note">生成时间：2026-06-10 早间 CST</div>
+  </section>
+</main>
+
+<script>
+const cards = [
+  {
+    section: '新模型 / 产品 · IPO 竞速',
+    rank: '01',
+    title: 'OpenAI 反手敲开 IPO 门，把 ChatGPT 拉进资本市场',
+    imageTitle: 'OpenAI IPO',
+    imageSub: 'Cash flow · compute · valuation',
+    accent: '#7dd3fc',
+    icon: '$',
+    sourceText: 'Barrons',
+    sourceUrl: 'https://www.barrons.com/articles/openai-ipo-chatgpt-trillion-dollar-valuation-9e450f65',
+    alt: 'OpenAI IPO 主题图',
+    summary: 'OpenAI 递交保密 IPO 申请，真正的信号不是“要上市”这四个字，而是它要把模型、用户、算力和现金流捆成一门能被资本市场定价的生意。大白话：AI 不再只比聪明，而是比谁能把入口和烧钱速度一起写成长期账本。最急的是还在赌私有高估值的人，受益的是押注平台化的投资者，承压的是只会卖单点功能的对手。',
+    cost: '如果你的团队还把 AI 当成一次性功能，就会错过 IPO 叙事给出的融资窗口，也会被更会讲增长故事的玩家抢走注意力。'
+  },
+  {
+    section: '新模型 / 产品 · Siri 重做',
+    rank: '02',
+    title: '苹果下场重做 Siri，把 Gemini 塞进语音入口',
+    imageTitle: 'Siri AI',
+    imageSub: 'Context · tools · privacy',
+    accent: '#8ddc9b',
+    icon: 'AP',
+    sourceText: 'Axios',
+    sourceUrl: 'https://www.axios.com/2026/06/09/apple-siri-ai-agents-wwdc',
+    alt: '苹果 Siri AI 主题图',
+    summary: 'Apple 在 WWDC 2026 终于把 Siri 拉到能做事的台面上：它会看上下文、接照片和日历，还把 Google Gemini 摆进后端。大白话：语音助手不再只是听命令，而是开始接任务链。最急的是还停在旧语音助手的人，受益的是重度 iPhone 用户，承压的是只会做问答壳子的产品。',
+    cost: '如果你的团队还把助手当成语音壳，就会错过“会做事”的入口红利，也会被更像代理的产品抢走使用时长。'
+  },
+  {
+    section: '新模型 / 产品 · 亲手验证',
+    rank: '03',
+    title: '实测 Siri AI，苹果这次总算让助手开始干活',
+    imageTitle: 'Siri in action',
+    imageSub: 'Mail · calendar · reminders',
+    accent: '#60a5fa',
+    icon: 'S',
+    sourceText: 'The Verge',
+    sourceUrl: 'https://www.theverge.com/tech/947432/siri-ai-apple-intelligence-ios-27-wwdc',
+    alt: 'Siri AI 实测主题图',
+    summary: 'The Verge 的实测里，Siri 已经能从邮件里捞出事件、加进日历，还会替你收拾待办。大白话：苹果不是在做更聪明的聊天框，而是在把“会做事”变成默认动作。最急的是想把助手塞进工作流的人，受益的是普通用户，承压的是所有把时间耗在重复操作上的软件。',
+    cost: '如果你的团队仍靠人工串邮件、日历和待办，就会错过把助手塞进工作流的时间红利，也会被更自动化的产品挤掉粘性。'
+  },
+  {
+    section: '企业落地 · 算力长租',
+    rank: '04',
+    title: 'Applied Digital 砸出 52 亿美元长租，把 AI 算力园区卖给神秘云巨头',
+    imageTitle: 'Data center lease',
+    imageSub: '15-year contract · 210MW',
+    accent: '#f97316',
+    icon: 'DC',
+    sourceText: 'Barrons',
+    sourceUrl: 'https://www.barrons.com/articles/applied-digital-stock-ai-hyperscaler-9f04b1ba',
+    alt: 'AI 数据中心长租主题图',
+    summary: 'Applied Digital 跟一位神秘 hyperscaler 签下 15 年、52 亿美元的大单，等于把 AI 算力园区提前锁了单。大白话：大模型不只烧 GPU，还先把地皮和电力吃光。最急的是数据中心开发商和电网，受益的是云巨头，承压的是没有电、没有地、也没有长期合约的小玩家。',
+    cost: '如果你的团队不把算力、地皮和电力一起算账，就会错过 AI 基础设施的先发合约，也会被提前锁仓的云巨头卡住。'
+  },
+  {
+    section: '企业落地 · 城市争抢',
+    rank: '05',
+    title: 'AI 公司狂扫曼哈顿写字楼，房东开始围猎新租客',
+    imageTitle: 'AI office market',
+    imageSub: 'OpenAI · Anthropic · leasing',
+    accent: '#fbbf24',
+    icon: 'NY',
+    sourceText: 'WSJ',
+    sourceUrl: 'https://www.wsj.com/real-estate/commercial/manhattans-ai-office-boom-echoes-the-red-hot-expansion-of-the-dot-com-era-8289fac7',
+    alt: '曼哈顿 AI 写字楼市场主题图',
+    summary: 'WSJ 说，曼哈顿今年上半年 AI 公司已经吞下 100 万平方英尺办公面积，OpenAI 和 Anthropic 把热点街区重新点火。大白话：AI 不是只活在云里，它正在真实城市里抢办公室、抢雇员、抢地段。最急的是房东和经纪人，受益的是拿到大租约的区域，承压的是以为远程办公会让写字楼慢慢冷掉的人。',
+    cost: '如果你的团队还把办公室当静态成本，而不是 AI 招人和品牌战的前台，就会错过新的租赁窗口，也会在热门地段被更会讲故事的租客挤走。'
+  },
+  {
+    section: '研究与开源 · 文档拆解',
+    rank: '06',
+    title: 'IPO-Mine 撕开 S-1 文件墙，给尽调装上公共拆解台',
+    imageTitle: 'IPO-Mine',
+    imageSub: 'Structured filings · extracted charts',
+    accent: '#a78bfa',
+    icon: 'R',
+    sourceText: 'arXiv',
+    sourceUrl: 'https://arxiv.org/abs/2605.28714',
+    alt: 'IPO-Mine 研究主题图',
+    summary: 'IPO-Mine 把超长、带图片的 IPO 文件拆成可检索、可分析的结构化数据，专治 50 万 token 的 S-1。大白话：它给尽调团队装了一把公共手术刀，让机器先把财报、风险和图表剁开。最急的是投研、合规和审计团队，受益的是会用数据做尽调的人，承压的是还在手翻 PDF 的旧流程。',
+    cost: '如果你的团队还靠人工翻 S-1，就会错过更快的尽调节奏，也会被会拆文档、会抽图表的工具甩开。'
+  },
+  {
+    section: 'AI × 地产营销 · 先验真',
+    rank: '07',
+    title: 'AI 牧场图撕开房产广告，买家开始先验真',
+    imageTitle: 'Real estate AI listing',
+    imageSub: 'Disclosure · staging · trust',
+    accent: '#fb7185',
+    icon: 'RE',
+    sourceText: 'news.com.au',
+    sourceUrl: 'https://www.news.com.au/finance/real-estate/buying/bizarre-aigenerated-detail-in-house-listing-amid-warning-buyers-must-be-ever-vigilant/news-story/1a968f2390bc8402cc6357953e280a6f',
+    alt: 'AI 房产 listing 主题图',
+    summary: 'news.com.au 报道的那张“牧场感”房源图里，AI 把牛羊塞进 listing，想用氛围卖房。大白话：房产营销开始拿合成图抢眼球，但不标注就会把买家带进幻觉。最急的是靠精修图拉流量的中介，受益的是透明披露工具和老实卖房的人，承压的是所有把真实房况藏在滤镜后面的团队。',
+    cost: '如果你的团队不把 AI 图像标注和原图披露做成硬规则，就会错过可信营销的红利，也会先吃到投诉和监管风险。'
+  }
+];
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function svgData(main, sub, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(main)}">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#08111d"/>
+        <stop offset="100%" stop-color="#182437"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="55%" cy="42%" r="72%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="slash" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".92"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".16" stroke="#ffffff" stroke-width="2">
+      <path d="M0 120H1200M0 338H1200M0 556H1200M168 0V675M598 0V675M1032 0V675"/>
+    </g>
+    <g transform="translate(92 86)">
+      <path d="M0 0H520L468 142H0Z" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".13"/>
+      <path d="M72 236H494L434 394H10Z" fill="url(#slash)" opacity=".92"/>
+      <circle cx="392" cy="90" r="122" fill="none" stroke="${accent}" stroke-opacity=".36" stroke-width="18"/>
+      <circle cx="392" cy="90" r="56" fill="${accent}" fill-opacity=".16"/>
+    </g>
+    <g transform="translate(92 468)">
+      <text x="0" y="0" fill="#f6f7fb" font-size="66" font-weight="800" font-family="Arial, Helvetica, sans-serif" letter-spacing=".6">${esc(main)}</text>
+      <text x="0" y="64" fill="${accent}" fill-opacity=".9" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="3">${esc(sub)}</text>
+      <rect x="0" y="92" width="240" height="10" rx="5" fill="${accent}" fill-opacity=".75"/>
+    </g>
+    <g transform="translate(968 70)" opacity=".92">
+      <rect x="0" y="0" width="156" height="156" rx="28" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".18"/>
+      <text x="78" y="95" text-anchor="middle" fill="#ffffff" font-size="50" font-weight="800" font-family="Arial, Helvetica, sans-serif">${esc(icon)}</text>
+    </g>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+function renderCard(card) {
+  return `
+  <article class="card">
+    <div class="eyebrow"><span>${esc(card.section)}</span><small>${esc(card.rank)}</small></div>
+    <h3>${esc(card.title)}</h3>
+    <figure>
+      <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${esc(card.alt)}" loading="lazy">
+      <figcaption>图片来源：本报告基于 <a href="${esc(card.sourceUrl)}" target="_blank" rel="noreferrer noopener">${esc(card.sourceText)}</a> 主题生成的 SVG 配图</figcaption>
+    </figure>
+    <p class="summary">${esc(card.summary)}</p>
+    <p class="cost">${esc(card.cost)}</p>
+  </article>`;
+}
+
+document.getElementById('cards').innerHTML = cards.map(renderCard).join('');
+</script>
+</body>
+</html>
