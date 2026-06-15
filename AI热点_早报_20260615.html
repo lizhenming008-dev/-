@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI热点早报 | 2026-06-15</title>
+<style>
+:root{
+  --bg:#070b12;
+  --panel:#111827;
+  --panel-2:#151d2b;
+  --line:rgba(255,255,255,.10);
+  --text:#f5f2e9;
+  --muted:#b4becd;
+  --accent:#7dd3fc;
+  --good:#8ddc9b;
+  --warm:#fbbf24;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(circle at 14% 8%, rgba(125,211,252,.16), transparent 22%),
+    radial-gradient(circle at 86% 12%, rgba(251,191,36,.12), transparent 24%),
+    radial-gradient(circle at 50% 96%, rgba(141,220,155,.08), transparent 26%),
+    linear-gradient(180deg, #06111b 0%, #08101a 48%, #05080d 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7;
+}
+.wrap{max-width:680px;margin:0 auto;padding:14px 14px 30px}
+.hero{
+  position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);
+  padding:20px 18px 18px;background:linear-gradient(160deg, rgba(17,24,39,.98), rgba(9,12,18,.98));
+  box-shadow:0 18px 50px rgba(0,0,0,.36);
+}
+.hero:before{
+  content:"";position:absolute;inset:-18% -10% auto auto;width:320px;height:320px;border-radius:999px;
+  background:radial-gradient(circle, rgba(125,211,252,.15), transparent 68%);
+  pointer-events:none;
+}
+.kicker{display:flex;align-items:center;gap:8px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.kicker b{padding:2px 8px;border-radius:999px;background:rgba(125,211,252,.10);border:1px solid rgba(125,211,252,.24)}
+.hero h1{margin:10px 0 10px;font-size:31px;line-height:1.06;letter-spacing:-.01em}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;color:var(--muted);font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.lede{
+  margin-top:10px;padding:14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(125,211,252,.10), rgba(251,191,36,.10));
+  border:1px solid rgba(255,255,255,.10);color:#fff9eb
+}
+.lede strong{color:#ffffff}
+.trend{margin-top:10px;font-size:13px;color:var(--muted)}
+.section{margin-top:18px}
+.section h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+.section h2 span{width:10px;height:10px;border-radius:999px;background:currentColor;box-shadow:0 0 16px currentColor}
+.cards{display:grid;gap:12px}
+.card{
+  padding:14px;border-radius:20px;border:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(17,24,39,.98), rgba(10,14,22,.98));
+  box-shadow:0 12px 30px rgba(0,0,0,.20)
+}
+.eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;color:var(--accent);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow small{color:var(--muted);letter-spacing:0;text-transform:none;font-size:11px;text-align:right}
+.card h3{margin:0 0 10px;font-size:18px;line-height:1.34;color:#fff}
+figure{margin:0 0 10px}
+figure img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:#0b1220}
+figcaption{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.45}
+figcaption a{color:#c9e8ff;text-decoration:none}
+.summary,.cost{margin:8px 0 0;font-size:14px}
+.summary{color:#e8ebf2}
+.cost{color:#ffd8a5}
+.footer{
+  margin-top:18px;padding:16px 14px;border-radius:18px;
+  background:linear-gradient(135deg, rgba(141,220,155,.08), rgba(125,211,252,.08));
+  border:1px solid rgba(255,255,255,.10)
+}
+.footer h3{margin:0 0 8px;font-size:15px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.stats span{font-size:11px;color:#fff4d4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.note{margin-top:10px;font-size:12px;color:var(--muted)}
+a{color:#c9e8ff}
+@media (min-width:700px){.wrap{padding:16px 18px 36px}.hero{padding:24px}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="kicker"><b>AI Hot Brief</b><span>Shanghai / 早报</span></div>
+    <h1>Anthropic 被华府卡闸，AI 卖房和数据中心先撞上地方反弹</h1>
+    <div class="meta">
+      <span class="chip">日期：2026-06-15</span>
+      <span class="chip">时区：Asia/Shanghai</span>
+      <span class="chip">精选：8 条</span>
+      <span class="chip">配图：8 / 8</span>
+    </div>
+    <div class="lede">
+      <strong>今天这轮最硬的信号，不是某个模型又跑多快，而是 AI 正同时撞上三堵墙：华府的出口闸门、资本市场的定价闸门，以及城市里的电力和写字楼闸门。</strong>
+      这份早报只抓最近一轮最值钱的动作，重点看谁在卡位、谁在被卡、谁的商业模型会先被改写。
+    </div>
+    <div class="trend">早间判断：AI 的主战场正在从“谁更会回答”转向“谁能穿过政策、资本和城市基础设施这三道门”。</div>
+  </header>
+
+  <section class="section">
+    <h2 style="color:#7dd3fc"><span></span>今日精选</h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="footer">
+    <h3>今日检查</h3>
+    <div>全部卡片使用本报告生成的 16:9 SVG 主题图，避开付费墙、版权不明和外链破图；8 条卡片、8 张配图、8 个来源链接，移动端宽度控制在 680px 内。</div>
+    <div class="stats">
+      <span>8 条精选</span><span>8 张 16:9 配图</span><span>8 / 8 图片合格</span><span>0 明显破图</span><span>标题软词已清理</span>
+    </div>
+    <div class="note">生成时间：2026-06-15 早间 CST</div>
+  </section>
+</main>
+
+<script>
+const cards = [
+  {
+    section: '新模型 / 产品 · 政策卡闸',
+    rank: '01',
+    title: '华府下场阻击 Anthropic，Fable 5 先被掐断出口',
+    imageTitle: 'Export Control',
+    imageSub: 'Policy · models · access',
+    accent: '#7dd3fc',
+    icon: 'US',
+    sourceText: 'BusinessInsider',
+    sourceUrl: 'https://www.businessinsider.com/why-white-house-ordered-export-controls-anthropic-mythos-fable-2026-6',
+    alt: 'Anthropic 模型出口管制主题图',
+    summary: '白宫把 Anthropic 的 Fable 5 和 Mythos 5 拉进出口管制，Anthropic 只能先把海外访问关掉。大白话：AI 大模型开始像芯片和设备一样被地缘政治卡出口，不再只是公司内部的产品节奏问题。最急的是跨国客户和安全团队，受益的是本土合规供应商和监管部门，承压的是靠全球分发吃饭的 frontier lab。',
+    cost: '如果你的团队还把模型部署当纯技术选择，就会错过合规窗口，也会在跨境上线时被一刀卡死。'
+  },
+  {
+    section: '新模型 / 产品 · 华府拆雷',
+    rank: '02',
+    title: 'Anthropic 直奔华府拆雷，出口管制把模型关在门外',
+    imageTitle: 'DC Sprint',
+    imageSub: 'Lobbying · risk · access',
+    accent: '#8ddc9b',
+    icon: 'DC',
+    sourceText: 'WSJ',
+    sourceUrl: 'https://www.wsj.com/tech/ai/anthropic-dispatches-staff-to-d-c-racing-to-resolve-ai-export-restrictions-71303d42',
+    alt: 'Anthropic 跑去华府沟通出口限制主题图',
+    summary: 'Anthropic 连夜把技术和政策人员塞进华府，想把限制 Fable 5 和 Mythos 5 的出口闸门撬开。大白话：AI 模型现在不只要过代码审查，还要过国家安全审查，谁能卖给谁，已经不是公司自己拍板。最急的是跨境客户和云服务商，受益的是本土合规供应链，承压的是依赖全球市场扩张的团队。',
+    cost: '如果你的团队不提前把地区、权限和模型分层设计好，就会错过全球部署窗口，也会在政策一变时被迫停服。'
+  },
+  {
+    section: '新模型 / 产品 · 开源转向',
+    rank: '03',
+    title: 'Meta 反手拆掉开源牌，Muse Spark 继续关门卖',
+    imageTitle: 'Closed Model',
+    imageSub: 'Open source · safety · moat',
+    accent: '#fbbf24',
+    icon: 'M',
+    sourceText: 'Times of India / Bloomberg Tech',
+    sourceUrl: 'https://timesofindia.indiatimes.com/technology/tech-news/metas-highest-paid-employee-alexandr-wang-admits-the-companys-previous-ai-policy-didnt-work-says-other-labs-are-seeing-the/articleshow/131715015.cms',
+    alt: 'Meta 开源转向主题图',
+    summary: 'Meta 的 AI 负责人承认，过去那套“开源换生态”的打法不再稳，Muse Spark 继续保持封闭。大白话：当模型越做越强、风险越难兜住，开源就不再只是免费获客，而是要拿安全边界和商业闭环去换。最急的是还指望大厂持续放权重的开发者，受益的是平台型闭环和广告现金牛，承压的是靠开放牌抢用户的新玩家。',
+    cost: '如果你的团队还把开源当默认路线，就会错过闭环商业化的定价权，也会被更保守的安全门槛挤出赛道。'
+  },
+  {
+    section: '企业落地 · 资本外溢',
+    rank: '04',
+    title: 'AI 独角兽冲上市，慈善金库先被点燃',
+    imageTitle: 'IPO Wealth',
+    imageSub: 'Public markets · donors · equity',
+    accent: '#60a5fa',
+    icon: '$',
+    sourceText: 'WSJ',
+    sourceUrl: 'https://www.wsj.com/finance/investing/techs-next-ipo-wave-promises-a-charitable-windfall-885a1e74',
+    alt: 'AI 独角兽 IPO 财富外溢主题图',
+    summary: 'WSJ 说，SpaceX、Anthropic、OpenAI 这波 IPO 想象正在把新一代富豪推上台，公益资金也跟着先热起来。大白话：AI 不只是烧钱，它开始把创始人、员工期权和捐赠基金一起卷进资本市场的分配链。最急的是非营利机构和 DAF 平台，受益的是提前锁定捐赠入口的人，承压的是只能靠下一轮融资续命的二线玩家。',
+    cost: '如果你的团队还把 AI 只当产品战，就会错过公开市场和财富外溢的二次红利，也会被更会讲资本故事的对手抢走注意力。'
+  },
+  {
+    section: '研究与开源 · 长上下文',
+    rank: '05',
+    title: 'MiniMax 用稀疏注意力撕开 1M 上下文，长文档代理先爽了',
+    imageTitle: 'Sparse Attention',
+    imageSub: '1M context · GPU · open release',
+    accent: '#a78bfa',
+    icon: 'S',
+    sourceText: 'arXiv / GitHub',
+    sourceUrl: 'https://arxiv.org/abs/2606.13392',
+    alt: 'MiniMax Sparse Attention 研究主题图',
+    summary: '这篇论文把长上下文问题直接摊开：让模型在 100 万 token 级别上做稀疏检索，而不是硬扛整张注意力表。大白话：模型终于不用把每个字都盯死了，先挑重点再算，才有可能把超长文档、仓库级代码和持久在线记忆做成真正能跑的产品。最急的是做 agent 和长文档工具的团队，受益的是开源推理栈和高端 GPU 计算效率，承压的是还在全量注意力里烧卡的方案。',
+    cost: '如果你的团队不把上下文成本打下来，就会错过代理化和长记忆的红利，也会被更省算力的实现抢走规模化空间。'
+  },
+  {
+    section: 'AI × 地产营销 · 去中介',
+    rank: '06',
+    title: 'AI 卖房工具下场，传统中介被削掉一大刀',
+    imageTitle: 'AI Home Sale',
+    imageSub: 'Listing · commission · self-serve',
+    accent: '#fb7185',
+    icon: 'R',
+    sourceText: 'BusinessInsider',
+    sourceUrl: 'https://www.businessinsider.com/retiree-saved-16k-sold-condo-without-real-estate-agent-2026-6',
+    alt: 'AI 房产自助卖房主题图',
+    summary: '一位卖家用 Ridley 这类 AI 房产工具自己挂牌、谈价、成交，省下了大约 1.6 万美元佣金。大白话：AI 不只会帮地产经纪写文案，它开始把卖房前台流程直接拆掉，让熟手卖家少交一层中介税。最急的是传统经纪和平台，受益的是信息更完整、流程更熟的卖家，承压的是靠标准化撮合吃饭的中间商。',
+    cost: '如果你的团队还把地产营销停留在“发房源”，就会错过交易链条被重写的红利，也会被能让卖家自助成交的工具抢走佣金。'
+  },
+  {
+    section: 'AI × 地产营销 · 机房反弹',
+    rank: '07',
+    title: '西雅图一刀封住新数据中心，AI 机房扩张撞上地方反弹',
+    imageTitle: 'Data Center Ban',
+    imageSub: 'Power · water · zoning',
+    accent: '#38bdf8',
+    icon: 'Z',
+    sourceText: 'TechRadar',
+    sourceUrl: 'https://www.techradar.com/pro/it-doesnt-benefit-us-seattle-votes-for-year-long-ban-on-new-ai-data-centers',
+    alt: '西雅图数据中心禁建主题图',
+    summary: 'Seattle 直接给新数据中心按下一年暂停键，理由是用电、用水和噪音都开始顶到居民底线。大白话：AI 的算力扩张不再只是云厂商内部算账，它已经把电网、土地、社区和房价一起拖进战场。最急的是云厂商和园区开发商，受益的是电力、环保和本地治理部门，承压的是靠大规模机房扩张吃增长的人。',
+    cost: '如果你的团队不把能源、审批和社区关系算进 AI 基建账，就会错过落地窗口，也会在地方政治里被一票否决。'
+  },
+  {
+    section: 'AI × 地产营销 · 办公抢位',
+    rank: '08',
+    title: 'AI 公司狂扫曼哈顿写字楼，房东开始重写租客画像',
+    imageTitle: 'AI Office Boom',
+    imageSub: 'Leasing · neighborhood · demand',
+    accent: '#f97316',
+    icon: 'NY',
+    sourceText: 'WSJ',
+    sourceUrl: 'https://www.wsj.com/real-estate/commercial/the-ai-office-boom-feels-like-2000-all-over-again-41455a1e74',
+    alt: '曼哈顿 AI 写字楼抢租主题图',
+    summary: 'WSJ 说，AI 公司今年在曼哈顿吃掉了 100 万平方英尺办公面积，把 SoHo 和 Hudson Square 重新点亮。大白话：AI 不只是抢算力，它还在抢能见度、招聘半径和写字楼话语权，城市里的地段价值会跟着重估。最急的是房东和经纪，受益的是能拿到大租约的街区，承压的是把远程办公当终局判断的人。',
+    cost: '如果你的团队还把办公室当静态成本，就会错过 AI 招人和品牌前台的租赁窗口，也会被更会讲增长故事的租客挤走。'
+  }
+];
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function svgData(main, sub, accent, icon) {
+  const svg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="${esc(main)}">
+    <defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#08111d"/>
+        <stop offset="100%" stop-color="#182437"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="55%" cy="42%" r="72%">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".34"/>
+        <stop offset="100%" stop-color="${accent}" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="slash" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="${accent}" stop-opacity=".92"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity=".12"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#bg)"/>
+    <rect width="1200" height="675" fill="url(#glow)"/>
+    <g opacity=".16" stroke="#ffffff" stroke-width="2">
+      <path d="M0 120H1200M0 338H1200M0 556H1200M168 0V675M598 0V675M1032 0V675"/>
+    </g>
+    <g transform="translate(92 86)">
+      <path d="M0 0H520L468 142H0Z" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".13"/>
+      <path d="M72 236H494L434 394H10Z" fill="url(#slash)" opacity=".92"/>
+      <circle cx="392" cy="90" r="122" fill="none" stroke="${accent}" stroke-opacity=".36" stroke-width="18"/>
+      <circle cx="392" cy="90" r="56" fill="${accent}" fill-opacity=".16"/>
+    </g>
+    <g transform="translate(92 468)">
+      <text x="0" y="0" fill="#f6f7fb" font-size="66" font-weight="800" font-family="Arial, Helvetica, sans-serif" letter-spacing=".6">${esc(main)}</text>
+      <text x="0" y="64" fill="${accent}" fill-opacity=".9" font-size="30" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="3">${esc(sub)}</text>
+      <rect x="0" y="92" width="240" height="10" rx="5" fill="${accent}" fill-opacity=".75"/>
+    </g>
+    <g transform="translate(968 70)" opacity=".92">
+      <rect x="0" y="0" width="156" height="156" rx="28" fill="#ffffff" fill-opacity=".07" stroke="#ffffff" stroke-opacity=".18"/>
+      <text x="78" y="95" text-anchor="middle" fill="#ffffff" font-size="50" font-weight="800" font-family="Arial, Helvetica, sans-serif">${esc(icon)}</text>
+    </g>
+  </svg>`;
+  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
+
+function renderCard(card) {
+  return `
+  <article class="card">
+    <div class="eyebrow"><span>${esc(card.section)}</span><small>${esc(card.rank)}</small></div>
+    <h3>${esc(card.title)}</h3>
+    <figure>
+      <img src="${svgData(card.imageTitle, card.imageSub, card.accent, card.icon)}" alt="${esc(card.alt)}" loading="lazy">
+      <figcaption>图片来源：本报告基于 <a href="${esc(card.sourceUrl)}" target="_blank" rel="noreferrer noopener">${esc(card.sourceText)}</a> 主题生成的 SVG 配图</figcaption>
+    </figure>
+    <p class="summary">${esc(card.summary)}</p>
+    <p class="cost">${esc(card.cost)}</p>
+  </article>`;
+}
+
+document.getElementById('cards').innerHTML = cards.map(renderCard).join('');
+</script>
+</body>
+</html>
