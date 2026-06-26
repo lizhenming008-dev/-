@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新闻联播源检查 | 20260626</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f6f8;color:#17212b;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78}.wrap{max-width:760px;margin:0 auto;padding:18px 14px 34px}.hero{background:#3a2b18;color:#fff;padding:24px 18px;border-radius:8px}.hero h1{margin:4px 0 8px;font-size:24px;line-height:1.25}.hero p{margin:0;color:#f3e6d1;font-size:14px}.card{margin-top:14px;background:#fff;border:1px solid #e1e6ec;border-radius:8px;padding:16px}.warn{border-left:4px solid #d97706;background:#fff7ed}.card h2{margin:0 0 8px;font-size:20px}.card h3{margin:16px 0 6px;font-size:16px}.card p{margin:6px 0}.source{word-break:break-all}.note{color:#66788a;font-size:13px}.back{display:inline-block;margin-top:14px;color:#0b63ce;text-decoration:none}a{color:#0b63ce}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <p>Asia/Shanghai · 2026-06-26</p>
+    <h1>新闻联播源检查</h1>
+    <p>只处理央视《新闻联播》官方源；没有官方源就等待，不用 AI 新闻补新闻栏目。</p>
+  </header>
+
+  <section class="card warn">
+    <h2>检查结论：上一日新闻联播页面尚未生成</h2>
+    <p>本次按规则检查 2026-06-25 的央视网《新闻联播》官方日页。原因很简单：2026-06-26 早上 09:00 时，当天晚间节目还没有播出，所以不能查 2026-06-26 当天页。</p>
+    <p class="source">官方源：<a href="https://tv.cctv.com/lm/xwlb/day/NEWS_20260625.shtml" target="_blank" rel="noreferrer noopener">https://tv.cctv.com/lm/xwlb/day/NEWS_20260625.shtml</a></p>
+    <p>检查结果：HTTP 404。</p>
+    <p>栏目处理：当日新闻联播页面尚未生成，等待央视源发布。</p>
+  </section>
+
+  <section class="card">
+    <h2>这是什么意思？</h2>
+    <h3>央视网新闻联播日页是什么？</h3>
+    <p>这是央视网按日期整理《新闻联播》节目内容的官方页面。它通常包含当天节目入口、标题、视频链接和相关条目。只有这个官方页面生成后，才能提取节目链接、标题、缩略图和新闻条目，再做深度解读。</p>
+
+    <h3>为什么这里没有新闻解读？</h3>
+    <p>因为官方源返回 404。这个状态下如果继续写具体新闻内容，就会变成用非官方信息或猜测内容补页面。新闻栏目必须以央视官方源为准，所以这里只保留源检查、日期说明和等待结论。</p>
+
+    <h3>图片为什么没有？</h3>
+    <p>图片检查依赖官方页面正文。官方日页未生成时，无法下载页面统计 <code>&lt;img</code> 或 <code>class="news-img"</code> 数量，因此不写虚假的图片数量。等央视源返回 200 后，再生成带图片和深度解读的独立新闻页。</p>
+
+    <p class="note">下一次可在央视源返回 HTTP 200 后，重新生成独立新闻联播解读页。</p>
+  </section>
+
+  <a class="back" href="./briefing-20260626.html">返回晨报入口</a>
+</main>
+</body>
+</html>
